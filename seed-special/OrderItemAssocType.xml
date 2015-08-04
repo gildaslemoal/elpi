@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <OrderItemAssocType orderItemAssocTypeId="DROP_SHIPMENT" hasTable="N" description="Drop Shipment" lastUpdatedStamp="2015-06-18 14:49:58.327" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.327" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemAssocType orderItemAssocTypeId="EXCHANGE" hasTable="N" description="Exchange Order" lastUpdatedStamp="2015-06-18 14:49:58.33" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.33" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemAssocType orderItemAssocTypeId="NEW_VERSION" hasTable="N" description="New Version" lastUpdatedStamp="2015-06-18 14:49:58.329" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.329" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemAssocType orderItemAssocTypeId="PURCHASE_ORDER" hasTable="N" description="Purchase Order" lastUpdatedStamp="2015-06-18 14:49:58.326" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.326" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemAssocType orderItemAssocTypeId="REPLACEMENT" hasTable="N" description="Return Replacement" lastUpdatedStamp="2015-06-18 14:49:58.328" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.328" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <TenantDataSource tenantId="DEMO1" entityGroupName="org.ofbiz" jdbcUri="jdbc:derby:ofbiz_DEMO1;create=true" jdbcUsername="ofbiz" jdbcPassword="ofbiz" lastUpdatedStamp="2015-01-20 16:23:10.038" lastUpdatedTxStamp="2015-01-20 16:23:10.035" createdStamp="2015-01-20 16:23:10.038" createdTxStamp="2015-01-20 16:23:10.035"/>
+    <TenantDataSource tenantId="DEMO1" entityGroupName="org.ofbiz.olap" jdbcUri="jdbc:derby:ofbizolap_DEMO1;create=true" jdbcUsername="ofbiz" jdbcPassword="ofbiz" lastUpdatedStamp="2015-01-20 16:23:10.039" lastUpdatedTxStamp="2015-01-20 16:23:10.035" createdStamp="2015-01-20 16:23:10.039" createdTxStamp="2015-01-20 16:23:10.035"/>
+    <TenantDataSource tenantId="DEMO2" entityGroupName="org.ofbiz" jdbcUri="jdbc:derby:ofbiz_DEMO2;create=true" jdbcUsername="ofbiz" jdbcPassword="ofbiz" lastUpdatedStamp="2015-01-20 16:23:10.041" lastUpdatedTxStamp="2015-01-20 16:23:10.035" createdStamp="2015-01-20 16:23:10.041" createdTxStamp="2015-01-20 16:23:10.035"/>
+    <TenantDataSource tenantId="DEMO2" entityGroupName="org.ofbiz.olap" jdbcUri="jdbc:derby:ofbizolap_DEMO2;create=true" jdbcUsername="ofbiz" jdbcPassword="ofbiz" lastUpdatedStamp="2015-01-20 16:23:10.042" lastUpdatedTxStamp="2015-01-20 16:23:10.035" createdStamp="2015-01-20 16:23:10.042" createdTxStamp="2015-01-20 16:23:10.035"/>
+</entity-engine-xml>

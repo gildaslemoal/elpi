@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <Facility facilityId="10000" facilityTypeId="OFFICE" ownerPartyId="10000" defaultInventoryItemTypeId="NON_SERIAL_INV_ITEM" facilityName="Si&#232;ge social Nous Citoyens" lastUpdatedStamp="2015-06-18 14:58:58.997" lastUpdatedTxStamp="2015-06-18 14:58:58.929" createdStamp="2015-06-18 14:58:58.997" createdTxStamp="2015-06-18 14:58:58.929"/>
+</entity-engine-xml>

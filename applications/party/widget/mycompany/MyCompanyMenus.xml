@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<menus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-menu.xsd">
+    <menu name="MyCompanyAppBar" title="${uiLabelMap.MyCompanyManager}" extends="CommonAppBarMenu" extends-resource="component://common/widget/CommonMenus.xml">
+        <menu-item name="mycompany" title="${uiLabelMap.MyCompany}">
+            <link target="mycompany">
+                <parameter param-name="partyId"/>
+            </link>
+        </menu-item>
+        <menu-item name="list-employees" title="${uiLabelMap.PartyListEmployees}" >
+            <link target="listemployees"/>
+        </menu-item>
+        <menu-item name="create-employee" title="${uiLabelMap.PartyAddNewEmployee}" >
+            <link target="NewEmployee"/>
+        </menu-item>
+    </menu>
+
+    <menu name="ProfileTabBar" extends="CommonTabBarMenu" extends-resource="component://common/widget/CommonMenus.xml"
+        default-menu-item-name="viewprofile">
+        <menu-item name="viewprofile" title="${uiLabelMap.PartyProfile}">
+            <link target="viewProfile">
+                <parameter param-name="partyId"/>
+            </link>
+        </menu-item>
+        <menu-item name="viewemployees" title="${uiLabelMap.HumanResEmployees}">
+            <link target="ViewEmployees">
+                <parameter param-name="partyId"/>
+            </link>
+        </menu-item>
+        <menu-item name="viewcoordinates" title="${uiLabelMap.PartyContactInformation}">
+            <link target="ViewCoordinates">
+                <parameter param-name="partyId"/>
+            </link>
+        </menu-item>
+        <menu-item name="viewcontents" title="${uiLabelMap.ContentContents}">
+            <link target="ViewContents">
+                <parameter param-name="partyId"/>
+            </link>
+        </menu-item>
+        <menu-item name="viewnotes" title="${uiLabelMap.CommonNotes}">
+            <link target="ViewNotes">
+                <parameter param-name="partyId"/>
+            </link>
+        </menu-item>
+        <menu-item name="viewproductstore" title="${uiLabelMap.ProductProductStore}">
+            <link target="ViewProductStore">
+                <parameter param-name="partyId"/>
+            </link>
+        </menu-item>
+    </menu>
+    
+</menus>

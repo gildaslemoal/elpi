@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ReturnType returnTypeId="RTN_CREDIT" description="Store Credit" sequenceId="01" lastUpdatedStamp="2015-06-18 14:49:58.581" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.581" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnType returnTypeId="RTN_CSREPLACE" description="Cross-Ship Replacement" sequenceId="04" lastUpdatedStamp="2015-06-18 14:49:58.584" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.584" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnType returnTypeId="RTN_REFUND" description="Refund" sequenceId="02" lastUpdatedStamp="2015-06-18 14:49:58.582" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.582" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnType returnTypeId="RTN_REFUND_IMMEDIATE" description="Refund immediately" sequenceId="08" lastUpdatedStamp="2015-06-18 14:49:58.588" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.588" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnType returnTypeId="RTN_RENTAL" description="Rental" sequenceId="09" lastUpdatedStamp="2015-06-18 14:49:58.589" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.589" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnType returnTypeId="RTN_REPAIR_REPLACE" description="Repair Replacement" sequenceId="05" lastUpdatedStamp="2015-06-18 14:49:58.585" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.585" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnType returnTypeId="RTN_REPLACE" description="Wait Replacement" sequenceId="03" lastUpdatedStamp="2015-06-18 14:49:58.583" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.583" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnType returnTypeId="RTN_REPLACE_IMMEDIAT" description="Replace Immediately" sequenceId="07" lastUpdatedStamp="2015-06-18 14:49:58.587" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.587" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnType returnTypeId="RTN_WAIT_REPLACE_RES" description="Wait Replacement Reserved" sequenceId="06" lastUpdatedStamp="2015-06-18 14:49:58.586" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.586" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

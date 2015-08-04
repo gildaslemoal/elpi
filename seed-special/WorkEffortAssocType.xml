@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <WorkEffortAssocType workEffortAssocTypeId="ROUTING_COMPONENT" hasTable="N" description="Routing and Routing Task Association" lastUpdatedStamp="2015-06-18 14:49:55.421" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.421" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortAssocType workEffortAssocTypeId="WORK_EFF_BREAKDOWN" hasTable="N" description="Breakdown/Detail" lastUpdatedStamp="2015-06-18 14:49:55.416" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.416" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortAssocType workEffortAssocTypeId="WORK_EFF_CONCURRENCY" parentTypeId="WORK_EFF_DEPENDENCY" hasTable="N" description="Concurrency" lastUpdatedStamp="2015-06-18 14:49:55.418" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.418" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortAssocType workEffortAssocTypeId="WORK_EFF_DEPENDENCY" hasTable="N" description="Dependency" lastUpdatedStamp="2015-06-18 14:49:55.417" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.417" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortAssocType workEffortAssocTypeId="WORK_EFF_PRECEDENCY" parentTypeId="WORK_EFF_DEPENDENCY" hasTable="N" description="Precedency" lastUpdatedStamp="2015-06-18 14:49:55.419" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.419" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortAssocType workEffortAssocTypeId="WORK_EFF_TEMPLATE" hasTable="N" description="Template of" lastUpdatedStamp="2015-06-18 14:49:55.42" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.42" createdTxStamp="2015-06-18 14:49:55.323"/>
+</entity-engine-xml>

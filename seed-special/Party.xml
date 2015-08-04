@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <Party partyId="10000" partyTypeId="PARTY_GROUP" preferredCurrencyUomId="EUR" statusId="PARTY_ENABLED" createdDate="2015-06-18 14:54:37.001" createdByUserLogin="admin" lastModifiedDate="2015-06-18 14:54:37.001" lastModifiedByUserLogin="admin" lastUpdatedStamp="2015-06-18 14:54:37.009" lastUpdatedTxStamp="2015-06-18 14:54:37.001" createdStamp="2015-06-18 14:54:37.009" createdTxStamp="2015-06-18 14:54:37.001"/>
+    <Party partyId="system" partyTypeId="PERSON" lastUpdatedStamp="2015-06-18 14:49:54.572" lastUpdatedTxStamp="2015-06-18 14:49:54.569" createdStamp="2015-06-18 14:49:54.572" createdTxStamp="2015-06-18 14:49:54.569"/>
+</entity-engine-xml>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+
+    <screen name="main">
+        <section>
+            <actions>
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+            </actions>
+            <widgets>
+                <decorator-screen name="EasyOFBizCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="OrderStats">
+        <section>
+            <actions>
+                <set field="titleProperty" value="OrderOrderStatisticsPage"/>
+                <set field="headerItem" value="stats"/>
+                <script location="component://order/webapp/ordermgr/WEB-INF/actions/order/OrderStats.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="EasyOFBizCommonDecorator" location="component://easyofbiz/widget/CommonScreens.xml">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html><html-template location="component://order/webapp/ordermgr/order/orderstats.ftl"/></html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="Dashboard">
+        <section>
+            <actions>
+                <set field="titleProperty" value="OrderOrderStatisticsPage"/>
+                <set field="headerItem" value="stats"/>
+                <script location="component://order/webapp/ordermgr/WEB-INF/actions/order/OrderStats.groovy"/>
+                <set field="layoutSettings.styleSheets[]" value="/easyofbiztheme/css/morris.css" global="true"/>
+                <set field="layoutSettings.javaScripts[]" value="/easyofbiztheme/js/plugins/morris/raphael.min.js" global="true"/>
+                <set field="layoutSettings.javaScripts[]" value="/easyofbiztheme/js/plugins/morris/morris.min.js" global="true"/>
+                <!--<set field="layoutSettings.javaScripts[]" value="/easyofbiztheme/js/plugins/morris/morris-data.js" global="true"/>-->
+    <!--             <set field="headerItem" value="dashboardScreen"/> -->
+            </actions>
+            <widgets>
+                <decorator-screen name="EasyOFBizCommonDecorator" location="component://easyofbiz/widget/CommonScreens.xml">
+                    <decorator-section name="body">
+                        <platform-specific>
+                        <html>
+<!--                             <html-template location="component://order/webapp/ordermgr/order/orderstats.ftl"/> -->
+                            <html-template location="component://easyofbiz/webapp/easyofbiz/Dashboard.ftl"/>
+                        </html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>       
+            </widgets>
+        </section>
+    </screen>
+    <screen name="DashboardDons">
+        <section>
+            <actions>
+                <set field="titleProperty" value="OrderOrderStatisticsPage"/>
+                <set field="headerItem" value="stats"/>
+                <script location="component://easyofbiz/webapp/easyofbiz/WEB-INF/actions/DashboardDons.groovy"/>
+                <set field="layoutSettings.styleSheets[]" value="/easyofbiztheme/css/morris.css" global="true"/>
+                <set field="layoutSettings.javaScripts[]" value="/easyofbiztheme/js/plugins/morris/raphael.min.js" global="true"/>
+                <set field="layoutSettings.javaScripts[]" value="/easyofbiztheme/js/plugins/morris/morris.min.js" global="true"/>
+                <!--<set field="layoutSettings.javaScripts[]" value="/easyofbiztheme/js/plugins/morris/morris-data.js" global="true"/>-->
+    <!--             <set field="headerItem" value="dashboardScreen"/> -->
+            </actions>
+            <widgets>
+                <decorator-screen name="EasyOFBizCommonDecorator" location="component://easyofbiz/widget/CommonScreens.xml">
+                    <decorator-section name="body">
+                        <platform-specific>
+                        <html>
+<!--                             <html-template location="component://order/webapp/ordermgr/order/orderstats.ftl"/> -->
+                            <html-template location="component://easyofbiz/webapp/easyofbiz/DashboardDons.ftl"/>
+                        </html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="DashboardMembres">
+        <section>
+            <actions>
+                <set field="titleProperty" value="OrderOrderStatisticsPage"/>
+                <set field="headerItem" value="stats"/>
+                <script location="component://easyofbiz/webapp/easyofbiz/WEB-INF/actions/DashboardMembres.groovy"/>
+                <set field="layoutSettings.styleSheets[]" value="/easyofbiztheme/css/morris.css" global="true"/>
+                <set field="layoutSettings.javaScripts[]" value="/easyofbiztheme/js/plugins/morris/raphael.min.js" global="true"/>
+                <set field="layoutSettings.javaScripts[]" value="/easyofbiztheme/js/plugins/morris/morris.min.js" global="true"/>
+                <!--<set field="layoutSettings.javaScripts[]" value="/easyofbiztheme/js/plugins/morris/morris-data.js" global="true"/>-->
+    <!--             <set field="headerItem" value="dashboardScreen"/> -->
+            </actions>
+            <widgets>
+                <decorator-screen name="EasyOFBizCommonDecorator" location="component://easyofbiz/widget/CommonScreens.xml">
+                    <decorator-section name="body">
+                        <platform-specific>
+                        <html>
+<!--                             <html-template location="component://order/webapp/ordermgr/order/orderstats.ftl"/> -->
+                            <html-template location="component://easyofbiz/webapp/easyofbiz/DashboardMembres.ftl"/>
+                        </html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+</screens>

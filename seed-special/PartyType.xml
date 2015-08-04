@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PartyType partyTypeId="AUTOMATED_AGENT" hasTable="N" description="Automated Agent" lastUpdatedStamp="2015-06-18 14:49:54.452" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.452" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyType partyTypeId="CORPORATION" parentTypeId="LEGAL_ORGANIZATION" hasTable="N" description="Corporation" lastUpdatedStamp="2015-06-18 14:49:54.459" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.459" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyType partyTypeId="FAMILY" parentTypeId="INFORMAL_GROUP" hasTable="N" description="Family" lastUpdatedStamp="2015-06-18 14:49:54.456" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.456" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyType partyTypeId="GOVERNMENT_AGENCY" parentTypeId="LEGAL_ORGANIZATION" hasTable="N" description="Government Agency" lastUpdatedStamp="2015-06-18 14:49:54.46" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.46" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyType partyTypeId="INFORMAL_GROUP" parentTypeId="PARTY_GROUP" hasTable="N" description="Informal Group" lastUpdatedStamp="2015-06-18 14:49:54.455" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.455" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyType partyTypeId="LEGAL_ORGANIZATION" parentTypeId="PARTY_GROUP" hasTable="N" description="Legal Organization" lastUpdatedStamp="2015-06-18 14:49:54.458" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.458" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyType partyTypeId="PARTY_GROUP" hasTable="Y" description="Party Group" lastUpdatedStamp="2015-06-18 14:49:54.454" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.454" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyType partyTypeId="PERSON" hasTable="Y" description="Person" lastUpdatedStamp="2015-06-18 14:49:54.453" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.453" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyType partyTypeId="TEAM" parentTypeId="INFORMAL_GROUP" hasTable="N" description="Team" lastUpdatedStamp="2015-06-18 14:49:54.457" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.457" createdTxStamp="2015-06-18 14:49:54.183"/>
+</entity-engine-xml>

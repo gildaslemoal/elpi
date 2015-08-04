@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <WorkEffortAssoc workEffortIdFrom="DEFAULT_ROUTING" workEffortIdTo="DEFAULT_TASK" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="10" fromDate="2004-09-24 15:09:38.736" lastUpdatedStamp="2015-06-18 14:49:56.422" lastUpdatedTxStamp="2015-06-18 14:49:55.982" createdStamp="2015-06-18 14:49:56.422" createdTxStamp="2015-06-18 14:49:55.982"/>
+</entity-engine-xml>

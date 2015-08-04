@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PerfRatingType perfRatingTypeId="1" hasTable="N" description="Fails to Meet Expectations" lastUpdatedStamp="2015-06-18 14:49:58.227" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.227" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PerfRatingType perfRatingTypeId="2" hasTable="N" description="Inconsistently Fulfills" lastUpdatedStamp="2015-06-18 14:49:58.228" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.228" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PerfRatingType perfRatingTypeId="3" hasTable="N" description="Fulfilled Expectations" lastUpdatedStamp="2015-06-18 14:49:58.229" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.229" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PerfRatingType perfRatingTypeId="4" hasTable="N" description="Frequently Exceeds" lastUpdatedStamp="2015-06-18 14:49:58.23" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.23" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PerfRatingType perfRatingTypeId="5" hasTable="N" description="Consistently Exceeds" lastUpdatedStamp="2015-06-18 14:49:58.231" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.231" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

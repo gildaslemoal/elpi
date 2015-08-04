@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <property key="FrontEndEmailUnkownAsUserLogin">
+        <value xml:lang="en">This email is unkown, you should provide the one use to connect into your account</value>
+        <value xml:lang="fr">Cet email ne correspond pas à celui que vous avez utilisé pour vous connecter à votre compte, veuillez essayer de nouveau !</value>
+    </property>
+    <property key="FrontEndResetLinkRequestError">
+        <value xml:lang="en">Impossible to complete your request due to technical issues. Please contact the supplier support service.</value>
+        <value xml:lang="fr">Impossible de réponde à votre demande. Veuillez contacter le service de support aux fournisseurs.</value>
+    </property>
+    <property key="FrontEndResetPasswordBadLinkError">
+        <value xml:lang="en">This link is not valid, try copying the link from your email client and paste it into your browser !</value>
+        <value xml:lang="fr">Ce lien n'est pas valide, essayez de copier le lien manuellement depuis votre client mail et de le coller dans le navigateur !</value>
+    </property>
+    <property key="FrontEndResetPasswordExpiredLinkError">
+        <value xml:lang="en">This link has expired, you may request a nex link, from login page, or contact supplier support service.</value>
+        <value xml:lang="fr">Ce lien est expiré, vous pouvez demander à nouveau un changement de mot de passe depuis la fenêtre de connexion, ou contacter le support.</value>
+    </property>
+</resource>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <OrderItemType orderItemTypeId="ASSET_ORDER_ITEM" parentTypeId="PURCHASE_SPECIFIC" hasTable="N" description="PO: Fixed Asset" lastUpdatedStamp="2015-06-18 14:49:58.319" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.319" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemType orderItemTypeId="BULK_ORDER_ITEM" hasTable="N" description="Bulk Item" lastUpdatedStamp="2015-06-18 14:49:58.323" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.323" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemType orderItemTypeId="INVENTORY_ORDER_ITEM" parentTypeId="PURCHASE_SPECIFIC" hasTable="N" description="PO: Inventory" lastUpdatedStamp="2015-06-18 14:49:58.317" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.317" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemType orderItemTypeId="PRODUCT_ORDER_ITEM" hasTable="N" description="Product Item" lastUpdatedStamp="2015-06-18 14:49:58.32" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.32" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemType orderItemTypeId="PURCHASE_SPECIFIC" hasTable="N" description="Purchase Order Specific" lastUpdatedStamp="2015-06-18 14:49:58.316" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.316" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemType orderItemTypeId="RENTAL_ORDER_ITEM" hasTable="N" description="Rental Item" lastUpdatedStamp="2015-06-18 14:49:58.322" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.322" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemType orderItemTypeId="SUPPLIES_ORDER_ITEM" parentTypeId="PURCHASE_SPECIFIC" hasTable="N" description="PO: Supplies (to Expense)" lastUpdatedStamp="2015-06-18 14:49:58.318" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.318" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderItemType orderItemTypeId="WORK_ORDER_ITEM" hasTable="N" description="Work Item" lastUpdatedStamp="2015-06-18 14:49:58.321" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.321" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

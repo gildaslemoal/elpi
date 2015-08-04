@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <TrainingClassType trainingClassTypeId="ADVAN_TRAINING" description="Advance Training" lastUpdatedStamp="2015-06-18 14:49:58.179" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.179" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <TrainingClassType trainingClassTypeId="BASIC_TRAINING" description="Basic Training" lastUpdatedStamp="2015-06-18 14:49:58.177" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.177" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <TrainingClassType trainingClassTypeId="IMPRO_TRAINING" description="Improvement Training" lastUpdatedStamp="2015-06-18 14:49:58.18" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.18" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <TrainingClassType trainingClassTypeId="ONJOB_TRAINING" description="On Job Training" lastUpdatedStamp="2015-06-18 14:49:58.178" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.178" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

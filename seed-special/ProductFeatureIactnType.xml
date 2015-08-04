@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProductFeatureIactnType productFeatureIactnTypeId="FEATURE_IACTN_DEPEND" hasTable="N" description="Dependencies" lastUpdatedStamp="2015-06-18 14:49:55.707" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.707" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductFeatureIactnType productFeatureIactnTypeId="FEATURE_IACTN_INCOMP" hasTable="N" description="Incompatibility" lastUpdatedStamp="2015-06-18 14:49:55.708" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.708" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

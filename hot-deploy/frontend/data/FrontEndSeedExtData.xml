@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <!--<Facility facilityId="AAB" -->
+      <!--facilityTypeId="PLATEFORME"-->
+      <!--facilityName="Plateforme Brétagne"-->
+      <!--ownerPartyId="O-toit-Bretagne"-->
+      <!--description="Plateforme de la règion Brétagne"/>-->
+
+    <!--<ContactMech contactMechId="AAB" contactMechTypeId="POSTAL_ADDRESS" />-->
+    <!--<PostalAddress contactMechId="AAB" toName="O-Toit" attnName="O-Toit" address1="Boulevard du Champ Daguet" city="Saint-Grégoire" postalCode="35760" countryGeoId="FRA" stateProvinceGeoId="_NA_" />-->
+    <!--<FacilityContactMech facilityId="AAB" contactMechId="AAB" fromDate="2001-01-01 00:00:00.0"/>-->
+    <!--<FacilityContactMechPurpose facilityId="AAB" contactMechId="AAB" contactMechPurposeTypeId="PRIMARY_LOCATION" fromDate="2001-01-01 00:00:00.0"/>-->
+
+    <!--<Facility facilityId="PO5" parentFacilityId="AAB" facilityTypeId="PRIMARY_ROOF" ownerPartyId="O-toit-Bretagne" facilityName="touran 14" productStoreId="O-toit-Bretagne" lastUpdatedStamp="2015-04-14 17:56:10.91" lastUpdatedTxStamp="2015-04-14 17:56:10.872" createdStamp="2015-04-14 17:10:41.968" createdTxStamp="2015-04-14 17:10:41.935" delayTimeFromParent="TF_hr"/>-->
+    <!--<ContactMech contactMechId="PO5" contactMechTypeId="POSTAL_ADDRESS" />-->
+    <!--<PostalAddress contactMechId="PO5" toName="O-Toit" attnName="O-Toit" address1="103 Av. Henri Freville" city="Rennes" postalCode="35200" countryGeoId="FRA" stateProvinceGeoId="_NA_" />-->
+    <!--<FacilityContactMech facilityId="PO5" contactMechId="PO5" fromDate="2001-01-01 00:00:00.0"/>-->
+    <!--<FacilityContactMechPurpose facilityId="PO5" contactMechId="PO5" contactMechPurposeTypeId="PRIMARY_LOCATION" fromDate="2001-01-01 00:00:00.0"/>-->
+    <!--<Facility facilityId="PO7" parentFacilityId="AAB" facilityTypeId="PRIMARY_ROOF" ownerPartyId="O-toit-Bretagne" facilityName="polo" productStoreId="O-toit-Bretagne" description="polo" lastUpdatedStamp="2015-04-16 22:15:04.432" lastUpdatedTxStamp="2015-04-16 22:15:04.395" createdStamp="2015-04-14 16:38:40.523" createdTxStamp="2015-04-14 16:38:40.464" delayTimeFromParent="TF_hr"/>-->
+    <!--<ContactMech contactMechId="PO7" contactMechTypeId="POSTAL_ADDRESS" />-->
+    <!--<PostalAddress contactMechId="PO7" toName="O-Toit" attnName="O-Toit" address1="2 Boulevard Emmanuel Mounier" city="Rennes" postalCode="35700" countryGeoId="FRA" stateProvinceGeoId="_NA_" />-->
+    <!--<FacilityContactMech facilityId="PO7" contactMechId="PO7" fromDate="2001-01-01 00:00:00.0"/>-->
+    <!--<FacilityContactMechPurpose facilityId="PO7" contactMechId="PO7" contactMechPurposeTypeId="PRIMARY_LOCATION" fromDate="2001-01-01 00:00:00.0"/>-->
+
+    <!--<Party partyId="FERME_ORIGINALE" partyTypeId="PARTY_GROUP" preferredCurrencyUomId="EUR" statusId="PARTY_ENABLED"/>-->
+    <!--<PartyGroup comments="Fournisseur" groupName="La ferme originale" groupNameLocal="La ferme originale" partyId="FERME_ORIGINALE"/>-->
+    <!--<PartyRole partyId="FERME_ORIGINALE" roleTypeId="SUPPLIER"/>-->
+    <!--<PartyRole partyId="FERME_ORIGINALE" roleTypeId="BILL_FROM_VENDOR"/>-->
+    <!--<PartyRole partyId="FERME_ORIGINALE" roleTypeId="SHIP_FROM_VENDOR"/>-->
+    <!--<ContactMech contactMechId="FERME_ORIGINALE" contactMechTypeId="POSTAL_ADDRESS"/>-->
+    <!--<PostalAddress contactMechId="FERME_ORIGINALE" address1="créavallée" city="Périgueux" postalCode="24000" countryGeoId="FRA" stateProvinceGeoId="_NA_"/>-->
+
+    <!--<FacilityParty facilityId="PO5" partyId="FERME_ORIGINALE" roleTypeId="SUPPLIER" fromDate="2015-04-14 20:24:24.0"/>-->
+    <!--<FacilityParty facilityId="PO5" partyId="O-toit-Bretagne" roleTypeId="OWNER" fromDate="2015-04-14 17:10:42.199"/>-->
+    <!--<FacilityParty facilityId="PO7" partyId="FERME_ORIGINALE" roleTypeId="SUPPLIER" fromDate="2015-04-16 22:12:33.0"/>-->
+    <!--<FacilityParty facilityId="PO7" partyId="O-toit-Bretagne" roleTypeId="OWNER" fromDate="2015-04-14 16:38:42.175"/>-->
+    <!-- -->
+
+    <!--<ProductCategory productCategoryId="10040" productCategoryTypeId="INTERNAL_CATEGORY" categoryName="A base d&apos;agrumes" />-->
+    <!--<Product productId="10010" productTypeId="FINISHED_GOOD" primaryProductCategoryId="10040" introductionDate="2015-04-10 11:42:00.0" salesDiscWhenNotAvail="N" internalName="Jus D&apos;Agrumes Frais" brandName="Jus D&apos;Agrumes Frais" productName="Jus D&apos;Agrumes Frais" description="Jus D&apos;Agrumes Frais" quantityUomId="VLIQ_L" quantityIncluded="1.000000" piecesIncluded="1" weightUomId="WT_g" weight="1400.000000" heightUomId="LEN_mm" shippingHeight="185.000000" widthUomId="LEN_mm" shippingWidth="85.000000" depthUomId="LEN_mm" shippingDepth="85.000000" taxable="Y" chargeShipping="Y" autoCreateKeywords="N" isVirtual="N" isVariant="N" requirementMethodEnumId="PRODRQM_NONE" billOfMaterialLevel="0" lotIdFilledIn="Forbidden" unitTypeEnumId="TAU_PIEC" mandatoryVertical="N" pickingMod="DETAIL" expireDateFilledIn="Forbidden" validateDate="2015-04-14 14:21:39.876" validateByUserLogin="admin"/>-->
+    <!--<ProductOffer productOfferId="10020" productOfferName="offre 1" productOfferTypeId="DROP" productId="10010" supplierPartyId="FERME_ORIGINALE" fromDate="2015-04-29 00:00:00.0" statusId="OFFER_VALIDATED" catalogSupplierPrice="2.380" purchasePrice="2.390" consumerSalePrice="3.260" quantity="100.000000" smallImageUrl="/images/products/10010/small.jpg" mediumImageUrl="/images/products/10010/medium.jpg" largeImageUrl="/images/products/10010/large.jpg" detailImageUrl="/images/products/10010/detail.jpg" originalImageUrl="/images/products/10010/original.jpg" />-->
+    <!--<ProductOfferFacility productOfferId="10020" facilityId="PO5" fromDate="2015-04-15 23:57:39.572"/>-->
+    <!--<ProductOfferAdjustment productOfferAdjustmentId="10052" productOfferAdjustmentTypeId="INTERNAL_MARGIN" productOfferId="10020" description="Marge standard" sourcePercentage="14.000000" manualAdjustment="N"/>-->
+    <!--<ProductOfferAdjustment productOfferAdjustmentId="10053" productOfferAdjustmentTypeId="SALES_TAX" productOfferId="10020" description="TVA standard 19.6" sourcePercentage="19.600000" manualAdjustment="N"/>-->
+
+    <!--<ProductCategory productCategoryId="10078" productCategoryTypeId="INTERNAL_CATEGORY" categoryName="jus de fruit" description="jus de fruit" />-->
+    <!--<Product productId="10020" productTypeId="FINISHED_GOOD" primaryProductCategoryId="10078" introductionDate="2015-04-14 00:08:00.0" salesDiscWhenNotAvail="N" internalName="jus ananas" brandName="jus ananas" productName="jus ananas" description="jus ananas" smallImageUrl="/images/products/10020/small.jpg" mediumImageUrl="/images/products/10020/medium.jpg" largeImageUrl="/images/products/10020/large.jpg" detailImageUrl="/images/products/10020/detail.jpg" originalImageUrl="/images/products/10020/original.jpg" quantityUomId="VLIQ_L" quantityIncluded="0.000000" piecesIncluded="1" weightUomId="WT_g" weight="900.000000" heightUomId="LEN_mm" shippingHeight="85.000000" widthUomId="LEN_mm" shippingWidth="20.000000" depthUomId="LEN_mm" shippingDepth="30.000000" taxable="Y" chargeShipping="Y" autoCreateKeywords="N" isVirtual="N" isVariant="N" requirementMethodEnumId="PRODRQM_NONE" billOfMaterialLevel="0" lotIdFilledIn="Forbidden" unitTypeEnumId="TAU_PIEC" mandatoryVertical="N" pickingMod="DETAIL" expireDateFilledIn="Forbidden" validateDate="2015-04-14 14:21:39.876" validateByUserLogin="admin"/>-->
+    <!--<ProductOffer productOfferId="10030" productOfferName="offre 2" productOfferTypeId="DROP" productId="10020" supplierPartyId="FERME_ORIGINALE" fromDate="2015-04-17 01:00:32.308" statusId="OFFER_VALIDATED" catalogSupplierPrice="2.140" purchasePrice="2.140" consumerSalePrice="2.990" quantity="52.000000"/>-->
+    <!--<ProductOfferFacility productOfferId="10030" facilityId="PO5" fromDate="2015-04-16 22:11:20.53"/>-->
+    <!--<ProductOfferFacility productOfferId="10030" facilityId="PO7" fromDate="2015-04-16 22:15:07.857"/>-->
+    <!--<ProductOfferAdjustment productOfferAdjustmentId="10093" productOfferAdjustmentTypeId="INTERNAL_MARGIN" productOfferId="10030" description="Marge standard" sourcePercentage="14.000000" manualAdjustment="N"/>-->
+    <!--<ProductOfferAdjustment productOfferAdjustmentId="10094" productOfferAdjustmentTypeId="SALES_TAX" productOfferId="10030" description="TVA standard 19.6" sourcePercentage="19.600000" manualAdjustment="N"/>-->
+    <!--<ProductOfferAdjustment productOfferAdjustmentId="10095" productOfferAdjustmentTypeId="INTERNAL_MARGIN" productOfferId="10030" description="Marge manuelle" sourcePercentage="3.000000" manualAdjustment="Y"/>-->
+
+    <!--<DataResource dataResourceId="10201" dataResourceTypeId="ELECTRONIC_TEXT" />-->
+    <!--<DataResource dataResourceId="10202" dataResourceTypeId="ELECTRONIC_TEXT" />-->
+    <!--<DataResource dataResourceId="10203" dataResourceTypeId="ELECTRONIC_TEXT" />-->
+    <!--<DataResource dataResourceId="10207" dataResourceTypeId="SHORT_TEXT" dataTemplateTypeId="NONE" statusId="CTNT_IN_PROGRESS" dataResourceName="10010.jpg" mimeTypeId="text/html" objectInfo="/images/products/10020/10010.jpg" />-->
+    <!--<DataResource dataResourceId="10208" dataResourceTypeId="SHORT_TEXT" dataTemplateTypeId="NONE" statusId="CTNT_IN_PROGRESS" dataResourceName="10020.jpg" mimeTypeId="text/html" objectInfo="/images/products/10020/10020.jpg"/>-->
+
+    <!--<ElectronicText dataResourceId="10201" textData="Avec Pulpe. - A Teneur garantie en vitamine C. - Bouchon verseur"/>-->
+    <!--<ElectronicText dataResourceId="10202" textData="A base de jus d'orange concentré - Vitamine C"/>-->
+    <!--<ElectronicText dataResourceId="10203" textData="A boire frais. Agiter avant d'ouvrir. près ouverture à conserver au réfrigérateur pendant 1 semaine" />-->
+
+    <!--<Content contentId="10401" dataResourceId="10201" statusId="CTNT_IN_PROGRESS" contentName="ARG" description="ARG" mimeTypeId="text/html"/>-->
+    <!--<Content contentId="10402" dataResourceId="10202" statusId="CTNT_IN_PROGRESS" contentName="COMPO" description="COMPO" mimeTypeId="text/html"/>-->
+    <!--<Content contentId="10403" dataResourceId="10203" statusId="CTNT_IN_PROGRESS" contentName="CONSEIL" description="CONSEIL" mimeTypeId="text/html"/>-->
+    <!--<Content contentId="10407" contentTypeId="DOCUMENT" dataResourceId="10207" statusId="CTNT_IN_PROGRESS"/>-->
+    <!--<Content contentId="10408" contentTypeId="DOCUMENT" dataResourceId="10208" statusId="CTNT_IN_PROGRESS"/>-->
+
+    <!--<ProductContent productId="10010" contentId="10401" productContentTypeId="ARG_COM" fromDate="2015-04-14 00:15:39.159"/>-->
+    <!--<ProductContent productId="10010" contentId="10402" productContentTypeId="COMPOSITION" fromDate="2015-04-14 00:15:48.655"/>-->
+    <!--<ProductContent productId="10010" contentId="10403" productContentTypeId="CONSEIL_UTIL" fromDate="2015-04-14 00:15:56.124"/>-->
+    <!--<ProductContent productId="10010" contentId="10407" productContentTypeId="MAIN_IMAGE" fromDate="2015-04-14 00:31:15.22"/>-->
+
+    <!--<ProductContent productId="10020" contentId="10401" productContentTypeId="ARG_COM" fromDate="2015-04-14 00:15:39.159"/>-->
+    <!--<ProductContent productId="10020" contentId="10402" productContentTypeId="COMPOSITION" fromDate="2015-04-14 00:15:48.655"/>-->
+    <!--<ProductContent productId="10020" contentId="10403" productContentTypeId="CONSEIL_UTIL" fromDate="2015-04-14 00:15:56.124"/>-->
+    <!--<ProductContent productId="10020" contentId="10408" productContentTypeId="MAIN_IMAGE" fromDate="2015-04-14 00:31:15.22"/>-->
+
+</entity-engine-xml>

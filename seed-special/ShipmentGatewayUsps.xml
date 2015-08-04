@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ShipmentGatewayUsps shipmentGatewayConfigId="USPS_CONFIG" connectUrl="http://production.shippingapis.com/ShippingAPITest.dll" connectUrlLabels="http://production.shippingapis.com/ShippingAPITest.dll" connectTimeout="60" accessUserId="000000000000" accessPassword="999999999999" maxEstimateWeight="70" test="N" lastUpdatedStamp="2015-06-18 14:49:55.937" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.937" createdTxStamp="2015-06-18 14:49:55.809"/>
+</entity-engine-xml>

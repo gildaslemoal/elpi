@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <VisualTheme visualThemeId="EASYOFBIZ" visualThemeSetId="BACKOFFICE" description="Easy OFBiz - Floating Layout, Sight-Impaired Accessible, Bidirectional" lastUpdatedStamp="2015-06-18 14:49:54.13" lastUpdatedTxStamp="2015-06-18 14:49:54.129" createdStamp="2015-06-18 14:49:54.13" createdTxStamp="2015-06-18 14:49:54.129"/>
+    <VisualTheme visualThemeId="EC_DEFAULT" visualThemeSetId="ECOMMERCE" description="OFBiz Ecommerce Standard Floating Layout" lastUpdatedStamp="2015-06-18 14:49:58.898" lastUpdatedTxStamp="2015-06-18 14:49:58.897" createdStamp="2015-06-18 14:49:58.898" createdTxStamp="2015-06-18 14:49:58.897"/>
+    <VisualTheme visualThemeId="EC_OTOIT" visualThemeSetId="ECOMMERCE" description="O&apos;toit Ecommerce" lastUpdatedStamp="2015-06-18 15:11:45.438" lastUpdatedTxStamp="2015-06-18 15:11:45.435" createdStamp="2015-06-18 15:11:45.438" createdTxStamp="2015-06-18 15:11:45.435"/>
+    <VisualTheme visualThemeId="FLAT_GREY" visualThemeSetId="BACKOFFICE" description="Flat Grey - Floating Layout, Sight-Impaired Accessible, Bidirectional" lastUpdatedStamp="2015-06-18 14:49:54.157" lastUpdatedTxStamp="2015-06-18 14:49:54.155" createdStamp="2015-06-18 14:49:54.157" createdTxStamp="2015-06-18 14:49:54.155"/>
+    <VisualTheme visualThemeId="TOMAHAWK" visualThemeSetId="BACKOFFICE" description="Tomahawk: the evolution of the Dropping Crumbs theme" lastUpdatedStamp="2015-06-18 14:49:54.172" lastUpdatedTxStamp="2015-06-18 14:49:54.171" createdStamp="2015-06-18 14:49:54.172" createdTxStamp="2015-06-18 14:49:54.171"/>
+</entity-engine-xml>

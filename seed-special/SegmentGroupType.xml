@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SegmentGroupType segmentGroupTypeId="MARKET_SEGMENT" description="Market Segment" lastUpdatedStamp="2015-06-18 14:49:58.637" lastUpdatedTxStamp="2015-06-18 14:49:58.598" createdStamp="2015-06-18 14:49:58.637" createdTxStamp="2015-06-18 14:49:58.598"/>
+    <SegmentGroupType segmentGroupTypeId="SALES_SEGMENT" description="Sales Segment" lastUpdatedStamp="2015-06-18 14:49:58.638" lastUpdatedTxStamp="2015-06-18 14:49:58.598" createdStamp="2015-06-18 14:49:58.638" createdTxStamp="2015-06-18 14:49:58.598"/>
+</entity-engine-xml>

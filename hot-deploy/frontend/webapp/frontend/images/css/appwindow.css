@@ -1,0 +1,23 @@
+            .link-button {
+                border: solid 2px #F68D1E;
+                margin-top:25px;
+                border-radius: 6px;
+                transition: opacity 5s linear;
+            }
+            @-webkit-keyframes pulse {
+                0% {
+                    -webkit-box-shadow: 0 0 12px rgba(50,50,50,0.35);
+                }
+                50% {
+                    -webkit-box-shadow: 0 0 12px rgba(50,50,50,0.9);
+                }
+                100% {
+                    -webkit-box-shadow: 0 0 12px rgba(50,50,50,0.35);
+                }
+            }
+            .link-button:hover {
+                -webkit-box-shadow: 0px 0px 12px rgba(50,50,50,0.5);
+                -moz-box-shadow: 0px 0px 12px rgba(50,50,50,0.5);
+                box-shadow: 0px 0px 12px rgba(50,50,50,0.5);
+                -webkit-animation: pulse 1.5s infinite ease-in-out; /* Ici on utilise l'animation référencée plus haut */
+            }

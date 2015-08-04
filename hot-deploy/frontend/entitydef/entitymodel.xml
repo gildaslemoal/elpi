@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entitymodel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/entitymodel.xsd">
+    <!-- ========================================================= -->
+    <!-- ======================== Defaults ======================= -->
+    <!-- ========================================================= -->
+    <title>Entity of FrontEnd Component</title>
+    <description>None</description>
+    <copyright></copyright>
+    <version></version>
+
+
+    <!--#Bam# shopin-reappro -->
+    <entity entity-name="ReapproRun" package-name="com.m2.shopin" never-cache="true">
+        <field name="reapproRunId" type="id-ne"/>
+        <field name="startTime" type="date-time"/>
+        <field name="endTime" type="date-time"/>
+        <field name="hostName" type="id"/>
+        <field name="instanceId" type="id"/>
+        <prim-key field="reapproRunId"/>
+    </entity>
+    <entity entity-name="ReapproRunLogType" package-name="com.m2.shopin">
+        <field name="reapproRunLogTypeId" type="id-ne"/>
+        <field name="description" type="description"/>
+        <prim-key field="reapproRunLogTypeId"/>
+    </entity>
+    <entity entity-name="ReapproRunLog" package-name="com.m2.shopin">
+        <field name="reapproRunId" type="id-ne"/>
+        <field name="reapproRunLogSeqId" type="id-ne"/>
+        <field name="reapproRunLogTypeId" type="id-ne"/>
+        <field name="runLog" type="description"/>
+        <prim-key field="reapproRunId"/>
+        <prim-key field="reapproRunLogSeqId"/>
+        <relation type="one" fk-name="REAP_LOG_RUN" rel-entity-name="ReapproRun">
+            <key-map field-name="reapproRunId"/>
+        </relation>
+        <relation type="one" fk-name="REAP_LOG_TYPE" rel-entity-name="ReapproRunLogType">
+            <key-map field-name="reapproRunLogTypeId"/>
+        </relation>
+    </entity>
+    <view-entity entity-name="OfferAndDropShipmentOrderItems" package-name="org.ofbiz.product" never-cache="true">
+        <member-entity entity-alias="OH" entity-name="OrderHeader"/>
+        <member-entity entity-alias="OISGA" entity-name="OrderItemShipGroupAssoc"/>
+        <member-entity entity-alias="OISG" entity-name="OrderItemShipGroup"/>
+        <member-entity entity-alias="OI" entity-name="OrderItem"/>
+        <member-entity entity-alias="POF" entity-name="ProductOffer"/>
+        <alias entity-alias="OH" name="orderTypeId"/>
+        <alias entity-alias="OISGA" name="orderId"/>
+        <alias entity-alias="OISGA" name="shipGroupSeqId"/>
+        <alias entity-alias="OISGA" name="orderItemSeqId"/>
+        <alias entity-alias="OISG" name="facilityId"/>
+        <alias entity-alias="OI" name="productOfferId"/>
+        <alias entity-alias="OI" name="productId"/>
+        <alias entity-alias="OI" name="itemDescription"/>
+        <alias entity-alias="OISGA" name="statusId"/>
+        <alias entity-alias="OI" name="quantity"/>
+        <alias entity-alias="OI" name="unitPrice"/>
+        <alias entity-alias="OI" name="estimatedDeliveryDate"/>
+        <alias entity-alias="POF" name="supplierPartyId"/>
+        <view-link entity-alias="OH" rel-entity-alias="OISG">
+            <key-map field-name="orderId"/>
+        </view-link>
+        <view-link entity-alias="OISG" rel-entity-alias="OISGA">
+            <key-map field-name="orderId"/>
+            <key-map field-name="shipGroupSeqId"/>
+        </view-link>
+        <view-link entity-alias="OISGA" rel-entity-alias="OI">
+            <key-map field-name="orderId"/>
+            <key-map field-name="orderItemSeqId"/>
+        </view-link>
+        <view-link entity-alias="OI" rel-entity-alias="POF">
+            <key-map field-name="productOfferId"/>
+        </view-link>
+        <relation type="one" fk-name="ODSOI_ORDER" rel-entity-name="OrderHeader">
+            <key-map field-name="orderId"/>
+        </relation>
+        <relation type="one" fk-name="ODSOI_ORDER_ITEM" rel-entity-name="OrderItem">
+            <key-map field-name="orderId"/>
+            <key-map field-name="orderItemSeqId"/>
+        </relation>
+        <relation type="one" fk-name="ODSOI_OISGA" rel-entity-name="OrderItemShipGroupAssoc">
+            <key-map field-name="orderId"/>
+            <key-map field-name="orderItemSeqId"/>
+            <key-map field-name="shipGroupSeqId"/>
+        </relation>
+        <relation type="many" fk-name="ODSOI_OFFR_FAC" rel-entity-name="ProductOfferFacility">
+            <key-map field-name="productOfferId"/>
+        </relation>
+        <relation type="one" fk-name="ODSOI_OFFER" rel-entity-name="ProductOffer">
+            <key-map field-name="productOfferId"/>
+        </relation>
+        <entity-condition>
+            <condition-list>
+                <condition-expr entity-alias="OH" field-name="orderTypeId" operator="equals" value="SALES_ORDER"/>
+                <condition-expr entity-alias="OH" field-name="statusId" operator="equals" value="ORDER_APPROVED"/>
+                <condition-expr entity-alias="OISGA" field-name="statusId" operator="equals" value="ITEM_CREATED"/>
+                <condition-expr entity-alias="POF" field-name="productOfferTypeId" operator="equals" value="DROP"/>
+            </condition-list>
+            <order-by field-name="orderItemSeqId"/>
+        </entity-condition>
+    </view-entity>
+    <view-entity entity-name="ProductFacilityAndFacility" package-name="org.ofbiz.product" never-cache="true">
+        <member-entity entity-alias="PF" entity-name="ProductFacility"/>
+        <member-entity entity-alias="FA" entity-name="Facility"/>
+        <alias-all entity-alias="PF"/>
+        <alias-all entity-alias="FA"/>
+        <view-link entity-alias="PF" rel-entity-alias="FA">
+            <key-map field-name="facilityId"/>
+        </view-link>
+    </view-entity>
+    <view-entity entity-name="InventoryTransferAndItem" package-name="org.ofbiz.product.inventory" never-cache="true">
+        <member-entity entity-alias="IT" entity-name="InventoryTransfer"/>
+        <member-entity entity-alias="II" entity-name="InventoryItem"/>
+        <alias-all entity-alias="IT">
+            <exclude field="locationSeqId"/>
+            <exclude field="statusId"/>
+            <exclude field="facilityId"/>
+            <exclude field="containerId"/>
+            <exclude field="comments"/>
+        </alias-all>
+        <alias-all entity-alias="II">
+            <exclude field="locationSeqId"/>
+            <exclude field="statusId"/>
+            <exclude field="facilityId"/>
+            <exclude field="containerId"/>
+            <exclude field="comments"/>
+        </alias-all>
+        <alias entity-alias="IT" name="itLocationSeqId" field="locationSeqId"/>
+        <alias entity-alias="IT" name="itStatusId" field="statusId"/>
+        <alias entity-alias="IT" name="itFacilityId" field="facilityId"/>
+        <alias entity-alias="IT" name="itContainerId" field="containerId"/>
+        <alias entity-alias="IT" name="itComments" field="comments"/>
+        <alias entity-alias="II" name="iiLocationSeqId" field="locationSeqId"/>
+        <alias entity-alias="II" name="iiStatusId" field="statusId"/>
+        <alias entity-alias="II" name="iiFacilityId" field="facilityId"/>
+        <alias entity-alias="II" name="iiContainerId" field="containerId"/>
+        <alias entity-alias="II" name="iiComments" field="comments"/>
+        <view-link entity-alias="IT" rel-entity-alias="II">
+            <key-map field-name="inventoryItemId"/>
+        </view-link>
+    </view-entity>
+    <view-entity entity-name="ProductToFacilityWaitingTransferTotal" package-name="org.ofbiz.product.inventory" never-cache="true">
+        <member-entity entity-alias="IT" entity-name="InventoryTransfer"/>
+        <member-entity entity-alias="II" entity-name="InventoryItem"/>
+        <alias entity-alias="IT" name="facilityIdTo"/>
+        <alias entity-alias="IT" name="facilityId"/>
+        <alias entity-alias="II" name="statusId"/>
+        <alias entity-alias="II" name="productId"/>
+        <alias entity-alias="II" name="quantityOnHandTotal" function="sum"/>
+        <view-link entity-alias="IT" rel-entity-alias="II">
+            <key-map field-name="inventoryItemId"/>
+        </view-link>
+    </view-entity>
+    <view-entity entity-name="PurchaseOrderAndOffer" package-name="org.ofbiz.product" never-cache="true">
+        <member-entity entity-alias="OH" entity-name="OrderHeader"/>
+        <member-entity entity-alias="OI" entity-name="OrderItem"/>
+        <member-entity entity-alias="OF" entity-name="ProductOffer"/>
+        <alias entity-alias="OH" name="orderId"/>
+        <alias entity-alias="OH" name="orderTypeId"/>
+        <alias entity-alias="OH" name="statusId"/>
+        <alias entity-alias="OI" name="orderItemSeqId"/>
+        <alias entity-alias="OI" name="productOfferId"/>
+        <alias entity-alias="OI" name="productId"/>
+        <alias entity-alias="OI" name="quantity"/>
+        <alias entity-alias="OI" name="cancelQuantity"/>
+        <view-link entity-alias="OH" rel-entity-alias="OI">
+            <key-map field-name="orderId"/>
+        </view-link>
+        <view-link entity-alias="OI" rel-entity-alias="OF">
+            <key-map field-name="productOfferId"/>
+        </view-link>
+    </view-entity>
+    <!--#Eam# shopin-reappro -->
+    <!--#Bam# shopin -->
+    <extend-entity entity-name="Product">
+        <field name="altPkgOfProductId" type="id"><description>If not empty, this product is an alterante package of another product defined by altPkgOfProductId</description></field>
+        <field name="unitTypeEnumId" type="id-ne"><description>packaging type, value is one of enumTypeId="TYP_ART_UNITE"</description></field>
+        <field name="mandatoryVertical" type="indicator"><description>information pour Logys</description></field>
+        <field name="pickingMod" type="id"><description>how to manage picking, all product in a shipmentPackage or each product is a package, two values : "DETAIL" and "UNITE/EMB"</description></field>
+        <index name="PROD_PRODUCT_NAME">
+            <index-field name="productName"/>
+        </index>
+        <index name="PROD_INTERNAL_NAME">
+            <index-field name="internalName"/>
+        </index>
+        <index name="PROD_BRAND_NAME">
+            <index-field name="brandName"/>
+        </index>
+    </extend-entity>
+    <extend-entity entity-name="ProductOffer">
+        <index name="PROD_OFFER_NAME">
+            <index-field name="productOfferName"/>
+        </index>
+    </extend-entity>
+    <extend-entity entity-name="ProductFeature">
+        <index name="PROD_FEATURE_DESC">
+            <index-field name="description"/>
+        </index>
+    </extend-entity>
+    <extend-entity entity-name="ProductFeatureCategory">
+        <index name="PROD_FEATURE_CAT_DESC">
+            <index-field name="description"/>
+        </index>
+
+        <!--#Bam# correctifs-reappro -->
+        <index name="PROD_FEAT_CAT_DESC">
+            <index-field name="description"/>
+        </index>
+        <!--#Eam# correctifs-reappro -->
+    </extend-entity>
+    <extend-entity entity-name="Person">
+        <index name="PERSON_F_NAME">
+            <index-field name="firstName"/>
+        </index>
+        <index name="PERSON_M_NAME">
+            <index-field name="middleName"/>
+        </index>
+        <index name="PERSON_L_NAME">
+            <index-field name="lastName"/>
+        </index>
+    </extend-entity>
+    <extend-entity entity-name="PartyGroup">
+        <field name="legalStatus" type="id"/>
+        <index name="PG_G_NAME">
+            <index-field name="groupName"/>
+        </index>
+    </extend-entity>
+    <extend-entity entity-name="Facility">
+        <index name="FCLTY_F_NAME">
+            <index-field name="facilityName"/>
+        </index>
+    </extend-entity>
+    <extend-entity entity-name="ProductMarket">
+        <index name="P_MKT_P_OFFR_NAME">
+            <index-field name="productOfferName"/>
+        </index>
+    </extend-entity>
+
+    <extend-entity entity-name="ProductStore">
+        <field name="margePlateforme" type="currency-precise"><description>Marge par default pour une plate-forme</description></field>
+        <field name="margeToit" type="currency-precise"><description>Marge par defaut pour un toit</description></field>
+    </extend-entity>
+
+    <extend-entity entity-name="Product">
+        <field name="expireDateFilledIn" type="long-varchar"><description>Same values as lotIdFilledIn</description></field>
+        <field name="validateDate" type="date-time"><description>Validation date</description></field>
+        <field name="validateByUserLogin" type="id-vlong"><description>Validation login</description></field>
+        <field name="confirmDate" type="date-time"/>
+        <field name="confirmByUserLogin" type="id-vlong"/>
+        <field name="abcInventoryClass" type="indicator"><description>Inventory Rotation Rate Class (CHAR(1) = A, B or C)</description></field>
+    </extend-entity>
+
+    <extend-entity entity-name="ProductFeatureCategory">
+        <field name="qualifyingEnumId" type="id-ne"><description>the set of features will be : Required, Optionnal or Informative (EnumTypeId = PFC_QAL)</description></field>
+        <field name="filterEnumId" type="id-ne"><description>the set of features will be : Unique or Multiple (EnumTypeId = PFC_FLT)</description></field>
+    </extend-entity>
+
+    <!--
+    à partir du produit (donc de l'offre, donc du fournisseur) et du lieu de livraison du consommateur (donc du lieu de livraison (ou de stockage) du fournisseur)
+    1) si le mode de gestion de l'article-fournisseur-lieu est "à la commande"
+    1.1) quand est la prochaine commande au fournisseur (en fonction de l'univers) => date1
+    1.2) quand est la livraison de la prochaine commande au fournisseur pour ce produit => ( date1 +  delai de préparation du fournisseur (supposé fixe et faible) ) comparé aux dates de livraison => date2
+    2) si article géré sur stock sur la plateforme ou livraison sur la plate-forme alors comparaison avec l'heure de livraison max pour déterminer la date de préparation => date3
+    2.1) calcul de la date de livraison sur toit : date3 + delai de transfert => date4
+    3) comparaison date de livraison toit avec heure max pour déterminer la date de dispo consommateur => date5
+
+    résultat pour cette offre sur ce lieu, jusqu'a date1 les commandes seront livrées au consommateur après date5
+
+    au niveau des données il y a:
+    - date de prochaine commande / univers => PartyFacilityTime
+    - delai de préparation du fournisseur / Article / univers => ProductPartyFacility
+    - date de livraison max / univers => PartyFacilityTime
+    - délai de transfert entre toit et plate-forme => facility (le toit)
+    - heure max de livraison toit => facility (toit)
+     -->
+
+    <!--#Eam# shopin -->
+    <!--#Bam# product-offer -->
+    <entity entity-name="ProductMarket" package-name="org.ofbiz.product.offer"
+            title="Product Market Entity">
+        <field name="productMarketId" type="id-ne"/>
+        <field name="productOfferName" type="description"/>
+        <field name="productId" type="id-ne"/>
+        <field name="estimatedQuantity" type="fixed-point"/>
+        <field name="marketDate" type="date-time"/>
+        <field name="marketWeek" type="numeric"/>
+        <field name="marketYear" type="numeric"/>
+        <prim-key field="productMarketId"/>
+    </entity>
+    <entity entity-name="ProductOfferType" package-name="org.ofbiz.product.offer"
+            default-resource-name="ProductEntityLabels"
+            title="Product Offer Type Entity">
+        <field name="productOfferTypeId" type="id-ne"/>
+        <field name="description" type="description"/>
+        <prim-key field="productOfferTypeId"/>
+    </entity>
+    <entity entity-name="ProductOffer" package-name="org.ofbiz.product.offer"
+            title="Product Offer Entity">
+        <description>Define supplier offer for a product on a given facility (one or many facilities)</description>
+        <field name="productOfferId" type="id-ne"/>
+        <field name="productOfferName" type="description"/>
+        <field name="productOfferTypeId" type="id-ne"/>
+        <field name="productMarketId" type="id"/>
+        <field name="productId" type="id-ne"/>
+        <field name="supplierPartyId" type="id-ne"/>
+        <field name="fromDate" type="date-time"/>
+        <field name="thruDate" type="date-time"/>
+        <field name="statusId" type="id-ne"/>
+        <!--        <field name="price" type="currency-precise"/>-->
+        <field name="catalogSupplierPrice" type="currency-precise"/>
+        <field name="purchasePrice" type="currency-precise"/>
+        <field name="consumerSalePrice" type="currency-precise"/>
+        <field name="quantity" type="fixed-point"/>
+        <field name="createdDate" type="date-time"/>
+        <field name="createdByUserLogin" type="id-vlong"/>
+        <field name="lastModifiedDate" type="date-time"/>
+        <field name="lastModifiedByUserLogin" type="id-vlong"/>
+        <prim-key field="productOfferId"/>
+        <relation type="one" fk-name="PROD_OFFER_PROD" rel-entity-name="Product">
+            <key-map field-name="productId"/>
+        </relation>
+        <relation type="one" fk-name="PROD_OFFER_TYPE" rel-entity-name="ProductOfferType">
+            <key-map field-name="productOfferTypeId"/>
+        </relation>
+        <relation type="one" fk-name="PROD_OFFER_STTS" rel-entity-name="StatusItem">
+            <key-map field-name="statusId"/>
+        </relation>
+        <relation type="one" fk-name="PROD_OFFER_MRKT" rel-entity-name="ProductMarket">
+            <key-map field-name="productMarketId"/>
+        </relation>
+        <relation type="one" title="Supplier" fk-name="PROD_OFFER_SUP" rel-entity-name="Party">
+            <key-map field-name="supplierPartyId" rel-field-name="partyId"/>
+        </relation>
+        <relation type="one" fk-name="PROD_OFFER_CUL" title="CreatedBy" rel-entity-name="UserLogin">
+            <key-map field-name="createdByUserLogin" rel-field-name="userLoginId"/>
+        </relation>
+    </entity>
+    <entity entity-name="ProductOfferFacility" package-name="org.ofbiz.product.offer"
+            title="Product Offer Facility Entity">
+        <field name="productOfferId" type="id-ne"/>
+        <field name="facilityId" type="id-ne"/>
+        <field name="fromDate" type="date-time"/>
+        <field name="thruDate" type="date-time"/>
+        <prim-key field="productOfferId"/>
+        <prim-key field="facilityId"/>
+        <prim-key field="fromDate"/>
+        <relation type="one" fk-name="OFFER_FAC_PROD" rel-entity-name="ProductOffer">
+            <key-map field-name="productOfferId"/>
+        </relation>
+        <relation type="one" fk-name="PROD_OFFER_FAC_FAC" rel-entity-name="Facility">
+            <key-map field-name="facilityId"/>
+        </relation>
+    </entity>
+    <entity entity-name="ProductOfferAdjustment" package-name="org.ofbiz.product.offer"
+            title="Product Offer Adjustment Entity">
+        <field name="productOfferAdjustmentId" type="id"/>
+        <field name="productOfferAdjustmentTypeId" type="id" not-null="true"/>
+        <field name="productOfferId" type="id-ne" not-null="true"/>
+        <field name="description" type="description"/>
+        <!--        <field name="amount" type="currency-precise"/>-->
+        <field name="sourcePercentage" type="fixed-point"/>
+        <field name="recurringAmount" type="currency-precise"/>
+        <field name="amountAlreadyIncluded" type="currency-precise"/>
+        <field name="taxAuthorityRateSeqId" type="id-ne"/>
+        <field name="manualAdjustment" type="indicator">
+            <description>If Y adjustment has been manually created. It will be automatically recalculated when offer is modified in order to not loose this adjustment</description>
+        </field>
+        <prim-key field="productOfferAdjustmentId"/>
+        <relation type="one" fk-name="PROD_OFFER_ADJ" rel-entity-name="ProductOffer">
+            <key-map field-name="productOfferId"/>
+        </relation>
+        <relation type="one" fk-name="PRD_OFR_ADJ_TYP" rel-entity-name="OrderAdjustmentType">
+            <key-map field-name="productOfferAdjustmentTypeId" rel-field-name="orderAdjustmentTypeId"/>
+        </relation>
+        <relation type="one" fk-name="ORDER_ADJ_TARPB" rel-entity-name="TaxAuthorityRateProduct">
+            <key-map field-name="taxAuthorityRateSeqId"/>
+        </relation>
+    </entity>
+    <extend-entity entity-name="OrderItem" default-resource-name="OrderEntityLabels">
+        <field name="productOfferId" type="id-ne"/>
+        <relation type="one" fk-name="ORDR_ITM_PROD_OFFR" rel-entity-name="ProductOffer">
+            <key-map field-name="productOfferId"/>
+        </relation>
+    </extend-entity>
+    <view-entity entity-name="ProductOfferStatus" package-name="org.ofbiz.product.offer">
+        <member-entity entity-alias="SI" entity-name="StatusItem"></member-entity>
+        <alias entity-alias="SI" name="statusId"></alias>
+        <alias entity-alias="SI" name="statusTypeId"></alias>
+        <alias entity-alias="SI" name="statusCode"></alias>
+        <alias entity-alias="SI" name="sequenceId"></alias>
+        <alias entity-alias="SI" name="description"></alias>
+        <entity-condition>
+            <condition-expr entity-alias="SI" field-name="statusTypeId" operator="equals" value="PRODUCT_OFFER_STATUS"/>
+            <order-by field-name="sequenceId"/>
+        </entity-condition>
+    </view-entity>
+    <view-entity entity-name="ProductOfferOrderItemSales" package-name="org.ofbiz.product.offer">
+        <member-entity entity-alias="OH" entity-name="OrderHeader"></member-entity>
+        <member-entity entity-alias="OI" entity-name="OrderItem"></member-entity>
+        <alias entity-alias="OI" name="productOfferId"></alias>
+        <alias entity-alias="OI" name="orderId"></alias>
+        <alias entity-alias="OI" name="orderItemSeqId"></alias>
+        <alias entity-alias="OI" name="itemDescription"></alias>
+        <alias entity-alias="OI" name="statusId"></alias>
+        <alias entity-alias="OI" name="quantity"></alias>
+        <alias entity-alias="OI" name="unitPrice"></alias>
+        <alias entity-alias="OI" name="estimatedDeliveryDate"></alias>
+        <view-link rel-entity-alias="OI" entity-alias="OH" rel-optional="true">
+            <key-map field-name="orderId"/>
+        </view-link>
+        <entity-condition>
+            <condition-expr entity-alias="OH" field-name="orderTypeId" operator="equals" value="SALES_ORDER"/>
+            <order-by field-name="orderItemSeqId"/>
+        </entity-condition>
+    </view-entity>
+
+    <view-entity entity-name="ProductOfferOrderItemPurchase" package-name="org.ofbiz.product.offer">
+        <member-entity entity-alias="OH" entity-name="OrderHeader"></member-entity>
+        <member-entity entity-alias="OI" entity-name="OrderItem"></member-entity>
+        <alias entity-alias="OI" name="productOfferId"></alias>
+        <alias entity-alias="OI" name="orderId"></alias>
+        <alias entity-alias="OI" name="orderItemSeqId"></alias>
+        <alias entity-alias="OI" name="itemDescription"></alias>
+        <alias entity-alias="OI" name="statusId"></alias>
+        <alias entity-alias="OI" name="quantity"></alias>
+        <alias entity-alias="OI" name="unitPrice"></alias>
+        <alias entity-alias="OI" name="estimatedDeliveryDate"></alias>
+        <view-link rel-entity-alias="OI" entity-alias="OH" rel-optional="true">
+            <key-map field-name="orderId"/>
+        </view-link>
+        <entity-condition>
+            <condition-expr entity-alias="OH" field-name="orderTypeId" operator="equals" value="PURCHASE_ORDER"/>
+            <order-by field-name="orderItemSeqId"/>
+        </entity-condition>
+    </view-entity>
+    <view-entity entity-name="ProductOfferShipmentsSales" package-name="org.ofbiz.product.offer">
+        <member-entity entity-alias="OI" entity-name="OrderItem"></member-entity>
+        <member-entity entity-alias="OS" entity-name="OrderShipment"></member-entity>
+        <member-entity entity-alias="S" entity-name="Shipment"></member-entity>
+        <alias entity-alias="OI" name="orderId"></alias>
+        <alias entity-alias="OI" name="orderItemSeqId"></alias>
+        <alias entity-alias="OI" name="productOfferId"></alias>
+        <alias entity-alias="S" name="shipmentId"></alias>
+        <alias entity-alias="S" name="shipmentTypeId"></alias>
+        <alias entity-alias="S" name="statusId"></alias>
+        <alias entity-alias="S" name="primaryShipGroupSeqId"></alias>
+        <alias entity-alias="S" name="estimatedReadyDate"></alias>
+        <alias entity-alias="S" name="estimatedShipDate"></alias>
+        <alias entity-alias="S" name="estimatedArrivalDate"></alias>
+        <alias entity-alias="S" name="estimatedShipCost"></alias>
+        <alias entity-alias="S" name="originFacilityId"></alias>
+        <alias entity-alias="S" name="destinationFacilityId"></alias>
+        <view-link rel-entity-alias="OS" entity-alias="OI" rel-optional="false">
+            <key-map field-name="orderId" rel-field-name="orderId"/>
+            <key-map field-name="orderItemSeqId" rel-field-name="orderItemSeqId"/>
+        </view-link>
+        <view-link rel-entity-alias="S" entity-alias="OS" rel-optional="false">
+            <key-map field-name="shipmentId" rel-field-name="shipmentId"/>
+        </view-link>
+        <entity-condition>
+            <condition-expr entity-alias="S" field-name="shipmentTypeId" operator="equals" value="SALES_SHIPMENT"/>
+            <order-by field-name="orderId"/>
+            <order-by field-name="orderItemSeqId"/>
+            <order-by field-name="shipmentId"/>
+            <order-by field-name="primaryShipGroupSeqId"/>
+        </entity-condition>
+    </view-entity>
+
+    <view-entity entity-name="ProductOfferShipmentsPurchase" package-name="org.ofbiz.product.offer">
+        <member-entity entity-alias="OI" entity-name="OrderItem"></member-entity>
+        <member-entity entity-alias="OS" entity-name="OrderShipment"></member-entity>
+        <member-entity entity-alias="S" entity-name="Shipment"></member-entity>
+        <alias entity-alias="OI" name="orderId"></alias>
+        <alias entity-alias="OI" name="orderItemSeqId"></alias>
+        <alias entity-alias="OI" name="productOfferId"></alias>
+        <alias entity-alias="S" name="shipmentId"></alias>
+        <alias entity-alias="S" name="shipmentTypeId"></alias>
+        <alias entity-alias="S" name="statusId"></alias>
+        <alias entity-alias="S" name="primaryShipGroupSeqId"></alias>
+        <alias entity-alias="S" name="estimatedReadyDate"></alias>
+        <alias entity-alias="S" name="estimatedShipDate"></alias>
+        <alias entity-alias="S" name="estimatedArrivalDate"></alias>
+        <alias entity-alias="S" name="estimatedShipCost"></alias>
+        <alias entity-alias="S" name="originFacilityId"></alias>
+        <alias entity-alias="S" name="destinationFacilityId"></alias>
+        <view-link rel-entity-alias="OS" entity-alias="OI" rel-optional="false">
+            <key-map field-name="orderId" rel-field-name="orderId"/>
+            <key-map field-name="orderItemSeqId" rel-field-name="orderItemSeqId"/>
+        </view-link>
+        <view-link rel-entity-alias="S" entity-alias="OS" rel-optional="false">
+            <key-map field-name="shipmentId" rel-field-name="shipmentId"/>
+        </view-link>
+        <entity-condition>
+            <condition-expr entity-alias="S" field-name="shipmentTypeId" operator="equals" value="PURCHASE_SHIPMENT"/>
+            <order-by field-name="orderId"/>
+            <order-by field-name="orderItemSeqId"/>
+            <order-by field-name="shipmentId"/>
+            <order-by field-name="primaryShipGroupSeqId"/>
+        </entity-condition>
+    </view-entity>
+
+    <view-entity entity-name="SupplierFacilities" package-name="org.ofbiz.product.offer">
+        <member-entity entity-alias="F" entity-name="Facility"></member-entity>
+        <member-entity entity-alias="FP" entity-name="FacilityParty"></member-entity>
+        <alias entity-alias="F" name="facilityId"></alias>
+        <alias entity-alias="F" name="facilityName"></alias>
+        <alias entity-alias="F" name="description"></alias>
+        <alias entity-alias="FP" name="partyId"></alias>
+        <view-link rel-entity-alias="FP" entity-alias="F" rel-optional="false">
+            <key-map field-name="facilityId" rel-field-name="facilityId"/>
+        </view-link>
+        <entity-condition>
+            <condition-expr entity-alias="FP" field-name="roleTypeId" operator="equals" value="SUPPLIER"/>
+            <order-by field-name="facilityId"/>
+        </entity-condition>
+    </view-entity>
+    <!--#Eam# product-offer -->
+    <view-entity entity-name="ProductProductOffer" package-name="org.ofbiz.product.offer">
+        <member-entity entity-alias="P" entity-name="Product"></member-entity>
+        <member-entity entity-alias="PO" entity-name="ProductOffer"></member-entity>
+        <alias-all entity-alias="P"/>
+        <alias entity-alias="PO" name="productOfferId"></alias>
+        <view-link rel-entity-alias="PO" entity-alias="P" rel-optional="false">
+            <key-map field-name="productId"/>
+        </view-link>
+        <relation type="one" fk-name="PROD_PRODOFFER_PRODOFFER" rel-entity-name="ProductOffer">
+            <key-map field-name="productOfferId"/>
+        </relation>
+        <relation type="one" fk-name="PROD_PRODOFFER_PRODUCT" rel-entity-name="Product">
+            <key-map field-name="productId"/>
+        </relation>
+    </view-entity>
+    <entity entity-name="Interface" package-name="org.ofbiz.interface">
+        <description>The Interface entity contains a list of systemes that may send to or receive data from this instance of ofbiz</description>
+        <field name="interfaceId" type="id-ne"/>
+        <field name="name" type="name"/>
+        <prim-key field="interfaceId"/>
+    </entity>
+    <entity entity-name="InterfaceLog" package-name="org.ofbiz.interface">
+        <description>The InterfaceLogs entity contains a lof for all IN/OUT data exchange</description>
+        <field name="interfaceLogId" type="id-ne"/>
+        <field name="interfaceId" type="id"/>
+        <field name="mode" type="id"/>
+        <field name="interfaceLogDate" type="date-time"/>
+        <field name="interfaceLogReq" type="very-long"/>
+        <field name="interfaceLogRes" type="very-long"/>
+        <field name="undelyingEntityPK" type="long-varchar"/>
+        <prim-key field="interfaceLogId"/>
+        <relation type="one" rel-entity-name="Interface">
+            <key-map field-name="interfaceId"/>
+        </relation>
+        <relation type="one" rel-entity-name="Enumeration">
+            <key-map field-name="mode" rel-field-name="enumId"/>
+        </relation>
+    </entity>
+</entitymodel>

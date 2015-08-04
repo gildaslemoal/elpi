@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <QuantityBreakType quantityBreakTypeId="ORDER_VALUE" description="Price Component Order Value Break" lastUpdatedStamp="2015-06-18 14:49:55.816" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.816" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <QuantityBreakType quantityBreakTypeId="QUANTITY" description="Price Component Quantity Break" lastUpdatedStamp="2015-06-18 14:49:55.815" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.815" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <QuantityBreakType quantityBreakTypeId="SHIP_PRICE" description="Shipping Price Break" lastUpdatedStamp="2015-06-18 14:49:55.814" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.814" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <QuantityBreakType quantityBreakTypeId="SHIP_QUANTITY" description="Shipping Quantity Break" lastUpdatedStamp="2015-06-18 14:49:55.813" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.813" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <QuantityBreakType quantityBreakTypeId="SHIP_WEIGHT" description="Shipping Weight Break" lastUpdatedStamp="2015-06-18 14:49:55.812" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.812" createdTxStamp="2015-06-18 14:49:55.809"/>
+</entity-engine-xml>

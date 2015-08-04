@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-form.xsd">
+
+    <!-- Note Glm 16/07/2015 : creation of forms according to http://ofbiz.us/developing-enterprise-application-with-apache-ofbiz-platform#ApacheOFBizFrameworkTutorial-AddCreateForm-->
+
+     <!-- Note Glm 16/07/2015 : factory 
+
+     empty form :
+
+     <form name="" type="single" target="">
+        <auto-fields-service service-name=""/>
+        <field name="" title="${uiLabelMap.CommonType}">
+            <drop-down allow-empty="false" current-description="">
+                 <entity-options description="${description}" key-field-name="" entity-name="">
+                    <entity-order-by field-name="description"/>
+                </entity-options>
+            </drop-down>
+        </field>
+        <field name="submitButton" title="${uiLabelMap.CommonAdd}"><submit button-type="button"/></field>-->
+
+     <!-- Note Glm 16/07/2015 : Model
+
+     <form name="AddOfbizDemo" type="single" target="createOfbizDemo">
+        <auto-fields-service service-name="createOfbizDemo"/>
+        <field name="ofbizDemoTypeId" title="${uiLabelMap.CommonType}">
+            <drop-down allow-empty="false" current-description="">
+                    <entity-options description="${description}" key-field-name="ofbizDemoTypeId" entity-name="OfbizDemoType">
+                    <entity-order-by field-name="description"/>
+                </entity-options>
+            </drop-down>
+        </field>
+        <field name="submitButton" title="${uiLabelMap.CommonAdd}"><submit button-type="button"/></field> 
+      -->
+
+        <!-- Note Glm 16/07/2015 : form for backlog's screens-->
+
+        <!-- Note Glm 16/07/2015 : form for creating tickets-->
+
+        <form name="AddElpiTicket" type="single" target="createElpiTicket">
+
+          <auto-fields-service service-name="createElpiTicket"/>
+
+        <field name="titleElpi" title="Title">
+          </field>
+
+        <field name="userElpiId" title="Username">
+            <drop-down allow-empty="false" current-description="">
+                 <entity-options description="${lastElpiName}" key-field-name="userElpiId" entity-name="UserElpi">
+                    <entity-order-by field-name="lastElpiName"/>
+                </entity-options>
+            </drop-down>
+        </field>
+
+        <field name="ticketElpiTypeId" title="Type of ticket">
+            <drop-down allow-empty="false" current-description="">
+                 <entity-options description="${ticketElpiTypeName}" key-field-name="ticketElpiTypeId" entity-name="TicketElpiType">
+                    <entity-order-by field-name="ticketElpiTypeName"/>
+                </entity-options>
+            </drop-down>
+        </field>
+
+        <field name="moduleElpiId" title="Module concerned">
+            <drop-down allow-empty="false" current-description="">
+                 <entity-options description="${moduleElpiName}" key-field-name="moduleElpiId" entity-name="ModuleElpi">
+                    <entity-order-by field-name="moduleElpiName"/>
+                </entity-options>
+            </drop-down>
+        </field>
+
+        <field name="submitButton" title="${uiLabelMap.CommonAdd}"><submit button-type="button"/></field>
+        </form>
+
+        <form name="AddElpiEvent" type="single" target="createElpiEvent">
+        <auto-fields-service service-name="createElpiEvent"/>
+        <field name="eventElpiTypeId" title="${uiLabelMap.CommonType}">
+            <drop-down allow-empty="false" current-description="">
+                 <entity-options description="${description}" key-field-name="eventElpiTypeId" entity-name="EventElpiType">
+                    <entity-order-by field-name="description"/>
+                </entity-options>
+            </drop-down>
+        </field>
+        <field name="submitButton" title="${uiLabelMap.CommonAdd}"><submit button-type="button"/></field>
+        </form>
+
+         <!-- Note Glm 16/07/2015 : form for activity's screens > Form list for tickets -->
+
+         <!-- apache-ofbiz method -->
+
+         <form name="ListElpiUser" type="list" list-name="userElpi" list-entry-name="userElpi"  default-map-name="userElpi" paginate-target="userElpiForm">
+           <!-- Important: Here service definition for updatePracticePerson has been used for automatically rendering the form fields, which you can use after completing CRUD operations from Part-3 -->
+           <!-- auto-fields-service service-name="updatePracticePerson" default-field-type="display" map-name="person"/-->
+
+           <!-- The above method can be used in case a service specific form is being rendered, otherwise form-fields can be explicitly mentioned as given below:-->
+           <field name="userElpiId"><display/></field>
+           <field name="lastElpiName" ><display/> </field>
+           <field name="firstElpiName" ><display/> </field>
+         </form>
+
+         <!-- Hotwax method-->
+
+        <form name="ListElpiUser" type="list" list-name="userElpi" target="updateUserElpi" separate-columns="true">
+    <actions>
+       <entity-condition entity-name="UserElpi" list="userElpi">
+            <order-by field-name="userElpiId DESC"/>
+       </entity-condition>
+    </actions>
+    <auto-fields-service service-name="updateOfbizDemo"/>
+    <field name="ofbizDemoId"><display/></field>
+     <field name="ofbizDemoTypeId" title="${uiLabelMap.OfbizDemoType}">
+         <drop-down allow-empty="false" current-description="">
+             <entity-options description="${description}" key-field-name="ofbizDemoTypeId" entity-name="OfbizDemoType">
+                 <entity-order-by field-name="description"/>
+             </entity-options>
+         </drop-down>
+     </field>
+     <!-- Here we have used auto-fields-service so following line of code can be skipped. -->
+     <!--  field name="firstName"><display/></field>
+     <field name="lastName"><display/></field>
+     <field name="comments"><display/></field -->
+     <field name="deleteLink" title="${uiLabelMap.CommonEmptyHeader}" widget-style="buttontext">
+         <hyperlink target="deleteOfbizDemo" description="${uiLabelMap.CommonDelete}" also-hidden="false" confirmation-message="${uiLabelMap.CommonConfirmDelete}" image-location="${iconsLocation}/delete.png">
+             <parameter param-name="ofbizDemoId"/>
+         </hyperlink>
+     </field>
+     <field name="submitButton" title="${uiLabelMap.CommonUpdate}"><submit button-type="button"/></field>
+</form>
+
+
+       <!-- Note Glm 16/07/2015 : form for activity's screens-->
+
+       <!-- Note Glm 16/07/2015 : form for library's screens-->
+
+       <!-- Note Glm 16/07/2015 : form for database's screens-->
+
+       <!-- Note Glm 16/07/2015 : form for settings's screens-->
+
+       <form name="AddElpiJob" type="single" target="createElpiJob">
+        <auto-fields-service service-name="createElpiJob"/>
+
+        <field name="submitButton" title="${uiLabelMap.CommonAdd}">
+          <submit button-type="button"/>
+        </field>
+
+      </form>
+
+    </forms>

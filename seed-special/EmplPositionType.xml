@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <EmplPositionType emplPositionTypeId="BIZ_ANALYST" hasTable="N" description="Business Analyst" lastUpdatedStamp="2015-06-18 14:49:58.167" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.167" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <EmplPositionType emplPositionTypeId="_NA_" lastUpdatedStamp="2015-06-18 14:49:57.495" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.495" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <EmplPositionType emplPositionTypeId="PROGRAMMER" hasTable="N" description="Programmer" lastUpdatedStamp="2015-06-18 14:49:58.165" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.165" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <EmplPositionType emplPositionTypeId="SYS_ADMIN" hasTable="N" description="System Administrator" lastUpdatedStamp="2015-06-18 14:49:58.166" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.166" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

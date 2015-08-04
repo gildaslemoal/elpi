@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PerfReviewItemType perfReviewItemTypeId="ATT" hasTable="N" description="Attitude" lastUpdatedStamp="2015-06-18 14:49:58.224" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.224" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PerfReviewItemType perfReviewItemTypeId="COMM" hasTable="N" description="Communication skills" lastUpdatedStamp="2015-06-18 14:49:58.225" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.225" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PerfReviewItemType perfReviewItemTypeId="JOBSAT" hasTable="N" description="Job Satisfaction" lastUpdatedStamp="2015-06-18 14:49:58.226" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.226" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PerfReviewItemType perfReviewItemTypeId="RESP" hasTable="N" description="Responsibility" lastUpdatedStamp="2015-06-18 14:49:58.223" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.223" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PerfReviewItemType perfReviewItemTypeId="TECH" hasTable="N" description="Technical skills" lastUpdatedStamp="2015-06-18 14:49:58.222" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.222" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

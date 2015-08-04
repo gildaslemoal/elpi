@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <WorkReqFulfType workReqFulfTypeId="WRF_DELIVERS" description="Delivers" lastUpdatedStamp="2015-06-18 14:49:58.594" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.594" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <WorkReqFulfType workReqFulfTypeId="WRF_DEPLOYS" description="Deploys" lastUpdatedStamp="2015-06-18 14:49:58.592" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.592" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <WorkReqFulfType workReqFulfTypeId="WRF_FIXES" description="Fixes" lastUpdatedStamp="2015-06-18 14:49:58.591" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.591" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <WorkReqFulfType workReqFulfTypeId="WRF_IMPLEMENTS" description="Implements" lastUpdatedStamp="2015-06-18 14:49:58.59" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.59" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <WorkReqFulfType workReqFulfTypeId="WRF_TESTS" description="Tests" lastUpdatedStamp="2015-06-18 14:49:58.593" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.593" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

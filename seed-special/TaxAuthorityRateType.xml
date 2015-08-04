@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <TaxAuthorityRateType taxAuthorityRateTypeId="EXPORT_TAX" description="Export Tax" lastUpdatedStamp="2015-06-18 14:49:57.48" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.48" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <TaxAuthorityRateType taxAuthorityRateTypeId="IMPORT_TAX" description="Import Tax" lastUpdatedStamp="2015-06-18 14:49:57.481" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.481" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <TaxAuthorityRateType taxAuthorityRateTypeId="INCOME_TAX" description="Income Tax" lastUpdatedStamp="2015-06-18 14:49:57.479" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.479" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <TaxAuthorityRateType taxAuthorityRateTypeId="SALES_TAX" description="Sales Tax" lastUpdatedStamp="2015-06-18 14:49:57.477" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.477" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <TaxAuthorityRateType taxAuthorityRateTypeId="USE_TAX" description="Use Tax" lastUpdatedStamp="2015-06-18 14:49:57.478" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.478" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <TaxAuthorityRateType taxAuthorityRateTypeId="VAT_TAX" description="Value Added Tax" lastUpdatedStamp="2015-06-18 14:49:57.482" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.482" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

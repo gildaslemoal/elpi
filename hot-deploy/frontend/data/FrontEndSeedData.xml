@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+
+
+
+<!--#Bam# product-offer -->
+    <ProductOfferType productOfferTypeId="STOCK" description="Gestion sur stock"/>
+    <ProductOfferType productOfferTypeId="DROP" description="A la commande"/>
+    <!--OHE 10Dec2013 maintenant il n'y a plus que 2 types d'offre 
+    <ProductOfferType productOfferTypeId="MASSE" description="Offre de masse"/>
+    <ProductOfferType productOfferTypeId="PRECISION" description="Offre de précision"/>
+    <ProductOfferType productOfferTypeId="PROXIMITE" description="Offre de proximité"/>
+     -->
+
+    <StatusType description="Product Offer Status" hasTable="N" parentTypeId="" statusTypeId="PRODUCT_OFFER_STATUS"/>
+    <StatusItem statusId="OFFER_NOT_READY"  statusTypeId="PRODUCT_OFFER_STATUS" description="En cours de saisie" sequenceId="01" statusCode="WIP" />
+    <StatusItem statusId="OFFER_PENDING"  statusTypeId="PRODUCT_OFFER_STATUS" description="En attente de validation" sequenceId="02" statusCode="REQUESTED" />
+    <StatusItem statusId="OFFER_VALIDATED"  statusTypeId="PRODUCT_OFFER_STATUS" description="Offre validée" sequenceId="03" statusCode="VALIDATED" />
+    <StatusItem statusId="OFFER_REJECTED"  statusTypeId="PRODUCT_OFFER_STATUS" description="Offre Rejetée" sequenceId="05" statusCode="REJECTED" />
+    <StatusItem statusId="OFFER_CANCELLED"  statusTypeId="PRODUCT_OFFER_STATUS" description="Offre annulée" sequenceId="07" statusCode="CANCELLED" />
+
+    <OrderAdjustmentType orderAdjustmentTypeId="INTERNAL_MARGIN" hasTable="N" description="Internal Margin"/>
+<!--#Eam# product-offer -->
+
+<!--#Bam# shopin -->
+    <ProductCategoryType description="Marques" hasTable="N" parentTypeId="" productCategoryTypeId="BRAND_CATEGORY"/>
+    <ProductCategoryType description="Tax" hasTable="N" parentTypeId="" productCategoryTypeId="TAX_CATEGORY"/>
+    <ProductCategoryType description="Internal" hasTable="N" parentTypeId="" productCategoryTypeId="INTERNAL_CATEGORY"/>
+
+    <Party partyId="TRESOR_PUBLIC" partyTypeId="PARTY_GROUP" preferredCurrencyUomId="EUR" statusId="PARTY_ENABLED"/>
+    <PartyGroup partyId="TRESOR_PUBLIC" groupName="Trésor public"/>
+    <PartyRole partyId="TRESOR_PUBLIC" roleTypeId="TAX_AUTHORITY"/>
+    <TaxAuthority taxAuthPartyId="TRESOR_PUBLIC" includeTaxInPrice="N" requireTaxIdForExemption="Y" taxAuthGeoId="FRA" taxIdFormatPattern="^(FR-?)?[0-9A-Z]{2}\ ?[0-9]{9}$"/>
+
+    <!--  tax is in the price already, so we want the adjustment to be a VAT_TAX adjustment to be subtracted instead of a SALES_TAX adjustment to be added
+    // the amount will be different because we want to figure out how much of the price was tax, and not how much tax needs to be added
+    // the formula is: taxAmount = priceWithTax - (priceWithTax/(1+taxPercentage/100))  -->
+    <TaxAuthorityRateType taxAuthorityRateTypeId="SALE_TAX" description="TVA et taxes assimilées" />
+
+    <ProductCategory productCategoryId="TVA_STD" productCategoryTypeId="TAX_CATEGORY" description="TVA standard à 19,6"/>
+    <TaxAuthorityCategory taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC" productCategoryId="TVA_STD" />
+<!-- 19,6 VAT -->
+    <TaxAuthorityRateProduct taxAuthorityRateSeqId="TVA_STD" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC" taxAuthorityRateTypeId="SALES_TAX" productCategoryId="TVA_STD" description="TVA standard 19.6" minItemPrice="0.0" minPurchase="0.0" taxPercentage="19.6" taxShipping="N" taxPromotions="N" titleTransferEnumId="" fromDate="2013-08-01 00:00:00.001" thruDate=""/>
+
+<!-- la socité -->
+    <Party partyId="O-toit-Bretagne" partyTypeId="PARTY_GROUP"/>
+    <PartyGroup partyId="O-toit-Bretagne" groupName="O-Toit Bretagne"/>
+    <PartyRole partyId="O-toit-Bretagne" roleTypeId="INTERNAL_ORGANIZATIO"/>
+    <PartyRole partyId="O-toit-Bretagne" roleTypeId="OWNER"/>
+    <PartyRole partyId="O-toit-Bretagne" roleTypeId="BILL_TO_CUSTOMER"/>
+    <PartyRole partyId="O-toit-Bretagne" roleTypeId="BILL_FROM_VENDOR"/>
+    <ContactMech contactMechId="O-toit-Bretagne" contactMechTypeId="POSTAL_ADDRESS"/>
+    <PostalAddress contactMechId="O-toit-Bretagne" address1="32 Bld Lakanal" city="P&#233;rigueux" postalCode="24600" countryGeoId="FRA" stateProvinceGeoId="_NA_"/>
+
+    <ShipmentMethodType shipmentMethodTypeId="STOCK_PLATEFORM" description="article géré en stock sur plate-forme" />
+    <ShipmentMethodType shipmentMethodTypeId="STOCK_ROOF"     description="article géré en stock sur toit primaire" />
+    <ShipmentMethodType shipmentMethodTypeId="DROP_SHIP_PLATEFORM" description="article géré à la commande sur plate-forme" />
+    <ShipmentMethodType shipmentMethodTypeId="DROP_SHIP_ROOF"     description="article géré à la commande sur toit primaire" />
+    <ShipmentMethodType shipmentMethodTypeId="APPOINTMENT" description="article géré au rendez-vous" />
+  <Party partyId="_NA_" partyTypeId="PARTY_GROUP"/>
+    <PartyGroup partyId="_NA_" groupName="Non renseigné"/>
+    <PartyRole partyId="_NA_" roleTypeId="CARRIER"/>
+    <CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" sequenceNumber="1" shipmentMethodTypeId="STOCK_PLATEFORM"/>
+    <CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" sequenceNumber="2" shipmentMethodTypeId="STOCK_ROOF"/>
+    <CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" sequenceNumber="3" shipmentMethodTypeId="DROP_SHIP_PLATEFORM"/>
+    <CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" sequenceNumber="4" shipmentMethodTypeId="DROP_SHIP_ROOF"/>
+    <CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" sequenceNumber="5" shipmentMethodTypeId="APPOINTMENT"/>
+
+    <!-- Ce rôle existe dans ofbiz mais sans parent, on lui ajoute le parent CUSTOMER afin qu'il soit associé au consommateur-->
+    <RoleType description="Consumer" hasTable="N" parentTypeId="CUSTOMER" roleTypeId="CONSUMER"/>
+    <FacilityType facilityTypeId="PLATEFORME" parentTypeId="" description="Plate-forme" hasTable="N"/>
+    <FacilityType facilityTypeId="PRIMARY_ROOF" parentTypeId="PLATEFORME" description="Toît primaire"  hasTable="N"/>
+    <FacilityType facilityTypeId="SECONDARY_ROOF" parentTypeId="PRIMARY_ROOF" description="Toît secondaire"  hasTable="N"/>
+    <FacilityType facilityTypeId="SHIP_ZONE_SUPP" parentTypeId="SECONDARY_ROOF" description="Zone d'expédition Fournisseur Prox." hasTable="N"/>
+    <Facility facilityId="AAA"
+      facilityTypeId="PLATEFORME"
+      facilityName="Plateforme Aquitaine"
+      ownerPartyId="O-toit-Bretagne"
+      description="Plateforme de la règion Aquitaine"/>
+
+    <ContactMech contactMechId="AAA" contactMechTypeId="POSTAL_ADDRESS" />
+    <PostalAddress contactMechId="AAA" toName="O-Toit" attnName="O-Toit" address1="ZI 5 quai Alfred de Vial" city="Bassens" postalCode="33530" countryGeoId="FRA" stateProvinceGeoId="_NA_" />
+    <FacilityContactMech facilityId="AAA" contactMechId="AAA" fromDate="2001-01-01 00:00:00.0"/>
+    <FacilityContactMechPurpose facilityId="AAA" contactMechId="AAA" contactMechPurposeTypeId="PRIMARY_LOCATION" fromDate="2001-01-01 00:00:00.0"/>
+
+    <ProductStore productStoreId="O-toit-Bretagne" storeName="O-Toit Bretagne" companyName="O-Toit Bretagne" title="O-Toit Bretagne"
+      subtitle="O-Toit" payToPartyId="O-toit-Bretagne" daysToCancelNonPay="30" prorateShipping="Y" prorateTaxes="Y"
+      oneInventoryFacility="Y" checkInventory="Y" reserveInventory="Y" balanceResOnOrderCreation="Y" reserveOrderEnumId="INVRO_FIFO_REC" requireInventory="N"
+      defaultLocaleString="fr_FR" defaultCurrencyUomId="EUR" allowPassword="Y" explodeOrderItems="N" retryFailedAuths="Y" reqReturnInventoryReceive="N"
+      inventoryFacilityId="AAA"
+      headerApprovedStatus="ORDER_APPROVED" itemApprovedStatus="ITEM_APPROVED" digitalItemApprovedStatus="ITEM_APPROVED" headerDeclinedStatus="ORDER_REJECTED"
+      itemDeclinedStatus="ITEM_REJECTED" headerCancelStatus="ORDER_CANCELLED" itemCancelStatus="ITEM_CANCELLED" orderNumberPrefix="WS"
+      authDeclinedMessage="There has been a problem with your method of payment. Please try a different method or call customer service."
+      authFraudMessage="Your order has been rejected and your account has been disabled due to fraud."
+      authErrorMessage="Problem connecting to payment processor; we will continue to retry and notify you by email."
+      storeCreditValidDays="90" storeCreditAccountEnumId="FIN_ACCOUNT"
+      margePlateforme="20"
+      margeToit="10"
+      visualThemeId="EC_DEFAULT" prodSearchExcludeVariants="Y" autoApproveInvoice="Y" shipIfCaptureFails="Y" autoApproveOrder="Y" showOutOfStockProducts="Y"/>
+    <ProductType description="Poids Variable" isPhysical="Y" isDigital="N" hasTable="N" parentTypeId="GOOD" productTypeId="WEIGHT_VAR_GOOD"/>
+    <ProductType description="Emballage" isPhysical="Y" isDigital="N" hasTable="N" parentTypeId="GOOD" productTypeId="PACKAGING"/>
+    <GoodIdentificationType goodIdentificationTypeId="EAN" description="EAN" isUnique="Y"/>
+
+    <EnumerationType description="Logys TSF_VAL, liste des valeurs transmises à Logys" enumTypeId="TSF_VAL" hasTable="N" />
+    <EnumerationType description="Unité de conditionnement" enumTypeId="TYP_ART_UNITE" hasTable="N" parentTypeId="TSF_VAL"/>
+    <Enumeration description="Piéce (unité de gestion de stock)" enumCode="PIEC" enumId="TAU_PIEC" sequenceId="01" enumTypeId="TYP_ART_UNITE"/><!-- 01 pour signaler que c'est l'unité de gestion de stock -->
+    <Enumeration description="Gramme (unité de gestion de stock)" enumCode="GRAM" enumId="TAU_GRAM" sequenceId="01" enumTypeId="TYP_ART_UNITE"/><!-- 01 pour signaler que c'est l'unité de gestion de stock -->
+    <Enumeration description="Pack" enumCode="PACK" enumId="TAU_PACK" sequenceId="02" enumTypeId="TYP_ART_UNITE"/>
+    <Enumeration description="Carton" enumCode="CART" enumId="TAU_CART" sequenceId="03" enumTypeId="TYP_ART_UNITE"/>
+    <Enumeration description="Palette" enumCode="PALE" enumId="TAU_PALE" sequenceId="04" enumTypeId="TYP_ART_UNITE"/>
+    <Uom uomId="VLIQ_cl" uomTypeId="VOLUME_LIQ_MEASURE" abbreviation="cl" description="Centiliter"/>
+    <Enumeration description="Stock (Toit)" enumCode="STOCK_TOI" enumId="PRODRQM_STOCK_TOI" sequenceId="01" enumTypeId="PROD_REQ_METHOD"/>
+    <Enumeration description="Stock (Plateforme)" enumCode="STOCK_PLT" enumId="PRODRQM_STOCK_PLT" sequenceId="02" enumTypeId="PROD_REQ_METHOD"/>
+    <Enumeration description="Cross-docking" enumCode="CROSS" enumId="PRODRQM_CROSS" sequenceId="03" enumTypeId="PROD_REQ_METHOD"/>
+    <EnumerationType description="Feature Categories option for Shopin product categories" enumTypeId="PFC_QAL" hasTable="N" />
+    <Enumeration description="Required" enumCode="REQ" enumId="PFC_REQ" sequenceId="01" enumTypeId="PFC_QAL"/>
+    <Enumeration description="Optional" enumCode="OPT" enumId="PFC_OPT" sequenceId="02" enumTypeId="PFC_QAL"/>
+    <Enumeration description="Informative" enumCode="INF" enumId="PFC_INF" sequenceId="03" enumTypeId="PFC_QAL"/>
+    <EnumerationType description="Feature Categories filter for Shopin products" enumTypeId="PFC_FLT" hasTable="N" />
+    <Enumeration description="Unique" enumCode="UNI" enumId="PFC_UNI" sequenceId="01" enumTypeId="PFC_FLT"/>
+    <Enumeration description="Multiple" enumCode="MUL" enumId="PFC_MUL" sequenceId="02" enumTypeId="PFC_FLT"/>
+    <EnumerationType description="Origine des informations concernant la préparation de commande d'achat" enumTypeId="PREP_ORDER_ORIGIN" hasTable="N"/>
+    <Enumeration description="Courriel" enumCode="MAIL" enumId="POO_MAIL" sequenceId="01" enumTypeId="PREP_ORDER_ORIGIN"/>
+    <Enumeration description="Portail" enumCode="PORTAL" enumId="POO_PORTAL" sequenceId="02" enumTypeId="PREP_ORDER_ORIGIN"/>
+    <Enumeration description="Portail et Courriel" enumCode="PORTAL_MAIL" enumId="POO_PORTAL_MAIL" sequenceId="03" enumTypeId="PREP_ORDER_ORIGIN"/>
+    <Enumeration description="Échange de Données Informatisées" enumCode="EXCHANGE" enumId="POO_EXCHANGE" sequenceId="04" enumTypeId="PREP_ORDER_ORIGIN"/>
+
+    <ProductContentType productContentTypeId="FRONT_IMAGES" description="Image pour le front office" hasTable="N"/>
+    <ProductContentType parentTypeId="FRONT_IMAGES" productContentTypeId="MAIN_IMAGE"   description="Image principale" hasTable="N"/>
+    <ProductContentType parentTypeId="FRONT_IMAGES" productContentTypeId="MISC_IMAGE"   description="Image additionnelle" hasTable="N"/>
+    <ProductContentType productContentTypeId="PRODUCT_TEXT" description="Texte de mise en avant d'article" hasTable="N"/>
+    <ProductContentType parentTypeId="PRODUCT_TEXT" productContentTypeId="ARG_COM" description="Argumentation commerciale" hasTable="N"/>
+    <ProductContentType parentTypeId="PRODUCT_TEXT" productContentTypeId="CONSEIL_UTIL" description="Conseil d'utilisation" hasTable="N"/>
+    <ProductContentType parentTypeId="PRODUCT_TEXT" productContentTypeId="COMPOSITION" description="Composition" hasTable="N" />
+    <ProductContentType description="Image Principale" hasTable="N" productContentTypeId="MAIN_IMAGE"/>    <Uom uomId="OTH_pi" uomTypeId="OTHER_MEASURE" abbreviation="PIE" description="Piece"/>
+
+    <StatusItem statusId="ORDER_RECEIV_PROCESS"  statusTypeId="ORDER_ITEM_STATUS" description="Processing" sequenceId="11" statusCode="ORDERED" />
+    <StatusValidChange statusId="ORDER_RECEIV_PROCESS" statusIdTo="ORDER_COMPLETED" transitionName="completed"/>
+    <StatusValidChange statusId="ORDER_PROCESSING" statusIdTo="ORDER_RECEIV_PROCESS" transitionName="completed"/>
+
+    <StatusItem statusId="ITEM_PROCESSING"  statusTypeId="ORDER_ITEM_STATUS" description="En cours de traitement" statusCode="PROCESSING" />
+    <StatusItem statusId="ITEM_RECEIVED"  statusTypeId="ORDER_ITEM_STATUS" description="Reçu" statusCode="RECEIVED" />
+
+    <!--<RoleTypeGroup roleTypeGroupId="SUPPLIER" roleTypeGroupName="Supplier" description="Supplier profile" sequenceId="5" />-->
+    <!--<RoleTypeGroupAssoc roleTypeGroupId="SUPPLIER" roleTypeId="SUPPLIER" />-->
+    <!--<RoleTypeGroupAssoc roleTypeGroupId="SUPPLIER" roleTypeId="BILL_FROM_VENDOR"/> &lt;!&ndash; pour avoir le role founisseur emmetru de facture des la création &ndash;&gt;-->
+
+    <ProductCategoryType description="Type de categories Unions" productCategoryTypeId="PRDT_UNIONS"/>
+    <ProductCategoryType parentTypeId="PRDT_UNIONS" productCategoryTypeId="INTERNAL_CATEGORY" description="Internal"/>
+    <ProductCategoryType parentTypeId="PRDT_UNIONS" productCategoryTypeId="TAX_CATEGORY" description="Tax"/>
+    <ProductCategoryType parentTypeId="PRDT_UNIONS" productCategoryTypeId="BRAND_CATEGORY" description="Marque"/>
+    <ProductCategoryType parentTypeId="PRDT_UNIONS" productCategoryTypeId="UNIVER_CATEGORY" description="Univers logistiques"/>
+    <ProductCategory productCategoryId="UNIV_1" categoryName="Univers 1" productCategoryTypeId="UNIVER_CATEGORY" description="Univers 1"/>
+    <ProductCategory productCategoryId="UNIV_2" categoryName="Univers 2" productCategoryTypeId="UNIVER_CATEGORY" description="Univers 2"/>
+    <ProductCategory productCategoryId="UNIV_3" categoryName="Univers 3" productCategoryTypeId="UNIVER_CATEGORY" description="Univers 3"/>
+    <ProductCategory productCategoryId="UNIV_4" categoryName="Univers 4" productCategoryTypeId="UNIVER_CATEGORY" description="Univers 4"/>
+    <ProductCategory productCategoryId="UNIV_5" categoryName="Univers 5" productCategoryTypeId="UNIVER_CATEGORY" description="Univers 5"/>
+
+    <PartyRelationshipType description="" hasTable="N" parentTypeId="" partyRelationshipName="Agent" partyRelationshipTypeId="AGENT" roleTypeIdValidFrom="" roleTypeIdValidTo="SUPPLIER"/>
+    <PartyRelationshipType description="" hasTable="N" parentTypeId="" partyRelationshipName="Contact Relation" partyRelationshipTypeId="CONTACT_REL" roleTypeIdValidFrom="" roleTypeIdValidTo="SUPPLIER"/>
+    <PartyRelationshipType description="" hasTable="N" parentTypeId="" partyRelationshipName="Distributor" partyRelationshipTypeId="DISTRIBUTION_CHANNEL" roleTypeIdValidFrom="" roleTypeIdValidTo="SUPPLIER"/>
+    <PartyRelationshipType description="" hasTable="Y" parentTypeId="" partyRelationshipName="Employee" partyRelationshipTypeId="EMPLOYMENT" roleTypeIdValidFrom="" roleTypeIdValidTo="SUPPLIER"/>
+    <PartyRelationshipType description="" hasTable="N" parentTypeId="" partyRelationshipName="Group Member" partyRelationshipTypeId="GROUP_ROLLUP" roleTypeIdValidFrom="" roleTypeIdValidTo="SUPPLIER"/>
+    <PartyRelationshipType description="" hasTable="N" parentTypeId="" partyRelationshipName="Owned by" partyRelationshipTypeId="OWNER" roleTypeIdValidFrom="" roleTypeIdValidTo="SUPPLIER"/>
+
+    <PartyClassificationType description="Métier" hasTable="N" parentTypeId="" partyClassificationTypeId="5000"/>
+    <PartyClassificationGroup partyClassificationGroupId="A10001" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Agro-alimentaire, horticulture" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10002" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="BTP, construction, second oeuvre" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10003" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Communication, publicité, édition" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10004" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Conseils, services aux entreprises" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10005" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Electricité, électronique" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10006" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Energie, environnement, emballage" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10007" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Equipement de locaux, mobilier" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10008" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Hôtel, restaurant d'affaires, loisirs" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10009" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Informatique, télécommunication" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10010" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Métaux, construction mécanique" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10011" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Plastiques, caoutchouc, chimie" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10012" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Précision - matériel et activités" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10013" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Textile, habillement, cuir" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="A10014" partyClassificationTypeId="INDUSTRY_CLASSIFICAT" description="Transport, véhicules, logistique" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5001" partyClassificationTypeId="5000" description="ALCOOLS" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5002" partyClassificationTypeId="5000" description="BEBE" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5003" partyClassificationTypeId="5000" description="BIERE" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5004" partyClassificationTypeId="5000" description="BISCUITS SALES" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5005" partyClassificationTypeId="5000" description="BOISSON BIO" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5006" partyClassificationTypeId="5000" description="BOUCHERIE" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5007" partyClassificationTypeId="5000" description="CHARCUTERIE" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5008" partyClassificationTypeId="5000" description="CHOCOLAT" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5009" partyClassificationTypeId="5000" description="CONDIMENTS" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5010" partyClassificationTypeId="5000" description="CONSERVES A BASE DE FRUITS" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5011" partyClassificationTypeId="5000" description="EAUX" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5012" partyClassificationTypeId="5000" description="FECULENTS" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5013" partyClassificationTypeId="5000" description="FROMAGE" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5014" partyClassificationTypeId="5000" description="FROMAGERIE" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5015" partyClassificationTypeId="5000" description="FRUITS ET LEGUMES" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5016" partyClassificationTypeId="5000" description="HYGIENE" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5017" partyClassificationTypeId="5000" description="JUS DE FRUIT" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5018" partyClassificationTypeId="5000" description="LAIT" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5019" partyClassificationTypeId="5000" description="ŒUFS" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5020" partyClassificationTypeId="5000" description="PATISSERIE FRAIS" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5021" partyClassificationTypeId="5000" description="PATISSERIE INDUSTRIELLE" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5022" partyClassificationTypeId="5000" description="PHARMACIE" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5023" partyClassificationTypeId="5000" description="POISSON" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5024" partyClassificationTypeId="5000" description="SIROPS" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5025" partyClassificationTypeId="5000" description="SODAS" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5026" partyClassificationTypeId="5000" description="SURGELES" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5027" partyClassificationTypeId="5000" description="TRAITEUR" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5028" partyClassificationTypeId="5000" description="VIENNOISERIE" parentTypeId=""/>
+    <PartyClassificationGroup partyClassificationGroupId="5029" partyClassificationTypeId="NUMBER_OF_EMPLOYEES" description="&lt; 20" parentTypeId=""/>
+
+    <ProductCategoryContentType description="Main image" hasTable="N" parentTypeId="" prodCatContentTypeId="MAIN_IMAGE"/>
+    <ProductCategoryContentType description="Misc image" hasTable="N" parentTypeId="" prodCatContentTypeId="MISC_IMAGE"/>
+
+    <!--Nutritional Info -->
+    <ProductFeatureGroup productFeatureGroupId="NUTRITION" description="Nutritional features"/>
+    <ProductFeatureType productFeatureTypeId="MACRONUTRIENTS" hasTable="N" description="Nutrients values"/>
+    <ProductFeatureType productFeatureTypeId="MICRONUTRIENTS" hasTable="N" description="Nutrients elements"/>
+    <ProductFeatureCategory productFeatureCategoryId="MICRONUTRIENTS" description="Nutrients elements features" filterEnumId="PFC_MUL" qualifyingEnumId="PFC_INF"/>
+    <ProductFeatureType productFeatureTypeId="ALLERGENICS" hasTable="N" description="Allergenics"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_GLU" hasTable="N" parentTypeId="ALLERGENICS" description="Gluten"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_CRU" hasTable="N" parentTypeId="ALLERGENICS" description="Crustaceans"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_MOL" hasTable="N" parentTypeId="ALLERGENICS" description="Molluscs"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_EGG" hasTable="N" parentTypeId="ALLERGENICS" description="Eggs"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_FIS" hasTable="N" parentTypeId="ALLERGENICS" description="Fish"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_PEA" hasTable="N" parentTypeId="ALLERGENICS" description="Peanuts"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_NUT" hasTable="N" parentTypeId="ALLERGENICS" description="Nuts"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_SOY" hasTable="N" parentTypeId="ALLERGENICS" description="Soybean"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_MIL" hasTable="N" parentTypeId="ALLERGENICS" description="Milk"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_CEL" hasTable="N" parentTypeId="ALLERGENICS" description="Celery"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_MUS" hasTable="N" parentTypeId="ALLERGENICS" description="Mustard"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_SES" hasTable="N" parentTypeId="ALLERGENICS" description="Sesame"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_LUP" hasTable="N" parentTypeId="ALLERGENICS" description="Lupin"/>
+    <ProductFeatureType productFeatureTypeId="ALRG_SUL" hasTable="N" parentTypeId="ALLERGENICS" description="Sulphur"/>
+    <ProductFeatureCategory productFeatureCategoryId="_NA_" description="Non Applicable features" filterEnumId="PFC_UNI" qualifyingEnumId="PFC_INF"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="NUTR_NRG" productFeatureTypeId="MACRONUTRIENTS" defaultSequenceNum="0" description="Energy"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="NUTR_CBH" productFeatureTypeId="MACRONUTRIENTS" defaultSequenceNum="1" description="Carbohydrates"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="NUTR_SUG" productFeatureTypeId="MACRONUTRIENTS" defaultSequenceNum="2" description="Sugars"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="NUTR_FAT" productFeatureTypeId="MACRONUTRIENTS" defaultSequenceNum="3" description="Fats"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="NUTR_SAT" productFeatureTypeId="MACRONUTRIENTS" defaultSequenceNum="4" description="Saturated fatty acids"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="NUTR_PRO" productFeatureTypeId="MACRONUTRIENTS" defaultSequenceNum="5" description="Proteins"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="NUTR_SOD" productFeatureTypeId="MACRONUTRIENTS" defaultSequenceNum="6" description="Sodium"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="NUTR_FIB" productFeatureTypeId="MACRONUTRIENTS" defaultSequenceNum="7" description="Fiber"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="NUTR_ALC" productFeatureTypeId="MACRONUTRIENTS" defaultSequenceNum="8" description="Alcohol"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_GLU_N" productFeatureTypeId="ALRG_GLU" defaultSequenceNum="0" description="No Cereals containing gluten"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_GLU_W" productFeatureTypeId="ALRG_GLU" defaultSequenceNum="1" description="With Cereals containing gluten"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_GLU_T" productFeatureTypeId="ALRG_GLU" defaultSequenceNum="2" description="Traces Cereals containing gluten"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_CRU_N" productFeatureTypeId="ALRG_CRU" defaultSequenceNum="0" description="No Crustaceans"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_CRU_W" productFeatureTypeId="ALRG_CRU" defaultSequenceNum="1" description="With Crustaceans"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_CRU_T" productFeatureTypeId="ALRG_CRU" defaultSequenceNum="2" description="Traces Crustaceans"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_MOL_N" productFeatureTypeId="ALRG_MOL" defaultSequenceNum="0" description="No Molluscs"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_MOL_W" productFeatureTypeId="ALRG_MOL" defaultSequenceNum="1" description="With Molluscs"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_MOL_T" productFeatureTypeId="ALRG_MOL" defaultSequenceNum="2" description="Traces Molluscs"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_EGG_N" productFeatureTypeId="ALRG_EGG" defaultSequenceNum="0" description="No Eggs"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_EGG_W" productFeatureTypeId="ALRG_EGG" defaultSequenceNum="1" description="With Eggs"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_EGG_T" productFeatureTypeId="ALRG_EGG" defaultSequenceNum="2" description="Traces Eggs"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_FIS_N" productFeatureTypeId="ALRG_FIS" defaultSequenceNum="0" description="No Fish"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_FIS_W" productFeatureTypeId="ALRG_FIS" defaultSequenceNum="1" description="With Fish"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_FIS_T" productFeatureTypeId="ALRG_FIS" defaultSequenceNum="2" description="Traces Fish"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_PEA_N" productFeatureTypeId="ALRG_PEA" defaultSequenceNum="0" description="No Peanuts"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_PEA_W" productFeatureTypeId="ALRG_PEA" defaultSequenceNum="1" description="With Peanuts"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_PEA_T" productFeatureTypeId="ALRG_PEA" defaultSequenceNum="2" description="Traces Peanuts"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_NUT_N" productFeatureTypeId="ALRG_NUT" defaultSequenceNum="0" description="No Nuts"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_NUT_W" productFeatureTypeId="ALRG_NUT" defaultSequenceNum="1" description="With Nuts"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_NUT_T" productFeatureTypeId="ALRG_NUT" defaultSequenceNum="2" description="Traces Nuts"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_SOY_N" productFeatureTypeId="ALRG_SOY" defaultSequenceNum="0" description="No Soybeans"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_SOY_W" productFeatureTypeId="ALRG_SOY" defaultSequenceNum="1" description="With Soybeans"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_SOY_T" productFeatureTypeId="ALRG_SOY" defaultSequenceNum="2" description="Traces Soybeans"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_MIL_N" productFeatureTypeId="ALRG_MIL" defaultSequenceNum="0" description="No Milk"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_MIL_W" productFeatureTypeId="ALRG_MIL" defaultSequenceNum="1" description="With Milk"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_MIL_T" productFeatureTypeId="ALRG_MIL" defaultSequenceNum="2" description="Traces Milk"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_CEL_N" productFeatureTypeId="ALRG_CEL" defaultSequenceNum="0" description="No Celery"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_CEL_W" productFeatureTypeId="ALRG_CEL" defaultSequenceNum="1" description="With Celery"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_CEL_T" productFeatureTypeId="ALRG_CEL" defaultSequenceNum="2" description="Traces Celery"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_MUS_N" productFeatureTypeId="ALRG_MUS" defaultSequenceNum="0" description="No Mustard"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_MUS_W" productFeatureTypeId="ALRG_MUS" defaultSequenceNum="1" description="With Mustard"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_MUS_T" productFeatureTypeId="ALRG_MUS" defaultSequenceNum="2" description="Traces Mustard"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_SES_N" productFeatureTypeId="ALRG_SES" defaultSequenceNum="0" description="No Sesame"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_SES_W" productFeatureTypeId="ALRG_SES" defaultSequenceNum="1" description="With Sesame"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_SES_T" productFeatureTypeId="ALRG_SES" defaultSequenceNum="2" description="Traces Sesame"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_LUP_N" productFeatureTypeId="ALRG_LUP" defaultSequenceNum="0" description="No Lupin"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_LUP_W" productFeatureTypeId="ALRG_LUP" defaultSequenceNum="1" description="With Lupin"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_LUP_T" productFeatureTypeId="ALRG_LUP" defaultSequenceNum="2" description="Traces Lupin"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_SUL_N" productFeatureTypeId="ALRG_SUL" defaultSequenceNum="0" description="No Sulphur dioxide"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_SUL_W" productFeatureTypeId="ALRG_SUL" defaultSequenceNum="1" description="With Sulphur dioxide"/>
+    <ProductFeature productFeatureCategoryId="_NA_" productFeatureId="ALRG_SUL_T" productFeatureTypeId="ALRG_SUL" defaultSequenceNum="2" description="Traces Sulphur dioxide"/>
+    <ProductFeature productFeatureId="NUTR_VITA" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="A Vitamin" defaultAmount="800"/>
+    <ProductFeature productFeatureId="NUTR_VITD" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="D Vitamin" defaultAmount="5"/>
+    <ProductFeature productFeatureId="NUTR_VITE" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="E Vitamin" defaultAmount="12"/>
+    <ProductFeature productFeatureId="NUTR_VITK" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="K Vitamin" defaultAmount="75"/>
+    <ProductFeature productFeatureId="NUTR_VITC" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="C Vitamin" defaultAmount="80"/>
+    <ProductFeature productFeatureId="NUTR_THIA" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="B1 Vitamin" defaultAmount="1.1"/>
+    <ProductFeature productFeatureId="NUTR_RIBO" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="B2 Vitamin" defaultAmount="1.4"/>
+    <ProductFeature productFeatureId="NUTR_NIAC" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="B3 Vitamin" defaultAmount="16"/>
+    <ProductFeature productFeatureId="NUTR_VIB6" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="B6 Vitamin" defaultAmount="1.4"/>
+    <ProductFeature productFeatureId="NUTR_FOLI" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="B9 Vitamin" defaultAmount="200"/>
+    <ProductFeature productFeatureId="NUTR_VB12" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="B12 Vitamin" defaultAmount="2.5"/>
+    <ProductFeature productFeatureId="NUTR_BIOT" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="B8 Vitamin" defaultAmount="50"/>
+    <ProductFeature productFeatureId="NUTR_PANT" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="B5 Vitamin" defaultAmount="6"/>
+    <ProductFeature productFeatureId="NUTR_POTA" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Potassium" defaultAmount="2000"/>
+    <ProductFeature productFeatureId="NUTR_CHLO" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Chloride" defaultAmount="800"/>
+    <ProductFeature productFeatureId="NUTR_CALC" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Calcium" defaultAmount="800"/>
+    <ProductFeature productFeatureId="NUTR_PHOS" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Phosphorus" defaultAmount="700"/>
+    <ProductFeature productFeatureId="NUTR_MAGN" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Magnesium" defaultAmount="375"/>
+    <ProductFeature productFeatureId="NUTR_FERU" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Iron" defaultAmount="14"/>
+    <ProductFeature productFeatureId="NUTR_ZINC" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Zinc" defaultAmount="10"/>
+    <ProductFeature productFeatureId="NUTR_COPP" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Copper" defaultAmount="1"/>
+    <ProductFeature productFeatureId="NUTR_MANG" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Manganese" defaultAmount="2"/>
+    <ProductFeature productFeatureId="NUTR_FLUO" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Fluoride" defaultAmount="3.5"/>
+    <ProductFeature productFeatureId="NUTR_SELE" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Selenium" defaultAmount="55"/>
+    <ProductFeature productFeatureId="NUTR_CHRO" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Chromium" defaultAmount="40"/>
+    <ProductFeature productFeatureId="NUTR_MOLY" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Molybdenum" defaultAmount="50"/>
+    <ProductFeature productFeatureId="NUTR_IODI" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Iodine" defaultAmount="150"/>
+    <ProductFeature productFeatureId="NUTR_SWEE" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Sweetener"/>
+    <ProductFeature productFeatureId="NUTR_ASPA" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Aspartame"/>
+    <ProductFeature productFeatureId="NUTR_LIQU" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Liquorice"/>
+    <ProductFeature productFeatureId="NUTR_CAFF" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Caffeine"/>
+    <ProductFeature productFeatureId="NUTR_STER" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Sterols/stanols"/>
+    <ProductFeature productFeatureId="NUTR_GMO" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Genetically modified organism"/>
+    <ProductFeature productFeatureId="NUTR_IRR" productFeatureTypeId="MICRONUTRIENTS" productFeatureCategoryId="MICRONUTRIENTS" description="Irradiation/Ionization"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_NRG" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_PRO" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_CBH" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_SUG" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_FAT" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_SAT" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_FIB" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_SOD" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_GLU_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_GLU_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_GLU_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_CRU_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_CRU_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_CRU_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_MOL_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_MOL_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_MOL_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_EGG_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_EGG_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_EGG_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_FIS_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_FIS_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_FIS_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_PEA_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_PEA_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_PEA_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_NUT_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_NUT_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_NUT_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_SOY_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_SOY_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_SOY_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_MIL_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_MIL_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_MIL_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_CEL_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_CEL_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_CEL_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_MUS_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_MUS_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_MUS_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_SES_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_SES_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_SES_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_LUP_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_LUP_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_LUP_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_SUL_N" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_SUL_W" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="ALRG_SUL_T" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_VITA" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_VITD" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_VITE" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_VITK" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_VITC" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_THIA" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_RIBO" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_NIAC" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_VIB6" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_FOLI" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_VB12" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_BIOT" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_PANT" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_POTA" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_CHLO" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_CALC" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_PHOS" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_MAGN" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_FERU" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_ZINC" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_COPP" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_MANG" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_FLUO" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_SELE" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_CHRO" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_MOLY" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_IODI" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_SWEE" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_ASPA" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_LIQU" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_CAFF" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_STER" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_GMO" fromDate="2001-01-01 01:01:01"/>
+    <ProductFeatureGroupAppl productFeatureGroupId="NUTRITION" productFeatureId="NUTR_IRR" fromDate="2001-01-01 01:01:01"/>
+<!--#Eam# shopin -->
+
+<!--#Bam# reappro -->
+
+    <StatusItem statusId="ITEM_ORDERED"  statusTypeId="ORDER_ITEM_STATUS" description="Ordered" sequenceId="07" statusCode="ORDERED" />
+    <ReapproRunLogType reapproRunLogTypeId="ERROR" description="Error"/>
+    <ReapproRunLogType reapproRunLogTypeId="WARN" description="Warning"/>
+    <ReapproRunLogType reapproRunLogTypeId="INFO" description="Info"/>
+    <ReapproRunLogType reapproRunLogTypeId="DEBUG" description="Debug"/>
+<!--#Eam# reappro -->
+
+
+    <!-- #Bam# moteur-statut -->
+    <StatusItem statusId="ORDER_REORDER"  statusTypeId="ORDER_STATUS" description="Prise en compte par le fournisseur" sequenceId="2" statusCode="REORDER" />
+    <StatusItem statusId="ORDER_SENT_LOGYS"  statusTypeId="ORDER_STATUS" description="Transmise a Logys" sequenceId="3" statusCode="OD_SNT_LGS" />
+    <StatusItem statusId="ORDER_PROCESS_PREP"  statusTypeId="ORDER_STATUS" description="En cours de préparation" sequenceId="4" statusCode="PREP_RUNING" />
+    <StatusItem statusId="ORDER_ITEMS_PREPARED"  statusTypeId="ORDER_STATUS" description="Lignes préparées" sequenceId="5" statusCode="PREPARED" />
+    <StatusItem statusId="ORDER_SUP_PROC"  statusTypeId="ORDER_STATUS" description="En cours de préparation fournisseur" sequenceId="6" statusCode="OD_SUP_PROC" />
+    <StatusItem statusId="ORDER_SUP_PREP"  statusTypeId="ORDER_STATUS" description="Préparée fournisseur" sequenceId="7" statusCode="OD_SUP_PREP" />
+    <StatusItem statusId="ORDER_WAITING_CUST"  statusTypeId="ORDER_STATUS" description="En attente sur le toit" sequenceId="8" statusCode="OD_WAIT_CUST" />
+    <StatusItem statusId="ORDER_TO_DELIVER"  statusTypeId="ORDER_STATUS" description="En attente de paiement" sequenceId="9" statusCode="OD_TO_DELIVER" />
+    <StatusItem statusId="ORDER_DELIVERED"  statusTypeId="ORDER_STATUS" description="Livré" sequenceId="10" statusCode="OD_DELIVERED" />
+    <StatusItem statusId="ITEM_REORDERED"  statusTypeId="ORDER_ITEM_STATUS" description="Ordered" sequenceId="07" statusCode="ORDERED" />
+    <StatusItem statusId="ITEM_PROC_PREP"  statusTypeId="ORDER_ITEM_STATUS" description="En cours de préparation" sequenceId="11" statusCode="PREP_RUNING" />
+    <StatusItem statusId="ITEM_SUP_PROC"  statusTypeId="ORDER_ITEM_STATUS" description="En cours de préparation fournisseur" sequenceId="12" statusCode="SUP_PROC" />
+    <StatusItem statusId="ITEM_SUP_PREP"  statusTypeId="ORDER_ITEM_STATUS" description="Préparée fournisseur" sequenceId="13" statusCode="SUP_PREP" />
+    <StatusItem statusId="ITEM_RECEIVING"  statusTypeId="ORDER_ITEM_STATUS" description="En cours de réception" sequenceId="14" statusCode="IT_RCVING" />
+    <StatusItem statusId="ITEM_RECEIVED"  statusTypeId="ORDER_ITEM_STATUS" description="Réceptionné" sequenceId="15" statusCode="IT_RECEIVED" />
+    <StatusValidChange statusId="ORDER_CREATED" statusIdTo="ORDER_REORDER" transitionName="Reappro fournisseur"/>
+    <StatusValidChange statusId="ORDER_APPROVED" statusIdTo="ORDER_REORDER" transitionName="Reappro fournisseur"/>
+    <StatusValidChange statusId="ORDER_APPROVED" statusIdTo="ORDER_SENT_LOGYS" transitionName="Envoi a Logys"/>
+    <StatusValidChange statusId="ORDER_APPROVED" statusIdTo="ORDER_ITEMS_PREPARED" transitionName="Lignes préparées"/>
+    <StatusValidChange statusId="ORDER_APPROVED" statusIdTo="ORDER_PROCESS_PREP" transitionName="En cours de préparation"/>
+    <StatusValidChange statusId="ORDER_REORDER" statusIdTo="ORDER_SENT_LOGYS" transitionName="Envoi a Logys"/>
+    <StatusValidChange statusId="ORDER_SENT" statusIdTo="ORDER_PROCESS_PREP" transitionName="En cours de préparation"/>
+    <StatusValidChange statusId="ORDER_SENT" statusIdTo="ORDER_ITEMS_PREPARED" transitionName="Préparés"/>
+    <!--<StatusValidChange statusId="ORDER_SENT" statusIdTo="ORDER_PREPARED" transitionName="Préparée"/>-->
+    <StatusValidChange statusId="ORDER_SENT_LOGYS" statusIdTo="ORDER_SUP_PROC" transitionName="En cours de préparation"/>
+    <StatusValidChange statusId="ORDER_SENT_LOGYS" statusIdTo="ORDER_SUP_PREP" transitionName="Préparée fournisseur"/>
+    <StatusValidChange statusId="ORDER_PROCESS_PREP" statusIdTo="ORDER_ITEMS_PREPARED" transitionName="Préparé"/>
+    <!--<StatusValidChange statusId="ORDER_PROCESS_PREP" statusIdTo="ORDER_PREPARED" transitionName="Préparé"/>-->
+    <!--<StatusValidChange statusId="ORDER_ITEMS_PREPARED" statusIdTo="ORDER_PREPARED" transitionName="Préparée"/>-->
+    <StatusValidChange statusId="ORDER_SUP_PROC" statusIdTo="ORDER_SUP_PREP" transitionName="Préparée fournisseur"/>
+    <!--<StatusValidChange statusId="ORDER_PREPARED" statusIdTo="ORDER_RECEIV_PROCESS" transitionName="En cours de reception"/>-->
+    <StatusValidChange statusId="ORDER_SUP_PREP" statusIdTo="ORDER_PROCESSING" transitionName="En cours de traitement"/>
+    <StatusValidChange statusId="ORDER_SENT_LOGYS" statusIdTo="ORDER_PROCESSING" transitionName="En cours de traitement"/>
+    <!--<StatusValidChange statusId="ORDER_PROCESSING" statusIdTo="ORDER_PREPARED" transitionName="Préparée"/>-->
+    <!--<StatusValidChange statusId="ORDER_PREPARED" statusIdTo="ORDER_WAITING_CUST" transitionName="En attente sur le toit"/>-->
+    <StatusValidChange statusId="ORDER_WAITING_CUST" statusIdTo="ORDER_DELIVERED" transitionName="Livré"/>
+    <!--<StatusValidChange statusId="ORDER_PREPARED" statusIdTo="ORDER_RECEIV_PROCESS" transitionName="En cours de reception"/>-->
+    <!--<StatusValidChange statusId="ORDER_PREPARED" statusIdTo="ORDER_TO_DELIVER" transitionName="Retrait demandé"/>-->
+    <StatusValidChange statusId="ITEM_CREATED" statusIdTo="ITEM_PROC_PREP" transitionName="En cours de préparation"/>
+    <!--<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ITEM_PREPARED" transitionName="Préparé"/>-->
+    <StatusValidChange statusId="ITEM_APPROVED" statusIdTo="ITEM_PROC_PREP" transitionName="en cours de préparation"/>
+    <!--<StatusValidChange statusId="ITEM_PROC_PREP" statusIdTo="ITEM_PREPARED" transitionName="préparée"/>-->
+    <!--<StatusValidChange statusId="ITEM_PREPARED" statusIdTo="ITEM_RECEIVED" transitionName="Réceptionné"/>-->
+    <StatusValidChange statusId="ITEM_RECEIVING" statusIdTo="ITEM_RECEIVED" transitionName="Réceptionné"/>
+    <StatusValidChange statusId="ITEM_REORDERED" statusIdTo="ITEM_PROCESSING" transitionName="En cours de traitement"/> 
+    <StatusValidChange statusId="ORDER_TO_DELIVER" statusIdTo="ORDER_DELIVERED" transitionName="Livré"/>
+    <!-- #Eam# moteur-statut -->
+    
+
+    <WebSite webSiteId="FrontEnd" siteName="Front End de Nous Citoyens" productStoreId="10000" visualThemeSetId="ECOMMERCE"/>
+    <ProductStore productStoreId="10000" visualThemeId="EC_OTOIT"/>
+
+    <!-- GESTION DES ENVOIS D'EMAIL -->
+    <!--Gestion des commandes-->
+    <ProductStoreEmailSetting
+            emailType="PRDS_ODR_CONFIRM"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Confirmation de commande #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#OrderConfirmNotice"
+            xslfoAttachScreenLocation="component://ecommerce/widget/EmailOrderScreens.xml#OrderConfirmNoticePdf"
+            />
+
+    <ProductStoreEmailSetting
+            emailType="PRDS_ODR_COMPLETE"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Votre commande est prête #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#OrderCompleteNotice"
+            />
+
+    <ProductStoreEmailSetting
+            emailType="PRDS_ODR_BACKORDER"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Rupture de stock sur votre commande #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#BackorderNotice"
+            />
+
+    <ProductStoreEmailSetting
+            emailType="PRDS_ODR_CHANGE"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Information de modification de commande #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#OrderChangeNotice"
+            />
+
+    <ProductStoreEmailSetting
+            emailType="PRDS_ODR_PAYRETRY"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Confirmation de payement de commande #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#PaymentRetryNotice"
+            />
+
+    <ProductStoreEmailSetting
+            emailType="PRDS_ODR_SHIP_COMPLT"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Confirmation d'envoi de votre commande #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#ShipmentCompleteNotice"
+            />
+
+    <!--Gestion utilisateurs-->
+    <ProductStoreEmailSetting
+            emailType="PRDS_PWD_RETRIEVE"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Demande de nouveau mot de passe (${userLogin.userLoginId})"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://securityext/widget/EmailSecurityScreens.xml#PasswordEmail"
+            />
+
+    <ProductStoreEmailSetting
+            emailType="PARTY_REGIS_CONFIRM"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Bienvenue :)"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/CustomerScreens.xml#CreatePartyNotification"
+            />
+
+    <ProductStoreEmailSetting
+            emailType="PRDS_CUST_REGISTER"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Bienvenue :)"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/CustomerScreens.xml#CreatePartyNotification"
+            />
+
+    <ProductStoreEmailSetting
+            emailType="UPD_PRSNL_INF_CNFRM"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Informations personnelles mises à jour"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://party/widget/partymgr/EmailPartyScreens.xml#ChangePersonalInfoNotification"
+            />
+
+    <ProductStoreEmailSetting
+            emailType="PRDS_EMAIL_VERIFY"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Vérification de votre addresse email"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://party/widget/partymgr/EmailPartyScreens.xml#VerifyEmailAddressNotification"
+            />
+
+    <ProductStoreEmailSetting
+            emailType="PRDS_CUST_ACTIVATED"
+            productStoreId="O-toit-Bretagne"
+            subject="O'Toit - Votre compte est activé (${userLogin.userLoginId})"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://party/widget/partymgr/EmailPartyScreens.xml#AccountActivatedNotification"
+            />
+ <!-- inetrafce data -->
+    <Interface interfaceId="BACK_OFFICE" name="Back Office App Interface"/>
+    <EnumerationType description="Interface log exchage mode" enumTypeId="IFE_LOG_MODE" hasTable="N"/>
+    <Enumeration enumId="IN_LOG" description="Incoming Interface Log" enumTypeId="IFE_LOG_MODE" sequenceId="00"/>
+    <Enumeration enumId="OUT_LOG" description="Outgoing Interface Log" enumTypeId="IFE_LOG_MODE" sequenceId="01"/>
+    <!-- Otoit Visual Theme -->
+    <VisualTheme visualThemeId="EC_OTOIT" visualThemeSetId="ECOMMERCE" description="O'toit Ecommerce"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/images/bootstrap/css/bootstrap.min.css" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/images/font-awesome-4.1.0/css/font-awesome.min.css" sequenceId="02"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/images/ion.rangeSlider-2.0.3/css/normalize.css" sequenceId="03"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/images/ion.rangeSlider-2.0.3/css/ion.rangeSlider.css" sequenceId="04"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/images/ion.rangeSlider-2.0.3/css/ion.rangeSlider.skinNice.css" sequenceId="05"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/frontend/images/css/otoit.css" sequenceId="06"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_SHORTCUT_ICON" resourceValue="/frontend/images/otoit-favicon.ico" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_HDR_TMPLT_LOC" resourceValue="component://frontend/webapp/frontend/includes/otoit-header.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_FTR_TMPLT_LOC" resourceValue="component://frontend/webapp/frontend/includes/otoit-footer.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_SCREENSHOT" resourceValue="/images/ecdefaulttheme.jpg" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_FTR_JAVASCRIPT" resourceValue="/images/jquery/jquery-1.10.2.min.js" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_FTR_JAVASCRIPT" resourceValue="/frontend/images/js/otoit.js" sequenceId="02"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_FTR_JAVASCRIPT" resourceValue="/images/bootstrap/js/bootstrap.min.js" sequenceId="03"/>
+    <VisualThemeResource visualThemeId="EC_OTOIT" resourceTypeEnumId="VT_FTR_JAVASCRIPT" resourceValue="/images/ion.rangeSlider-2.0.3/js/ion-rangeSlider/ion.rangeSlider.min.js" sequenceId="04"/>
+
+    <!--Gestion des demandes-->
+    <EmailTemplateSetting
+            emailTemplateSettingId="CUST_REQ_ACCEPTED"
+            bodyScreenLocation="component://order/widget/ordermgr/CustRequestScreens.xml#CreateCustRequestNotification"
+            subject="O'Toit - Votre demande a été reçue : '${custRequestName}' #CR${custRequestId}"/>
+    <EmailTemplateSetting
+            emailTemplateSettingId="CUST_REQ_COMPLETED"
+            bodyScreenLocation="component://order/widget/ordermgr/CustRequestScreens.xml#CompletedCustRequestNotification"
+            subject="O'Toit - Votre demande est prête : '${custRequestName}' #CR${custRequestId}"/>
+    <EmailTemplateSetting
+            emailTemplateSettingId="CUST_REQ_NOTE_ADDED"
+            bodyScreenLocation="component://order/widget/ordermgr/CustRequestScreens.xml#AddNoteCustRequestNotification"
+            subject="O'Toit - Une note a été ajoutée à votre demande : '${custRequestName}' #CR${custRequestId}"/>
+
+    <!--Gestion des commandes-->
+    <EmailTemplateSetting
+            emailTemplateSettingId="PRDS_ODR_CONFIRM"
+            subject="O'Toit - Confirmation de commande #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#OrderConfirmNotice"
+            xslfoAttachScreenLocation="component://ecommerce/widget/EmailOrderScreens.xml#OrderConfirmNoticePdf"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="PRDS_ODR_COMPLETE"
+            subject="O'Toit - Votre commande est prête #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#OrderCompleteNotice"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="PRDS_ODR_BACKORDER"
+            subject="O'Toit - Rupture de stock sur votre commande #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#BackorderNotice"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="PRDS_ODR_CHANGE"
+            subject="O'Toit - Information de modification de commande #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#OrderChangeNotice"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="PRDS_ODR_PAYRETRY"
+            subject="O'Toit - Confirmation de payement de commande #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#PaymentRetryNotice"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="PRDS_ODR_SHIP_COMPLT"
+            subject="O'Toit - Confirmation d'envoi de votre commande #${orderId}"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/EmailOrderScreens.xml#ShipmentCompleteNotice"
+            />
+
+    <!--Gestion utilisateurs-->
+    <EmailTemplateSetting
+            emailTemplateSettingId="SUP_REQ_PWD_RESET"
+            subject="O'Toit - Réinitialisation de votre mot de passe (${userLogin.userLoginId})"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/CustomerScreens.xml#SendPwdResetLink"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="PRDS_PWD_RETRIEVE"
+            subject="O'Toit - Demande de nouveau mot de passe (${userLogin.userLoginId})"
+            fromAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://securityext/widget/EmailSecurityScreens.xml#PasswordEmail"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="PARTY_REGIS_CONFIRM"
+            subject="O'Toit - Bienvenue :)"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/CustomerScreens.xml#CreatePartyNotification"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="PRDS_CUST_REGISTER"
+            subject="O'Toit - Bienvenue :)"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://frontend/widget/CustomerScreens.xml#CreatePartyNotification"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="UPD_PRSNL_INF_CNFRM"
+            subject="O'Toit - Informations personnelles mises à jour"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://party/widget/partymgr/EmailPartyScreens.xml#ChangePersonalInfoNotification"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="PRDS_EMAIL_VERIFY"
+            subject="O'Toit - Vérification de votre addresse email"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://party/widget/partymgr/EmailPartyScreens.xml#VerifyEmailAddressNotification"
+            />
+
+    <EmailTemplateSetting
+            emailTemplateSettingId="PRDS_CUST_ACTIVATED"
+            subject="O'Toit - Votre compte est activé (${userLogin.userLoginId})"
+            fromAddress="front-ofbiz@o-toit.com"
+            bccAddress="front-ofbiz@o-toit.com"
+            bodyScreenLocation="component://party/widget/partymgr/EmailPartyScreens.xml#AccountActivatedNotification"
+            />
+
+</entity-engine-xml>

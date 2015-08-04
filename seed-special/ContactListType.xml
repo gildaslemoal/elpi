@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ContactListType contactListTypeId="ANNOUNCEMENT" description="Announcement" lastUpdatedStamp="2015-06-18 14:49:58.613" lastUpdatedTxStamp="2015-06-18 14:49:58.598" createdStamp="2015-06-18 14:49:58.613" createdTxStamp="2015-06-18 14:49:58.598"/>
+    <ContactListType contactListTypeId="MARKETING" description="Marketing" lastUpdatedStamp="2015-06-18 14:49:58.611" lastUpdatedTxStamp="2015-06-18 14:49:58.598" createdStamp="2015-06-18 14:49:58.611" createdTxStamp="2015-06-18 14:49:58.598"/>
+    <ContactListType contactListTypeId="NEWSLETTER" description="Newsletter" lastUpdatedStamp="2015-06-18 14:49:58.612" lastUpdatedTxStamp="2015-06-18 14:49:58.598" createdStamp="2015-06-18 14:49:58.612" createdTxStamp="2015-06-18 14:49:58.598"/>
+</entity-engine-xml>

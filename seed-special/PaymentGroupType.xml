@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PaymentGroupType paymentGroupTypeId="BATCH_PAYMENT" hasTable="N" description="Batch of Payments" lastUpdatedStamp="2015-06-18 14:49:57.259" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.259" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <PaymentGroupType paymentGroupTypeId="CHECK_RUN" hasTable="N" description="Check Run" lastUpdatedStamp="2015-06-18 14:49:57.258" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.258" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

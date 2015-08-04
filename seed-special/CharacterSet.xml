@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <CharacterSet characterSetId="ISO-8859-1" description="ISO-8859-1 English" lastUpdatedStamp="2015-06-18 14:49:54.857" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.857" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="ISO-8859-10" description="ISO-8859-10 ?" lastUpdatedStamp="2015-06-18 14:49:54.866" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.866" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="ISO-8859-2" description="ISO-8859-2 ?" lastUpdatedStamp="2015-06-18 14:49:54.858" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.858" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="ISO-8859-3" description="ISO-8859-3 ?" lastUpdatedStamp="2015-06-18 14:49:54.859" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.859" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="ISO-8859-4" description="ISO-8859-4 ?" lastUpdatedStamp="2015-06-18 14:49:54.86" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.86" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="ISO-8859-5" description="ISO-8859-5 ?" lastUpdatedStamp="2015-06-18 14:49:54.861" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.861" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="ISO-8859-6" description="ISO-8859-6 Latin/Arabic" lastUpdatedStamp="2015-06-18 14:49:54.862" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.862" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="ISO-8859-7" description="ISO-8859-7 ?" lastUpdatedStamp="2015-06-18 14:49:54.863" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.863" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="ISO-8859-8" description="ISO-8859-8 Latin/Hebrew" lastUpdatedStamp="2015-06-18 14:49:54.864" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.864" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="ISO-8859-9" description="ISO-8859-9 ?" lastUpdatedStamp="2015-06-18 14:49:54.865" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.865" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="US-ASCII" description="US-ASCII as defined in ANSI X3.4-1986" lastUpdatedStamp="2015-06-18 14:49:54.867" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.867" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="UTF-16" description="Unicode 16 bit" lastUpdatedStamp="2015-06-18 14:49:54.869" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.869" createdTxStamp="2015-06-18 14:49:54.855"/>
+    <CharacterSet characterSetId="UTF-8" description="Unicode 8 bit" lastUpdatedStamp="2015-06-18 14:49:54.868" lastUpdatedTxStamp="2015-06-18 14:49:54.855" createdStamp="2015-06-18 14:49:54.868" createdTxStamp="2015-06-18 14:49:54.855"/>
+</entity-engine-xml>

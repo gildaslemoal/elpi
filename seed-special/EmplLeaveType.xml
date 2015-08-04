@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <EmplLeaveType leaveTypeId="INLAND_EARNED" hasTable="N" description="Inland Earned Leave" lastUpdatedStamp="2015-06-18 14:49:58.201" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.201" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <EmplLeaveType leaveTypeId="LOSS_OF_PAY" hasTable="N" description="Inland Loss of Pay" lastUpdatedStamp="2015-06-18 14:49:58.202" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.202" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <EmplLeaveType leaveTypeId="RESTRICTED_HOLIDAY" hasTable="N" description="Inland Restricted Holiday" lastUpdatedStamp="2015-06-18 14:49:58.203" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.203" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <EmplLeaveType leaveTypeId="SPECIAL_DAY_OFF" hasTable="N" description="Inland Special Day Off" lastUpdatedStamp="2015-06-18 14:49:58.204" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.204" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

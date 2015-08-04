@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <TechDataCalendarWeek calendarWeekId="DEFAULT" description="8hours/days" mondayStartTime="08:30:00" mondayCapacity="2.88E7" tuesdayStartTime="08:30:00" tuesdayCapacity="2.88E7" wednesdayStartTime="08:30:00" wednesdayCapacity="2.88E7" thursdayStartTime="08:30:00" thursdayCapacity="2.88E7" fridayStartTime="08:30:00" fridayCapacity="2.88E7" lastUpdatedStamp="2015-06-18 14:49:55.999" lastUpdatedTxStamp="2015-06-18 14:49:55.982" createdStamp="2015-06-18 14:49:55.999" createdTxStamp="2015-06-18 14:49:55.982"/>
+    <TechDataCalendarWeek calendarWeekId="SUPPLIER" description="8hours/days, currently the Re-Order Process convert day to mms with 8h/days" mondayStartTime="08:30:00" mondayCapacity="2.88E7" tuesdayStartTime="08:30:00" tuesdayCapacity="2.88E7" wednesdayStartTime="08:30:00" wednesdayCapacity="2.88E7" thursdayStartTime="08:30:00" thursdayCapacity="2.88E7" fridayStartTime="08:30:00" fridayCapacity="2.88E7" lastUpdatedStamp="2015-06-18 14:49:55.997" lastUpdatedTxStamp="2015-06-18 14:49:55.982" createdStamp="2015-06-18 14:49:55.997" createdTxStamp="2015-06-18 14:49:55.982"/>
+</entity-engine-xml>

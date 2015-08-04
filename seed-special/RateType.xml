@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <RateType rateTypeId="AVERAGE_PAY_RATE" description="Average Pay Rate" lastUpdatedStamp="2015-06-18 14:49:57.486" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.486" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <RateType rateTypeId="DISCOUNTED" description="Discounted Rate" lastUpdatedStamp="2015-06-18 14:49:57.484" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.484" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <RateType rateTypeId="HIGH_PAY_RATE" description="Highest Pay Rate" lastUpdatedStamp="2015-06-18 14:49:57.487" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.487" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <RateType rateTypeId="LOW_PAY_RATE" description="Lowest Pay Rate" lastUpdatedStamp="2015-06-18 14:49:57.488" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.488" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <RateType rateTypeId="OVERTIME" description="Overtime Rate" lastUpdatedStamp="2015-06-18 14:49:57.485" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.485" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <RateType rateTypeId="STANDARD" description="Standard Rate" lastUpdatedStamp="2015-06-18 14:49:57.483" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.483" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

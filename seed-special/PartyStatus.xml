@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PartyStatus statusId="PARTY_ENABLED" partyId="10000" statusDate="2015-06-18 14:54:37.001" lastUpdatedStamp="2015-06-18 14:54:37.011" lastUpdatedTxStamp="2015-06-18 14:54:37.001" createdStamp="2015-06-18 14:54:37.011" createdTxStamp="2015-06-18 14:54:37.001"/>
+</entity-engine-xml>

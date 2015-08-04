@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SurveyApplType surveyApplTypeId="CART_ADD" description="Add-To Cart" lastUpdatedStamp="2015-06-18 14:49:54.742" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.742" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <SurveyApplType surveyApplTypeId="CHECK_OUT" description="Check-Out" lastUpdatedStamp="2015-06-18 14:49:54.743" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.743" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <SurveyApplType surveyApplTypeId="CUSTOMER_PROFILE" description="Customer Profile" lastUpdatedStamp="2015-06-18 14:49:54.746" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.746" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <SurveyApplType surveyApplTypeId="GENERAL_POLL" description="General Poll" lastUpdatedStamp="2015-06-18 14:49:54.744" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.744" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <SurveyApplType surveyApplTypeId="PORDER_PLACE" description="Purchase Order Placement" lastUpdatedStamp="2015-06-18 14:49:54.748" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.748" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <SurveyApplType surveyApplTypeId="PORDITM_PLACE" description="Purchase Order Item Placement" lastUpdatedStamp="2015-06-18 14:49:54.749" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.749" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <SurveyApplType surveyApplTypeId="RANDOM_POLL" description="Random Poll" lastUpdatedStamp="2015-06-18 14:49:54.745" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.745" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <SurveyApplType surveyApplTypeId="SORDER_PLACE" description="Sales Order Placement" lastUpdatedStamp="2015-06-18 14:49:54.747" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.747" createdTxStamp="2015-06-18 14:49:54.587"/>
+</entity-engine-xml>

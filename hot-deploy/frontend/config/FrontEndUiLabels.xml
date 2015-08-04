@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <property key="FrontEndAmountIncludingTax">
+        <value xml:lang="en">Amount including tax</value>
+        <value xml:lang="fr">Montant TTC</value>
+    </property>
+    <property key="FrontEndApplication">
+        <value xml:lang="en">O'Toît FrontEnd Application</value>
+        <value xml:lang="fr">Application FrontEnd O'Toît</value>
+    </property>
+    <property key="FrontEndAtLeastOneMandatoryField">
+        <value xml:lang="en">At least one mandatory field</value>
+        <value xml:lang="fr">Au moins un champ obligatoire</value>
+    </property>
+    <property key="FrontEndCallUs">
+        <value xml:lang="en">Call us</value>
+        <value xml:lang="fr">Appelez nous au </value>
+    </property>
+    <property key="FrontEndCartContent">
+        <value xml:lang="en">Your cart contains</value>
+        <value xml:lang="fr">Votre panier contient</value>
+    </property>
+    <property key="FrontEndCartValidation">
+        <value xml:lang="en">CART VALIDATION</value>
+        <value xml:lang="fr">VALIDATION DU PANIER</value>
+    </property>
+    <property key="FrontEndChooseShippingPlace">
+        <value xml:lang="en">CHOICE OF SHIPPING PLACE</value>
+        <value xml:lang="fr">CHOIX DU LIEU DE LIVRAISON</value>
+    </property>
+    <property key="FrontEndChoosePaymentMethod">
+        <value xml:lang="en">CHOICE OF PAYMENT METHOD</value>
+        <value xml:lang="fr">CHOIX DU MODE DE PAIEMENT</value>
+    </property>
+    <property key="FrontEndChooseRoof">
+        <value xml:lang="en">Choose your roof</value>
+        <value xml:lang="fr">Choisissez votre toit</value>
+    </property>
+    <property key="FrontEndCompanyName">
+        <value xml:lang="en">O'Toît: FrontEnd</value>
+        <value xml:lang="fr">O'Toît: FrontEnd</value>
+    </property>
+    <property key="FrontEndCompanySubtitle">
+        <value xml:lang="en">Acheter autrement</value>
+        <value xml:lang="fr">Acheter autrement</value>
+    </property>
+    <property key="FrontEndConfirmation">
+        <value xml:lang="en">Confirmation</value>
+        <value xml:lang="fr">Confirmation</value>
+    </property>
+    <property key="FrontEndConfirmationEmailSend">
+        <value xml:lang="en">An e-mail of confirmation was sent to you</value>
+        <value xml:lang="fr">Un courriel de confirmation vous a été envoyé</value>
+    </property>
+    <property key="FrontEndConfirmNewPassword">
+        <value xml:lang="en">Confirm new password</value>
+        <value xml:lang="fr">Confirmation du nouveau mot de passe</value>
+    </property>
+    <property key="FrontEndConfirmRegistration">
+        <value xml:lang="en">Confirm registration</value>
+        <value xml:lang="fr">Confirmer l'inscription</value>
+    </property>
+    <property key="FrontEndConnection">
+        <value xml:lang="en">Login</value>
+        <value xml:lang="fr">Se connecter</value>
+    </property>
+    <property key="FrontEndDefaultRoof">
+        <value xml:lang="en">Default roof</value>
+        <value xml:lang="fr">Toît par défaut</value>
+    </property>
+    <property key="FrontEndEmailAddress">
+        <value xml:lang="en">Email address</value>
+        <value xml:lang="fr">Adresse email</value>
+    </property>
+    <property key="FrontEndEmailSendWhenProblemSolved">
+        <value xml:lang="en">An e-mail will be sent to you when the problem will be solved</value>
+        <value xml:lang="fr">Un courriel vous sera envoyé lorsque le problème sera résolu</value>
+    </property>
+    <property key="FrontEndErrorApologizes">
+        <value xml:lang="en">We apologize for the caused embarrassment</value>
+        <value xml:lang="fr">Nous vous prions de nous excuser pour la gêne occasionnée</value>
+    </property>
+    <property key="FrontEndFamily">
+        <value xml:lang="en">Family</value>
+        <value xml:lang="fr">Famille</value>
+    </property>
+    <property key="FrontEndFamilyLower">
+        <value xml:lang="en">family</value>
+        <value xml:lang="fr">famille</value>
+    </property>
+    <property key="FrontEndFavoritesLower">
+        <value xml:lang="en">favorites</value>
+        <value xml:lang="fr">coups de coeur</value>
+    </property>
+    <property key="FrontEndFavoritePaymentMethod">
+        <value xml:lang="en">Opt for your favorite payment method</value>
+        <value xml:lang="fr">Optez pour votre mode de paiement préféré</value>
+    </property>
+    <property key="FrontEndForgotPassword">
+        <value xml:lang="en">Forgot password ?</value>
+        <value xml:lang="fr">Mot de passe oublié ?</value>
+    </property>
+    <property key="FrontEndHistoricalLower">
+        <value xml:lang="en">historical</value>
+        <value xml:lang="fr">historique</value>
+    </property>
+    <property key="FrontEndHomePhone">
+        <value xml:lang="en">Home phone</value>
+        <value xml:lang="fr">Téléphone fixe</value>
+    </property>
+    <property key="FrontEndIdentification">
+        <value xml:lang="en">Identification</value>
+        <value xml:lang="fr">Identification</value>
+    </property>
+    <property key="FrontEndInformations">
+        <value xml:lang="en">Informations</value>
+        <value xml:lang="fr">Informations</value>
+    </property>
+    <property key="FrontEndInformationsLower">
+        <value xml:lang="en">informations</value>
+        <value xml:lang="fr">informations</value>
+    </property>
+    <property key="FrontEndIsEmpty">
+        <value xml:lang="en">is empty...</value>
+        <value xml:lang="fr">est vide...</value>
+    </property>
+    <property key="FrontEndLogout">
+        <value xml:lang="en">Logout</value>
+        <value xml:lang="fr">Déconnexion</value>
+    </property>
+    <property key="FrontEndLoginRegister">
+        <value xml:lang="en">Login / Register</value>
+        <value xml:lang="fr">Connexion / Inscription</value>
+    </property>
+    <property key="FrontEndMandatoryField">
+        <value xml:lang="en">Mandatory field</value>
+        <value xml:lang="fr">Champ obligatoire</value>
+    </property>
+    <property key="FrontEndMisses">
+        <value xml:lang="en">Misses</value>
+        <value xml:lang="fr">Madame</value>
+    </property>
+    <property key="FrontEndMister">
+        <value xml:lang="en">Mister</value>
+        <value xml:lang="fr">Monsieur</value>
+    </property>
+    <property key="FrontEndMon">
+        <value xml:lang="en">My</value>
+        <value xml:lang="fr">Mon</value>
+    </property>
+    <property key="FrontEndMa">
+        <value xml:lang="en">My</value>
+        <value xml:lang="fr">Ma</value>
+    </property>
+    <property key="FrontEndMes">
+        <value xml:lang="en">My</value>
+        <value xml:lang="fr">Mes</value>
+    </property>
+    <property key="FrontEndMyCart">
+        <value xml:lang="en">My cart</value>
+        <value xml:lang="fr">Mon panier</value>
+    </property>
+    <property key="FrontEndMyFavorite">
+        <value xml:lang="en">My favorite</value>
+        <value xml:lang="fr">Mes Favoris</value>
+    </property>
+    <property key="FrontEndNewPassword">
+        <value xml:lang="en">New password</value>
+        <value xml:lang="fr">Nouveau mot de passe</value>
+    </property>
+    <property key="FrontEndNoteYourOrderNumber">
+        <value xml:lang="en">Please note the number of your order</value>
+        <value xml:lang="fr">Veuillez noter le numéro de votre commande</value>
+    </property>
+    <property key="FrontEndNotificationMailConfim">
+        <value xml:lang="en">You will receive instructions ofr your password reinitialization soon via email.</value>
+        <value xml:lang="fr">Vous allez recevoir, très prochainnement par email, les instructions pour Réinitialiser votre mot de passe.</value>
+    </property>
+    <property key="FrontEndORDER_APPROVED">
+        <value xml:lang="de">Genehmigt</value>
+        <value xml:lang="en">Approved</value>
+        <value xml:lang="es">Aprobado</value>
+        <value xml:lang="fr">Validée</value>
+        <value xml:lang="it">Approvato</value>
+        <value xml:lang="ja">承認</value>
+        <value xml:lang="nl">Goedgekeurd</value>
+        <value xml:lang="pt">Aprovada</value>
+        <value xml:lang="pt_BR">Aprovado</value>
+        <value xml:lang="ro">Aprobata</value>
+        <value xml:lang="ru">Утвержден</value>
+        <value xml:lang="th">เห็นด้วย</value>
+        <value xml:lang="vi">Đã duyệt</value>
+        <value xml:lang="zh">已批准</value>
+        <value xml:lang="zh_TW">核准</value>
+    </property>
+    <property key="FrontEndORDER_CANCELLED">
+        <value xml:lang="de">Annulliert</value>
+        <value xml:lang="en">Cancelled</value>
+        <value xml:lang="es">Cancelado</value>
+        <value xml:lang="fr">Annulée</value>
+        <value xml:lang="it">Cancellato</value>
+        <value xml:lang="ja">取消</value>
+        <value xml:lang="nl">Gannuleerd</value>
+        <value xml:lang="pt">Cancelada</value>
+        <value xml:lang="pt_BR">Cancelado</value>
+        <value xml:lang="ro">Stearsa</value>
+        <value xml:lang="ru">Отменен</value>
+        <value xml:lang="th">ยกเลิก</value>
+        <value xml:lang="vi">Đã hủy</value>
+        <value xml:lang="zh">已取消</value>
+        <value xml:lang="zh_TW">取消</value>
+    </property>
+    <property key="FrontEndORDER_COMPLETED">
+        <value xml:lang="de">Abgeschlossen</value>
+        <value xml:lang="en">Completed</value>
+        <value xml:lang="es">Terminado</value>
+        <value xml:lang="fr">Terminée</value>
+        <value xml:lang="it">Completato</value>
+        <value xml:lang="ja">完了</value>
+        <value xml:lang="nl">Gereed</value>
+        <value xml:lang="pt">Completa</value>
+        <value xml:lang="pt_BR">Concluído</value>
+        <value xml:lang="ro">Completata</value>
+        <value xml:lang="ru">Завершен</value>
+        <value xml:lang="th">เสร็จสมบูรณ์</value>
+        <value xml:lang="vi">Hoàn thành</value>
+        <value xml:lang="zh">已完成</value>
+        <value xml:lang="zh_TW">完成</value>
+    </property>
+    <property key="FrontEndORDER_CREATED">
+        <value xml:lang="de">Erstellt</value>
+        <value xml:lang="en">Created</value>
+        <value xml:lang="es">Creado</value>
+        <value xml:lang="fr">Créée</value>
+        <value xml:lang="it">Creato</value>
+        <value xml:lang="ja">作成</value>
+        <value xml:lang="nl">Aangemaakt</value>
+        <value xml:lang="pt">Criada</value>
+        <value xml:lang="pt_BR">Criado</value>
+        <value xml:lang="ro">Creata</value>
+        <value xml:lang="ru">Создан</value>
+        <value xml:lang="th">สร้าง</value>
+        <value xml:lang="vi">Đã tạo</value>
+        <value xml:lang="zh">已创建</value>
+        <value xml:lang="zh_TW">建立</value>
+    </property>
+    <property key="FrontEndORDER_HOLD">
+        <value xml:lang="de">Wartend</value>
+        <value xml:lang="en">Held</value>
+        <value xml:lang="es">Retenido</value>
+        <value xml:lang="fr">Bloquée</value>
+        <value xml:lang="it">Congelato</value>
+        <value xml:lang="ja">保留</value>
+        <value xml:lang="nl">Geblokkeerd</value>
+        <value xml:lang="pt_BR">Retido</value>
+        <value xml:lang="ru">В ожидании</value>
+        <value xml:lang="th">การควบคุม</value>
+        <value xml:lang="vi">Đã giữ (hold)</value>
+        <value xml:lang="zh">已保留</value>
+        <value xml:lang="zh_TW">保留</value>
+    </property>
+    <property key="FrontEndORDER_PROCESSING">
+        <value xml:lang="de">In Verarbeitung</value>
+        <value xml:lang="en">Processing</value>
+        <value xml:lang="es">Procesando</value>
+        <value xml:lang="fr">En cours</value>
+        <value xml:lang="it">In esecuzione</value>
+        <value xml:lang="ja">処理中</value>
+        <value xml:lang="nl">Onder handen</value>
+        <value xml:lang="pt">A Processar</value>
+        <value xml:lang="pt_BR">Processando</value>
+        <value xml:lang="ro">In Executie</value>
+        <value xml:lang="ru">Обрабатывается</value>
+        <value xml:lang="th">ประมวลผล</value>
+        <value xml:lang="vi">Đang xử lý</value>
+        <value xml:lang="zh">处理中</value>
+        <value xml:lang="zh_TW">處理中</value>
+    </property>
+    <property key="FrontEndORDER_REJECTED">
+        <value xml:lang="de">Abgelehnt</value>
+        <value xml:lang="en">Rejected</value>
+        <value xml:lang="es">Rechazado</value>
+        <value xml:lang="fr">Rejetée</value>
+        <value xml:lang="it">Rifiutato</value>
+        <value xml:lang="ja">否認</value>
+        <value xml:lang="nl">Afgewezen</value>
+        <value xml:lang="pt">Rejeitada</value>
+        <value xml:lang="pt_BR">Rejeitado</value>
+        <value xml:lang="ro">Refuzata</value>
+        <value xml:lang="ru">Отклонен</value>
+        <value xml:lang="th">ปฏิเสธ</value>
+        <value xml:lang="vi">Từ chối</value>
+        <value xml:lang="zh">已拒绝</value>
+        <value xml:lang="zh_TW">否決</value>
+    </property>
+    <property key="FrontEndORDER_SENT">
+        <value xml:lang="de">Übermittelt</value>
+        <value xml:lang="en">Sent</value>
+        <value xml:lang="es">Enviado</value>
+        <value xml:lang="fr">Envoyée</value>
+        <value xml:lang="it">Inviato</value>
+        <value xml:lang="ja">送付済</value>
+        <value xml:lang="nl">Verzonden</value>
+        <value xml:lang="pt">Enviada</value>
+        <value xml:lang="pt_BR">Enviado</value>
+        <value xml:lang="ro">Transmisa</value>
+        <value xml:lang="ru">Отослан</value>
+        <value xml:lang="th">ส่ง</value>
+        <value xml:lang="vi">Đã gửi</value>
+        <value xml:lang="zh">已发送</value>
+        <value xml:lang="zh_TW">送出</value>
+    </property>
+    <property key="FrontEndOrderDetails">
+        <value xml:lang="en">Show order details</value>
+        <value xml:lang="fr">Afficher le détail de commande</value>
+    </property>
+    <property key="FrontEndOrdersLower">
+        <value xml:lang="en">orders</value>
+        <value xml:lang="fr">commandes</value>
+    </property>
+    <property key="FrontEndOrderSuccessfullyComplete">
+        <value xml:lang="en">You order has successfully been complete</value>
+        <value xml:lang="fr">Votre commande a bien été enregistrée</value>
+    </property>
+    <property key="FrontEndOrderSummary">
+        <value xml:lang="en">Summary of your order</value>
+        <value xml:lang="fr">Récapitulatif de votre commande</value>
+    </property>
+    <property key="FrontEndOrderValidatedWhenProblemSolved">
+        <value xml:lang="en">Your order will be validated when the problem of payment will be solved</value>
+        <value xml:lang="fr">Votre commande sera validée lorsque le problème de paiement sera résolu</value>
+    </property>
+    <property key="FrontEndOups">
+        <value xml:lang="en">Oups !</value>
+        <value xml:lang="fr">Oups !</value>
+    </property>
+    <property key="FrontEndPaiementError">
+        <value xml:lang="en">A problem during paiement prevents the order validation</value>
+        <value xml:lang="fr">Un problème lors du paiement empêche la validation de la commande</value>
+    </property>
+    <property key="FrontEndPasswordConfirmation">
+        <value xml:lang="en">Password confirmation</value>
+        <value xml:lang="fr">Confirmation du mot de passe</value>
+    </property>
+    <property key="FrontEndProduct">
+        <value xml:lang="en">product</value>
+        <value xml:lang="fr">article</value>
+    </property>
+    <property key="FrontEndProducts">
+        <value xml:lang="en">products</value>
+        <value xml:lang="fr">articles</value>
+    </property>
+    <property key="FrontEndRecoverFamilyCarts">
+        <value xml:lang="en">Recover the carts contents of other members of my family</value>
+        <value xml:lang="fr">Récupérer le contenu des paniers des autres membre de ma famille</value>
+    </property>
+    <property key="FrontEndRegister">
+        <value xml:lang="en">Register</value>
+        <value xml:lang="fr">Créer un compte</value>
+    </property>
+    <property key="FrontEndRememberMe">
+        <value xml:lang="en">Remember</value>
+        <value xml:lang="fr">Se souvenir de moi sur cet ordinateur</value>
+    </property>
+    <property key="FrontEndResetPassword">
+        <value xml:lang="en">Reset my password</value>
+        <value xml:lang="fr">Réinitialiser mon mot de passe</value>
+    </property>
+    <property key="FrontEndRetrieveHour">
+        <value xml:lang="en">Indicate the retrieve hour of your shopping cart</value>
+        <value xml:lang="fr">Indiquez l'heure de retrait de votre panier</value>
+    </property>
+    <property key="FrontEndRoofAddress">
+        <value xml:lang="en">Roof address</value>
+        <value xml:lang="fr">Adresse du toit</value>
+    </property>
+    <property key="FrontEndRoofWhereOrderAvailable">
+        <value xml:lang="en">Roof where your order will be delivered</value>
+        <value xml:lang="fr">Le Toit où votre commande sera livrée</value>
+    </property>
+    <property key="FrontEndSelectedProductsValidation">
+        <value xml:lang="en">Validate your products selection</value>
+        <value xml:lang="fr">Validez votre sélection d'articles</value>
+    </property>
+    <property key="FrontEndSelectionArea">
+        <value xml:lang="en">Selection area</value>
+        <value xml:lang="fr">Zone de sélection</value>
+    </property>
+    <property key="FrontEndSelectRoof">
+        <value xml:lang="en">Select the roof where you wish to be delivered</value>
+        <value xml:lang="fr">Sélectionnez le toit où vous souhaitez être livré</value>
+    </property>
+    <property key="FrontEndShoppingListsLower">
+        <value xml:lang="en">shopping lists</value>
+        <value xml:lang="fr">listes de courses</value>
+    </property>
+    <property key="FrontEndSince">
+        <value xml:lang="en">since</value>
+        <value xml:lang="fr">depuis le</value>
+    </property>
+    <property key="FrontEndYourEmail">
+        <value xml:lang="en">Your email</value>
+        <value xml:lang="fr">Votre email</value>
+    </property>
+    <property key="FrontEndYourOrderAvailable">
+        <value xml:lang="en">Your order will be available</value>
+        <value xml:lang="fr">Votre commande sera disponible</value>
+    </property>
+    <property key="PageTitleAccount">
+        <value xml:lang="en">My account</value>
+        <value xml:lang="fr">Mon compte</value>
+    </property>
+    <property key="PageTitleApplicationWindow">
+        <value xml:lang="en">Applications</value>
+        <value xml:lang="fr">Applications</value>
+    </property>
+        <property key="PageTitleCheckoutOptions">
+        <value xml:lang="en">Checkout options</value>
+        <value xml:lang="fr">Validation du panier</value>
+    </property>
+    <property key="PageTitleForgotPassword">
+        <value xml:lang="en">Password recovery</value>
+        <value xml:lang="fr">Récupération du mot de passe</value>
+    </property>
+    <property key="PageTitleLogin">
+        <value xml:lang="en">Login</value>
+        <value xml:lang="fr">Connexion</value>
+    </property>
+    <property key="PageTitleMain">
+        <value xml:lang="en">Home</value>
+        <value xml:lang="fr">Accueil</value>
+    </property>
+    <property key="PageTitleShoppingCart">
+        <value xml:lang="en">Shopping Cart</value>
+        <value xml:lang="fr">Panier</value>
+    </property>
+</resource>

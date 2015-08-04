@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SecurityGroup groupId="EASYOFBIZ" description="Simplified OFBiz Admin group, has all permissions for Party, Order, Fabrication order, Stock, CRM." lastUpdatedStamp="2015-06-18 14:49:58.918" lastUpdatedTxStamp="2015-06-18 14:49:58.913" createdStamp="2015-06-18 14:49:58.918" createdTxStamp="2015-06-18 14:49:58.913"/>
+    <SecurityGroup groupId="ECOMMERCE_CUSTOMER" description="Customer user of ECOMMERCE Limited access to own account" lastUpdatedStamp="2015-06-18 14:49:58.904" lastUpdatedTxStamp="2015-06-18 14:49:58.904" createdStamp="2015-06-18 14:49:58.904" createdTxStamp="2015-06-18 14:49:58.904"/>
+    <SecurityGroup groupId="SUPER" description="Super admin group, has all *_ADMIN permission loaded as seed data" lastUpdatedStamp="2015-06-18 14:49:49.804" lastUpdatedTxStamp="2015-06-18 14:49:49.793" createdStamp="2015-06-18 14:49:49.804" createdTxStamp="2015-06-18 14:49:49.793"/>
+</entity-engine-xml>

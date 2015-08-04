@@ -1,0 +1,9 @@
+Svn version = 1682564
+[INFO] OFBiz_Home : /var/lib/jenkins/workspace/Update_Front_master_branch/ofbiz,   ADM_Version : 20140515
+Installed add-ons:
+Editable  ArtifactId                                                  Version             Name
+ N        com.o-toit.front-component                                  0.1.5.3             Cet addon est l'addon principale du front office, il ajout le composant front...
+ N        com.o-toit.webdriver-front                                  0.0.2.2             Containing all nécessary files for launching selenium tests on the frontoffice.
+ N        org.ofbizextra.framework.webdriver-tools                    0.2.21-v13.07       This addon allow to use Selenium webdrivers to do functional testing
+ N        org.ofbiz-extra.webservice.new-wsdl-style                   0.7-v13.07          Enbale generation of valid wsdl style instead of map-map documents, it also a...
+

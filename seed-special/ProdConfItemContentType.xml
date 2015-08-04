@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProdConfItemContentType confItemContentTypeId="DESCRIPTION" hasTable="N" description="Description" lastUpdatedStamp="2015-06-18 14:49:55.699" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.699" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProdConfItemContentType confItemContentTypeId="IMAGE_URL" hasTable="N" description="Image" lastUpdatedStamp="2015-06-18 14:49:55.698" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.698" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProdConfItemContentType confItemContentTypeId="INSTRUCTIONS" hasTable="N" description="Instructions" lastUpdatedStamp="2015-06-18 14:49:55.701" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.701" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProdConfItemContentType confItemContentTypeId="LONG_DESCRIPTION" hasTable="N" description="Description - Long" lastUpdatedStamp="2015-06-18 14:49:55.7" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.7" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

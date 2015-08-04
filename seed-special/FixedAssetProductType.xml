@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <FixedAssetProductType fixedAssetProductTypeId="FAPT_SALE" description="Sale of Asset" lastUpdatedStamp="2015-06-18 14:49:56.879" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.879" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetProductType fixedAssetProductTypeId="FAPT_USE" description="Use of Asset" lastUpdatedStamp="2015-06-18 14:49:56.878" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.878" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

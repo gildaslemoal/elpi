@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <FinAccountTransType finAccountTransTypeId="ADJUSTMENT" hasTable="N" description="Adjustment" lastUpdatedStamp="2015-06-18 14:49:56.787" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.787" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FinAccountTransType finAccountTransTypeId="DEPOSIT" hasTable="N" description="Deposit" lastUpdatedStamp="2015-06-18 14:49:56.785" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.785" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FinAccountTransType finAccountTransTypeId="WITHDRAWAL" hasTable="N" description="Withdraw" lastUpdatedStamp="2015-06-18 14:49:56.786" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.786" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

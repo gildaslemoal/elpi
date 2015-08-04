@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <GeoPoint geoPointId="9000" dataSourceId="GEOPT_GOOGLE" latitude="40.297264" longitude="-111.696625" elevation="4756.000000" elevationUomId="LEN_ft" information="A testing GeoPoint for contactMechId=9015 (DemoCustomer)" lastUpdatedStamp="2015-06-18 14:49:54.509" lastUpdatedTxStamp="2015-06-18 14:49:54.507" createdStamp="2015-06-18 14:49:54.509" createdTxStamp="2015-06-18 14:49:54.507"/>
+    <GeoPoint geoPointId="9001" dataSourceId="GEOPT_GOOGLE" latitude="52.350" longitude="4.917" elevation="-4.000000" elevationUomId="LEN_m" information="A testing GeoPoint for contactMechId=EUROCUSTOMER (EuroCustomer)" lastUpdatedStamp="2015-06-18 14:49:54.511" lastUpdatedTxStamp="2015-06-18 14:49:54.507" createdStamp="2015-06-18 14:49:54.511" createdTxStamp="2015-06-18 14:49:54.507"/>
+    <GeoPoint geoPointId="9002" dataSourceId="GEOPT_GOOGLE" latitude="43.491661995004264" longitude="3.6840248107910156" elevation="40.000000" elevationUomId="LEN_m" information="A testing GeoPoint for contactMechId=FRENCHCUSTOMER (FrenchCustomer)" lastUpdatedStamp="2015-06-18 14:49:54.512" lastUpdatedTxStamp="2015-06-18 14:49:54.507" createdStamp="2015-06-18 14:49:54.512" createdTxStamp="2015-06-18 14:49:54.507"/>
+</entity-engine-xml>

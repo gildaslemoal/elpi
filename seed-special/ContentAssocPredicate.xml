@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ContentAssocPredicate contentAssocPredicateId="categorizes" description="Categorizes" lastUpdatedStamp="2015-06-18 14:49:54.633" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.633" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <ContentAssocPredicate contentAssocPredicateId="defines" description="The object defines the subject." lastUpdatedStamp="2015-06-18 14:49:54.628" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.628" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <ContentAssocPredicate contentAssocPredicateId="extends" description="The object extends the subject." lastUpdatedStamp="2015-06-18 14:49:54.629" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.629" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <ContentAssocPredicate contentAssocPredicateId="member-of" description="The object is a member of the subject." lastUpdatedStamp="2015-06-18 14:49:54.627" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.627" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <ContentAssocPredicate contentAssocPredicateId="references" description="The object references the subject." lastUpdatedStamp="2015-06-18 14:49:54.631" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.631" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <ContentAssocPredicate contentAssocPredicateId="related-to" description="The object is related to the subject." lastUpdatedStamp="2015-06-18 14:49:54.63" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.63" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <ContentAssocPredicate contentAssocPredicateId="topifies" description="Topifies" lastUpdatedStamp="2015-06-18 14:49:54.632" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.632" createdTxStamp="2015-06-18 14:49:54.587"/>
+</entity-engine-xml>

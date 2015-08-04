@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <WebSite webSiteId="FrontEnd" siteName="Front End de Nous Citoyens" visualThemeSetId="ECOMMERCE" lastUpdatedStamp="2015-06-18 15:11:59.219" lastUpdatedTxStamp="2015-06-18 15:11:59.218" createdStamp="2015-06-18 15:11:59.219" createdTxStamp="2015-06-18 15:11:59.218" productStoreId="10000"/>
+</entity-engine-xml>

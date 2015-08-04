@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<site-conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/site-conf.xsd">
+    <include location="component://common/webcommon/WEB-INF/common-controller.xml"/>
+    <include location="component://party/webapp/partymgr/WEB-INF/controller.xml"/>
+    <description>Customer Module Site Configuration File</description>
+    
+    <!-- Request Mappings -->
+    <request-map uri="main">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="main"/>
+    </request-map>
+    <request-map uri="FindCustomer">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="FindCustomer"/>
+    </request-map>
+    <request-map uri="NewCustomer">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="NewCustomer"/>
+        <response name="error" type="view" value="NewCustomer"/>
+    </request-map>
+    <request-map uri="CreatePartyGroupCustomer">
+        <security https="true" auth="true"/>
+        <event type="service" path="" invoke="createPartyGroupCustomer"/>
+        <response name="success" type="view" value="viewprofile"/>
+        <response name="error" type="view" value="NewCustomer"/>
+    </request-map>
+    <request-map uri="NewCustomerContact">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="NewCustomerContact"/>
+    </request-map>
+    <request-map uri="CreateCustomerContact">
+        <security https="true" auth="true"/>
+        <event type="service" path="" invoke="createCustomerContact"/>
+        <response name="success" type="view" value="viewprofile"/>
+        <response name="error" type="view" value="NewCustomerContact"/>
+    </request-map>
+    
+    <request-map uri="LookupCustomerPartyGroup"><security https="true" auth="true"/><response name="success" type="view" value="LookupCustomerPartyGroup"/></request-map>
+    
+    <!-- end of request mappings -->
+
+    <!-- View Mappings -->
+    <view-map name="main" type="screen" page="component://party/widget/customer/CustomerScreens.xml#FindCustomer"/>
+    <view-map name="FindCustomer" type="screen" page="component://party/widget/customer/CustomerScreens.xml#FindCustomer"/>
+    <view-map name="NewCustomer" type="screen" page="component://party/widget/customer/CustomerScreens.xml#NewCustomer"/>
+    <view-map name="NewCustomerContact" type="screen" page="component://party/widget/customer/CustomerScreens.xml#NewCustomerContact"/>
+    
+    <view-map name="LookupCustomerPartyGroup" type="screen" page="component://party/widget/partymgr/LookupScreens.xml#LookupCustomerPartyGroup"/>
+
+    <!-- end of view mappings -->
+</site-conf>

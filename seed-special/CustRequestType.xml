@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <CustRequestType custRequestTypeId="RF_BUGFIX" hasTable="N" description="Request For Bug Fix" lastUpdatedStamp="2015-06-18 14:49:58.282" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.282" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestType custRequestTypeId="RF_CATALOG" hasTable="N" description="Request For Catalog" lastUpdatedStamp="2015-06-18 14:49:58.285" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.285" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestType custRequestTypeId="RF_FEATURE" hasTable="N" description="Request For Feature" lastUpdatedStamp="2015-06-18 14:49:58.286" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.286" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestType custRequestTypeId="RF_INFO" hasTable="N" description="Request For Information" lastUpdatedStamp="2015-06-18 14:49:58.287" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.287" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestType custRequestTypeId="RF_PROPOSAL" hasTable="N" description="Request For Proposal" lastUpdatedStamp="2015-06-18 14:49:58.288" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.288" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestType custRequestTypeId="RF_PUR_QUOTE" hasTable="N" description="Request For Purchase Quote" lastUpdatedStamp="2015-06-18 14:49:58.291" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.291" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestType custRequestTypeId="RF_QUOTE" hasTable="N" description="Request For Quote" lastUpdatedStamp="2015-06-18 14:49:58.289" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.289" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestType custRequestTypeId="RF_SUPPORT" hasTable="N" description="Request For Support" lastUpdatedStamp="2015-06-18 14:49:58.29" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.29" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <OrderType orderTypeId="PURCHASE_ORDER" hasTable="N" description="Purchase" lastUpdatedStamp="2015-06-18 14:49:58.324" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.324" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderType orderTypeId="SALES_ORDER" hasTable="N" description="Sales" lastUpdatedStamp="2015-06-18 14:49:58.325" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.325" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

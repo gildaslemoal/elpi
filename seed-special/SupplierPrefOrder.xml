@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SupplierPrefOrder supplierPrefOrderId="10_MAIN_SUPPL" description="Main Supplier" lastUpdatedStamp="2015-06-18 14:49:55.932" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.932" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <SupplierPrefOrder supplierPrefOrderId="90_ALT_SUPPL" description="Alternative Supplier" lastUpdatedStamp="2015-06-18 14:49:55.933" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.933" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

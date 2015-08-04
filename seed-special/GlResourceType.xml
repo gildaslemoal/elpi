@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <GlResourceType glResourceTypeId="DELIVERED_GOODS" description="Delivered Goods" lastUpdatedStamp="2015-06-18 14:49:56.979" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.979" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <GlResourceType glResourceTypeId="FINISHED_GOODS" description="Finished Goods" lastUpdatedStamp="2015-06-18 14:49:56.978" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.978" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <GlResourceType glResourceTypeId="LABOR" description="Labor" lastUpdatedStamp="2015-06-18 14:49:56.976" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.976" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <GlResourceType glResourceTypeId="MONEY" description="Money" lastUpdatedStamp="2015-06-18 14:49:56.974" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.974" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <GlResourceType glResourceTypeId="RAW_MATERIALS" description="Raw Materials" lastUpdatedStamp="2015-06-18 14:49:56.975" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.975" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <GlResourceType glResourceTypeId="SERVICES" description="Services" lastUpdatedStamp="2015-06-18 14:49:56.977" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.977" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

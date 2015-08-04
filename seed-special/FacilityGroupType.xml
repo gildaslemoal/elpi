@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <FacilityGroupType facilityGroupTypeId="MGMT_STRUCTURE" description="Management Structure" lastUpdatedStamp="2015-06-18 14:49:55.559" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.559" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <FacilityGroupType facilityGroupTypeId="PRICING_GROUP" description="Pricing Group" lastUpdatedStamp="2015-06-18 14:49:55.56" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.56" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

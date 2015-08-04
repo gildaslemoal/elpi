@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <AcctgTransEntryType acctgTransEntryTypeId="_NA_" hasTable="N" description="Not Applicable" lastUpdatedStamp="2015-06-18 14:49:56.761" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.761" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

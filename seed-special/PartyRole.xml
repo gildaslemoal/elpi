@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PartyRole partyId="10000" roleTypeId="AGENT" lastUpdatedStamp="2015-06-18 14:55:17.743" lastUpdatedTxStamp="2015-06-18 14:55:17.739" createdStamp="2015-06-18 14:55:17.743" createdTxStamp="2015-06-18 14:55:17.739"/>
+    <PartyRole partyId="10000" roleTypeId="BILL_FROM_VENDOR" lastUpdatedStamp="2015-06-18 14:54:47.59" lastUpdatedTxStamp="2015-06-18 14:54:47.536" createdStamp="2015-06-18 14:54:47.59" createdTxStamp="2015-06-18 14:54:47.536"/>
+    <PartyRole partyId="10000" roleTypeId="BILL_TO_CUSTOMER" lastUpdatedStamp="2015-06-18 14:55:01.565" lastUpdatedTxStamp="2015-06-18 14:55:01.512" createdStamp="2015-06-18 14:55:01.565" createdTxStamp="2015-06-18 14:55:01.512"/>
+    <PartyRole partyId="10000" roleTypeId="CARRIER" lastUpdatedStamp="2015-06-18 14:55:13.027" lastUpdatedTxStamp="2015-06-18 14:55:12.982" createdStamp="2015-06-18 14:55:13.027" createdTxStamp="2015-06-18 14:55:12.982"/>
+    <PartyRole partyId="10000" roleTypeId="INTERNAL_ORGANIZATIO" lastUpdatedStamp="2015-06-18 14:55:23.49" lastUpdatedTxStamp="2015-06-18 14:55:23.445" createdStamp="2015-06-18 14:55:23.49" createdTxStamp="2015-06-18 14:55:23.445"/>
+    <PartyRole partyId="10000" roleTypeId="_NA_" lastUpdatedStamp="2015-06-18 14:54:37.032" lastUpdatedTxStamp="2015-06-18 14:54:37.001" createdStamp="2015-06-18 14:54:37.032" createdTxStamp="2015-06-18 14:54:37.001"/>
+    <PartyRole partyId="system" roleTypeId="PACKER" lastUpdatedStamp="2015-06-18 14:49:54.58" lastUpdatedTxStamp="2015-06-18 14:49:54.569" createdStamp="2015-06-18 14:49:54.58" createdTxStamp="2015-06-18 14:49:54.569"/>
+</entity-engine-xml>

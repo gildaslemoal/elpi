@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>FrontEnd Services</description>
+    <vendor></vendor>
+    <version>1.0</version>
+
+    <service name="createInterfaceLog" auth="false" require-new-transaction="true"
+            engine="java" location="org.ofbiz.backend.BackendUtils" invoke="createInterfaceLog">
+        <attribute name="interfaceId" mode="IN" type="String" optional="true"/>
+        <attribute name="interfaceLogReq" mode="IN" type="String" allow-html="any"/>
+        <attribute name="interfaceLogRes" mode="IN" type="String" allow-html="any"/>
+        <attribute name="mode" mode="IN" type="String"/>
+        <attribute name="undelyingEntityPK" mode="IN" type="String" optional="true"/>
+        <attribute name="interfaceLogId" mode="OUT" type="String" optional="true"/>
+    </service>
+
+    <service name="requestPasswordResetLink" engine="java"
+             location="org.ofbiz.frontend.FrontendServices" invoke="createEmailAddressVerification">
+        <attribute name="emailAddress" type="String" mode="IN" optional="false"/>
+        <attribute name="expireDate" type="String" mode="IN" optional="true"/>
+        <attribute name="mailVerify" type="String" mode="OUT" optional="true"/>
+        <attribute name="verifyHash" type="String" mode="OUT" optional="true"/>
+    </service>
+
+    <service name="sendPasswordResetLink" engine="java"
+             location="org.ofbiz.frontend.FrontendServices" invoke="sendPasswordResetLink">
+        <attribute name="emailAddress" type="String" mode="IN" optional="false"/>
+    </service>
+
+    <service name="requestPasswordReset" engine="java"
+             location="org.ofbiz.frontend.FrontendServices" invoke="requestPasswordReset">
+        <attribute name="verifyHash" type="String" mode="IN" optional="true"/>
+        <attribute name="emailAddress" type="String" mode="OUT"/>
+    </service>
+
+    <service name="resetPassword" engine="java"
+             location="org.ofbiz.frontend.FrontendServices" invoke="resetPassword">
+        <attribute name="emailAddress" type="String" mode="IN" />
+        <attribute name="password" mode="IN" type="String"/>
+        <attribute name="rpassword" mode="IN" type="String"/>
+        <attribute name="password" mode="IN" type="String"/>
+    </service>
+
+    <service name="createProfil" engine="java"
+             location="org.ofbiz.frontend.FrontendServices" invoke="createProfil">
+        <attribute name="USER_TITLE" type="String" mode="IN" optional="false"/>
+        <attribute name="USER_LAST_NAME" type="String" mode="IN" optional="false"/>
+        <attribute name="USER_FIRST_NAME" type="String" mode="IN" optional="false"/>
+        <attribute name="USER_BIRTHDATE" type="String" mode="INOUT" optional="true"/>
+        <attribute name="CUSTOMER_HOME_CONTACT" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_MOBILE_CONTACT" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_ADDRESS1" type="String" mode="IN" optional="false"/>
+        <attribute name="CUSTOMER_ADDRESS2" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_POSTAL_CODE" type="String" mode="IN" optional="false"/>
+        <attribute name="CUSTOMER_CITY" type="String" mode="IN" optional="false"/>
+        <attribute name="CUSTOMER_COUNTRY" type="String" mode="IN" optional="false"/>
+        <attribute name="CUSTOMER_STATE" type="String" mode="IN" optional="false"/>
+        <attribute name="CUSTOMER_EMAIL" type="String" mode="IN" optional="false"/>
+        <attribute name="PASSWORD" type="String" mode="IN" optional="false"/>
+        <attribute name="CUSTOMER_EMAIL_ALLOW_SOL" type="String" mode="IN" optional="true"/>
+        <!--<attribute name="partyId" type="String" mode="OUT" optional="false"/>-->
+    </service>
+
+    <service name="updateProfil" engine="java"
+             location="org.ofbiz.frontend.FrontendServices" invoke="updateProfil">
+        <attribute name="PARTY_ID" type="String" mode="IN" optional="true"/>
+        <attribute name="USER_TITLE" type="String" mode="IN" optional="true"/>
+        <attribute name="USER_LAST_NAME" type="String" mode="IN" optional="true"/>
+        <attribute name="USER_FIRST_NAME" type="String" mode="IN" optional="true"/>
+        <attribute name="USER_BIRTHDATE" type="String" mode="IN" optional="false"/>
+        <attribute name="CUSTOMER_HOME_CONTACT" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_MOBILE_CONTACT" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_ADDRESS1" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_ADDRESS2" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_POSTAL_CODE" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_CITY" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_COUNTRY" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_STATE" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_DEFAULT_ROOF" type="String" mode="IN" optional="true"/>
+    </service>
+
+    <service name="getUserDefaultRoof" engine="java"
+             location="org.ofbiz.frontend.FrontendServices" invoke="getUserDefaultRoof">
+        <attribute name="USER_LOGIN" type="String" mode="IN" optional="true"/>
+        <attribute name="CUSTOMER_DEFAULT_ROOF" type="String" mode="OUT"/>
+    </service>
+
+    <service name="selectMembership" engine="java"
+             location="org.ofbiz.frontend.FrontendServices" invoke="selectMembership">
+        <attribute name="adhesionRadios" type="String" mode="IN" optional="false"/>
+        <attribute name="donRadios" type="String" mode="INOUT" optional="true"/>
+        <attribute name="gift-amount" type="String" mode="INOUT" optional="true"/>
+        <attribute name="CUSTOMER_EMAIL_ALLOW_SOL" type="String" mode="IN" optional="true"/>
+        <attribute name="add_product_id" type="String" mode="OUT" optional="true"/>
+    </service>
+
+    <service name="selectGift" engine="java"
+             location="org.ofbiz.frontend.FrontendServices" invoke="selectGift">
+        <attribute name="donRadios" type="String" mode="IN" optional="true"/>
+        <attribute name="gift-amount" type="String" mode="INOUT" optional="true"/>
+        <attribute name="add_product_id" type="String" mode="OUT" optional="true"/>
+        <attribute name="quantity" type="String" mode="OUT" optional="true"/>
+    </service>
+
+</services>

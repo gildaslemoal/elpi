@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <DataSourceType dataSourceTypeId="ADMIN_ENTRY" description="Administrative Data Entry" lastUpdatedStamp="2015-06-18 14:49:49.878" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.878" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <DataSourceType dataSourceTypeId="ADVERTISEMENT" description="Advertisement" lastUpdatedStamp="2015-06-18 14:49:49.879" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.879" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <DataSourceType dataSourceTypeId="CONTENT_CREATION" description="Content and Data Resource Creation" lastUpdatedStamp="2015-06-18 14:49:49.889" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.889" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <DataSourceType dataSourceTypeId="CONTEST_SIGNUP" description="Contest Signup" lastUpdatedStamp="2015-06-18 14:49:49.877" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.877" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <DataSourceType dataSourceTypeId="GEOPOINT_SUPPLIER" description="Name of GeoPoints publisher" lastUpdatedStamp="2015-06-18 14:49:49.893" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.893" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <DataSourceType dataSourceTypeId="LEAD_SOURCE" description="Lead Source" lastUpdatedStamp="2015-06-18 14:49:58.646" lastUpdatedTxStamp="2015-06-18 14:49:58.598" createdStamp="2015-06-18 14:49:58.646" createdTxStamp="2015-06-18 14:49:58.598"/>
+    <DataSourceType dataSourceTypeId="MAILING_LIST_SIGNUP" description="Mailing List Signup" lastUpdatedStamp="2015-06-18 14:49:49.876" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.876" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <DataSourceType dataSourceTypeId="MY_PORTAL" description="My Portal" lastUpdatedStamp="2015-06-18 14:49:49.882" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.882" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <DataSourceType dataSourceTypeId="PARTNER" description="Partner" lastUpdatedStamp="2015-06-18 14:49:49.881" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.881" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <DataSourceType dataSourceTypeId="PURCHASED_DATA" description="Purchased Data" lastUpdatedStamp="2015-06-18 14:49:49.874" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.874" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <DataSourceType dataSourceTypeId="WEB" description="Web" lastUpdatedStamp="2015-06-18 14:49:49.88" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.88" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <DataSourceType dataSourceTypeId="WEBSITE_ENTRY" description="Website Data Entry" lastUpdatedStamp="2015-06-18 14:49:49.875" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.875" createdTxStamp="2015-06-18 14:49:49.866"/>
+</entity-engine-xml>

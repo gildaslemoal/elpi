@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <UserLogin userLoginId="admin" currentPassword="{SHA}47ca69ebb4bdc9ae0adec130880165d2cc05db1a" requirePasswordChange="Y" lastUpdatedStamp="2015-06-18 14:52:40.434" lastUpdatedTxStamp="2015-06-18 14:52:40.428" createdStamp="2015-06-18 14:52:40.434" createdTxStamp="2015-06-18 14:52:40.428"/>
+    <UserLogin userLoginId="anonymous" enabled="N" lastUpdatedStamp="2015-06-18 14:49:49.815" lastUpdatedTxStamp="2015-06-18 14:49:49.793" createdStamp="2015-06-18 14:49:49.815" createdTxStamp="2015-06-18 14:49:49.793"/>
+    <UserLogin userLoginId="system" isSystem="Y" enabled="N" lastUpdatedStamp="2015-06-18 14:49:54.583" lastUpdatedTxStamp="2015-06-18 14:49:54.569" createdStamp="2015-06-18 14:49:49.809" createdTxStamp="2015-06-18 14:49:49.793" partyId="system"/>
+</entity-engine-xml>

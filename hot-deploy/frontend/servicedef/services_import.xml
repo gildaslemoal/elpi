@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>Interface-Back Services</description>
+    <vendor></vendor>
+    <version>1.0</version>
+    <service name="importProductCategory" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductCategory">
+        <description>import the category entity to the front</description>
+        <auto-attributes mode="IN" entity-name="ProductCategory" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="ProductCategory" optional="true" include="nonpk">
+            <exclude field-name="linkOneImageUrl"/>
+            <exclude field-name="linkTwoImageUrl"/>
+            <exclude field-name="detailScreen"/>
+            <exclude field-name="showInSelect"/>
+        </auto-attributes>
+    </service>
+    <service name="importProductCategoryRemoval" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductCategoryRemoval">
+        <description>import the category entity to the front</description>
+        <attribute name="productCategoryId" mode="IN" type="String"/>
+    </service>
+    <service name="importProduct" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProduct">
+        <description>import the product entity to the front</description>
+        <auto-attributes mode="IN" entity-name="Product" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="Product" optional="true" include="nonpk"/>
+        <override name="description" allow-html="any"/>
+        <override name="longDescription" allow-html="any"/>
+    </service>
+    <service name="importProductToProductCategory" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductToProductCategory">
+        <description>import the product and category association  entity to the front</description>
+        <auto-attributes mode="IN" entity-name="ProductCategoryMember" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="ProductCategoryMember" optional="true" include="nonpk"/>
+    </service>
+    <service name="importFacility" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importFacility">
+        <description>import the facility entity to the front</description>
+        <auto-attributes mode="IN" entity-name="Facility" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="Facility" optional="true" include="nonpk">
+            <exclude field-name="ownerPartyId"/>
+            <exclude field-name="defaultInventoryItemTypeId"/>
+            <exclude field-name="primaryFacilityGroupId"/>
+            <exclude field-name="oldSquareFootage"/>
+            <exclude field-name="facilitySize"/>
+            <exclude field-name="facilitySizeUomId"/>
+            <exclude field-name="defaultDimensionUomId"/>
+            <exclude field-name="defaultWeightUomId"/>
+        </auto-attributes>
+    </service>
+    <service name="importProductOffer" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService"  invoke="importProductOffer">
+        <description>import the productOffer entity to the front</description>
+        <attribute name="productOfferId" mode="IN" type="String" />
+        <attribute name="productOfferName" mode="IN" type="String" />
+        <attribute name="productOfferTypeId" mode="IN" type="String" />
+        <attribute name="productId" mode="IN" type="String" />
+        <attribute name="supplierPartyId" mode="IN" type="String" />
+        <attribute name="adjustments" type="List" mode="IN" optional="false">
+            <list>
+                <map>
+                    <entity-map entity-name="ProductOfferAdjustment" include="all"/>
+                </map>
+            </list>
+        </attribute>
+        <attribute name="purchasePrice" mode="IN" type="BigDecimal" />
+        <attribute name="catalogSupplierPrice" mode="IN" type="BigDecimal"/>
+        <attribute name="consumerSalePrice" mode="IN" type="BigDecimal"/>
+        <attribute name="quantity" mode="IN" type="BigDecimal" />
+        <attribute name="fromDate" mode="IN" type="Timestamp"/>
+        <attribute name="statusId" mode="IN" type="String" optional="true"/>
+        <attribute name="thruDate" mode="IN" type="Timestamp" optional="true"/>
+    </service>
+    <service name="importProductOfferFacility" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductOfferFacility">
+        <description>import the ProductOfferFacility entity to the front</description>
+        <auto-attributes mode="IN" entity-name="ProductOfferFacility" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="ProductOfferFacility" optional="true" include="nonpk"/>
+    </service>
+
+    <service name="importProductFeatureCategory" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductFeatureCategory">
+        <description>import the feature category entity to the front</description>
+        <auto-attributes mode="IN" entity-name="ProductFeatureCategory" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="ProductFeatureCategory" optional="true" include="nonpk">
+        </auto-attributes>
+    </service>
+    <service name="importProductFeature" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductFeature">
+        <description>import the feature entity to the front</description>
+        <auto-attributes mode="IN" entity-name="ProductFeature" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="ProductFeature" optional="true" include="nonpk">
+        </auto-attributes>
+    </service>
+    <service name="importFeatureCategoryAppl" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importFeatureCategoryAppl">
+        <description>import the product feature category and product category association entity to the front</description>
+        <auto-attributes mode="IN" entity-name="ProductFeatureCategoryAppl" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="ProductFeatureCategoryAppl" optional="true" include="nonpk"/>
+    </service>
+    <service name="importFeatureCategoryApplRemove" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importFeatureCategoryApplRemove">
+        <description>import the product feature category and category association entity to the front</description>
+        <auto-attributes mode="IN" entity-name="ProductFeatureCategoryAppl" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="ProductFeatureCategoryAppl" optional="true" include="nonpk"/>
+    </service>
+    <service name="importProductFeatureAppl" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductFeatureAppl">
+        <description>import the feature and product association entity to the front</description>
+        <auto-attributes mode="IN" entity-name="ProductFeatureAppl" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="ProductFeatureAppl" optional="true" include="nonpk"/>
+    </service>
+    <service name="importProductFeatureApplRemoval" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductFeatureApplRemoval">
+        <description>import the feature and product association entity to the front</description>
+        <auto-attributes mode="IN" entity-name="ProductFeatureAppl" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="ProductFeatureAppl" optional="true" include="nonpk"/>
+    </service>
+    <service name="importGoodIdentification" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importGoodIdentification">
+        <description>import the good identification entity to the front</description>
+        <auto-attributes mode="IN" entity-name="GoodIdentification" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="GoodIdentification" optional="true" include="nonpk"/>
+    </service>
+    <service name="importGoodIdentificationType" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importGoodIdentificationType">
+        <description>import the good identification Type entity to the front</description>
+        <auto-attributes mode="IN" entity-name="GoodIdentificationType" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="GoodIdentificationType" optional="true" include="nonpk"/>
+    </service>
+    <service name="importProductImage" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductImage">
+        <description>import a product image to the front</description>
+        <attribute name="productId" mode="IN" type="String"/>
+        <attribute name="contentId" mode="IN" type="String"/>
+        <attribute name="type" mode="IN" type="String"/>
+        <attribute name="path" mode="IN" type="String"/>
+    </service>
+    <service name="importProductImageRemoval" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductImageRemoval">
+        <description>import a product image removal to the front</description>
+        <attribute name="productId" mode="IN" type="String"/>
+        <attribute name="contentId" mode="IN" type="String"/>
+    </service>
+    <service name="importProductText" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductText">
+        <description>import a product text to the front</description>
+        <attribute name="productId" mode="IN" type="String"/>
+        <attribute name="contentId" mode="IN" type="String"/>
+        <attribute name="type" mode="IN" type="String"/>
+        <attribute name="text" mode="IN" type="String"/>
+    </service>
+    <service name="importProductTextRemoval" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductTextRemoval">
+        <description>import a product Text removal to the front</description>
+        <attribute name="productId" mode="IN" type="String"/>
+        <attribute name="type" mode="IN" type="String"/>
+        <attribute name="contentId" mode="IN" type="String"/>
+    </service>
+    <service name="importProductDocument" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductDocument">
+        <description>import a product document to the front</description>
+        <attribute name="productId" mode="IN" type="String"/>
+        <attribute name="contentId" mode="IN" type="String"/>
+        <attribute name="type" mode="IN" type="String"/>
+        <attribute name="path" mode="IN" type="String"/>
+    </service>
+    <service name="importProductDocumentRemoval" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductDocumentRemoval">
+        <description>import a product document removal to the front</description>
+        <attribute name="productId" mode="IN" type="String"/>
+        <attribute name="contentId" mode="IN" type="String"/>
+    </service>
+    <service name="importProductCategoryMemberRemoval" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductCategoryMemberRemoval">
+        <description>import a product and category association removal to the front</description>
+        <auto-attributes mode="IN" entity-name="ProductCategoryMember" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="ProductCategoryMember" optional="true" include="nonpk"/>
+    </service>
+    <service name="importProductDataRemoval" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importProductDataRemoval">
+        <description>import product associated entities removal to the front</description>
+        <attribute name="productId" mode="IN" type="String"/>
+        <attribute name="identification" mode="IN" type="Boolean" optional="true"/>
+        <attribute name="document" mode="IN" type="Boolean" optional="true"/>
+        <attribute name="category" mode="IN" type="Boolean" optional="true"/>
+        <attribute name="feature" mode="IN" type="Boolean" optional="true"/>
+        <attribute name="image" mode="IN" type="Boolean" optional="true"/>
+        <attribute name="text" mode="IN" type="Boolean" optional="true"/>
+    </service>
+    <service name="importGoodIdentificationRemoval" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importGoodIdentificationRemoval">
+        <description>import the good identification removal to the front</description>
+        <auto-attributes mode="IN" entity-name="GoodIdentification" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="GoodIdentification" optional="true" include="nonpk"/>
+    </service>
+    <service name="importSupplier" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importSupplier">
+        <description>import a supplier to the front</description>
+        <auto-attributes mode="IN" entity-name="PartyGroup" optional="false" include="pk"/>
+        <auto-attributes mode="IN" entity-name="PartyGroup" optional="true" include="nonpk"/>
+    </service>
+    <service name="importSupplierPostalAddress" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importSupplierPostalAddress">
+        <description>import a supplier postal address to the front</description>
+        <attribute name="partyId" mode="IN" type="String"/>
+        <attribute name="contactMechId" mode="IN" type="String"/>
+        <attribute name="contactMechTypeId" mode="IN" type="String"/>
+        <attribute name="toName" mode="IN" type="String" optional="true"/>
+        <attribute name="attnName" mode="IN" type="String" optional="true"/>
+        <attribute name="address1" mode="IN" type="String"/>
+        <attribute name="address2" mode="IN" type="String" optional="true"/>
+        <attribute name="postalCode" mode="IN" type="String"/>
+        <attribute name="city" mode="IN" type="String"/>
+        <attribute name="country" mode="IN" type="String" optional="true"/>
+    </service>
+    <service name="importSupplierTelecomNumber" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importSupplierTelecomNumber">
+        <description>import a supplier telecom number to the front</description>
+        <attribute name="partyId" mode="IN" type="String"/>
+        <attribute name="contactMechId" mode="IN" type="String"/>
+        <attribute name="contactMechTypeId" mode="IN" type="String"/>
+        <attribute name="askForName" mode="IN" type="String" optional="true"/>
+        <attribute name="countryCode" mode="IN" type="String" optional="true"/>
+        <attribute name="areaCode" mode="IN" type="String" optional="true"/>
+        <attribute name="contactNumber" mode="IN" type="String"/>
+    </service>
+    <service name="importSupplierEmailAddress" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importSupplierEmailAddress">
+        <description>import a supplier email address to the front</description>
+        <attribute name="partyId" mode="IN" type="String"/>
+        <attribute name="contactMechId" mode="IN" type="String"/>
+        <attribute name="contactMechTypeId" mode="IN" type="String"/>
+        <attribute name="infoString" mode="IN" type="String"/>
+    </service>
+    <service name="importSupplierContactMechRemoval" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importSupplierContactMechRemoval">
+        <description>import a contact mechanism removal to the front</description>
+        <attribute name="partyId" mode="IN" type="String"/>
+        <attribute name="contactMechId" mode="IN" type="String"/>
+    </service>
+    <service name="importFacilityPostalAddress" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importFacilityPostalAddress">
+        <description>import a facility postal address to the front</description>
+        <attribute name="facilityId" mode="IN" type="String"/>
+        <attribute name="contactMechId" mode="IN" type="String"/>
+        <attribute name="contactMechTypeId" mode="IN" type="String"/>
+        <attribute name="toName" mode="IN" type="String" optional="true"/>
+        <attribute name="attnName" mode="IN" type="String" optional="true"/>
+        <attribute name="address1" mode="IN" type="String"/>
+        <attribute name="address2" mode="IN" type="String" optional="true"/>
+        <attribute name="postalCode" mode="IN" type="String"/>
+        <attribute name="city" mode="IN" type="String"/>
+        <attribute name="country" mode="IN" type="String" optional="true"/>
+    </service>
+    <service name="importFacilityTelecomNumber" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importFacilityTelecomNumber">
+        <description>import a facility telecom number to the front</description>
+        <attribute name="facilityId" mode="IN" type="String"/>
+        <attribute name="contactMechId" mode="IN" type="String"/>
+        <attribute name="contactMechTypeId" mode="IN" type="String"/>
+        <attribute name="askForName" mode="IN" type="String" optional="true"/>
+        <attribute name="countryCode" mode="IN" type="String" optional="true"/>
+        <attribute name="areaCode" mode="IN" type="String" optional="true"/>
+        <attribute name="contactNumber" mode="IN" type="String"/>
+    </service>
+    <service name="importFacilityEmailAddress" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importFacilityEmailAddress">
+        <description>import a facility email address to the front</description>
+        <attribute name="facilityId" mode="IN" type="String"/>
+        <attribute name="contactMechId" mode="IN" type="String"/>
+        <attribute name="contactMechTypeId" mode="IN" type="String"/>
+        <attribute name="infoString" mode="IN" type="String"/>
+    </service>
+    <service name="importFacilityContactMechRemoval" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="importFacilityContactMechRemoval">
+        <description>import a facility mechanism removal to the front</description>
+        <attribute name="facilityId" mode="IN" type="String"/>
+        <attribute name="contactMechId" mode="IN" type="String"/>
+    </service>
+    <service name="requestOrderPaymentCapturing" engine="java" auth="false" export="true"
+            location="org.ofbiz.backend.BackendImportService" invoke="requestOrderPaymentCapturing">
+        <description>Ask the front service to capture the payment</description>
+        <attribute name="orderId" mode="IN" type="String"/>
+        <attribute name="orderAmount" mode="IN" type="BigDecimal"/>
+        <attribute name="Status" mode="OUT" type="String"/>
+        <attribute name="PayboxTransacId" mode="OUT" type="Integer"/>
+    </service>
+</services>

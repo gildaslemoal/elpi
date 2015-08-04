@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>context
+<entity-engine-xml>
+    <SecurityPermission description="View operations in the EasyOFBiz Component." permissionId="EASYOFBIZ_VIEW"/>
+    <SecurityPermission description="Create operations in the EasyOFBiz Component." permissionId="EASYOFBIZ_CREATE"/>
+    <SecurityPermission description="Update operations in the EasyOFBiz Component." permissionId="EASYOFBIZ_UPDATE"/>
+    <SecurityPermission description="Delete operations in the EasyOFBiz Component." permissionId="EASYOFBIZ_DELETE"/>
+    <SecurityPermission description="ALL operations in the EasyOFBiz Component." permissionId="EASYOFBIZ_ADMIN"/>
+
+    <SecurityGroup description="Simplified OFBiz Admin group, has all permissions for Party, Order, Fabrication order, Stock, CRM." groupId="EASYOFBIZ"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="EASYOFBIZ_ADMIN"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="OFBTOOLS_VIEW"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="PARTYMGR_ADMIN"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="ORDERMGR_ADMIN"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="CATALOG_ADMIN"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="FACILITY_ADMIN"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="MANUFACTURING_ADMIN"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="ACCOUNTING_ADMIN"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="SECURITY_ADMIN"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="ACCTG_PREF_ADMIN"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="CATALOG_PRICE_MAINT"/>
+    <SecurityGroupPermission groupId="EASYOFBIZ" permissionId="CONTENTMGR_ADMIN"/>
+
+<!--     <SecurityGroupPermission groupId="FULLADMIN" permissionId="EASYOFBIZ_ADMIN"/> -->
+    <SecurityGroupPermission groupId="SUPER" permissionId="EASYOFBIZ_ADMIN"/>
+
+    <SecurityPermission description="Allow to hide standard menus for easyofbiz users" permissionId="EASYOFBIZHIDDEN_ADMIN"/>
+<!--     <SecurityGroupPermission groupId="FULLADMIN" permissionId="EASYOFBIZHIDDEN_ADMIN"/> -->
+    <SecurityGroupPermission groupId="SUPER" permissionId="EASYOFBIZHIDDEN_ADMIN"/>
+
+</entity-engine-xml>

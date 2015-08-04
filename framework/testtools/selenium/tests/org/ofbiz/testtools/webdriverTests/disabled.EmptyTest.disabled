@@ -1,0 +1,49 @@
+package org.ofbiz.testtools.webdriverTests;
+import org.junit.*;
+import org.ofbiz.testtools.webdriverTests.utils.WebdriverTestCase;
+import org.ofbiz.testtools.webdriverTests.utils.Utils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class EmptyTest extends WebdriverTestCase{
+    /**
+     * <ul>
+     *   <li>log as admin and put language and theme correctly (TOMAHAWK and en).</li>
+     *   <li>Connect to partymgr application.</li>
+     *   <li>go to findparty page</li>
+     * </ul>
+     * 
+     * @throws Exception
+     */
+    @Test
+    public  void functionnalTest()  throws Exception {
+        driverWait = new WebDriverWait(driver, 30);
+        Utils.testChangeLanguage(ofbizBaseUrl, null, null, "TOMAHAWK", driver);
+        driver.get(ofbizBaseUrl + "partymgr/control/logout");
+        WebElement waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.name("USERNAME")));
+        waitFor.clear();
+        waitFor.sendKeys("admin");
+        WebElement element = driver.findElement(By.name("PASSWORD"));
+        element.clear();
+        element.sendKeys("ofbiz");
+        element = driver.findElement(By.cssSelector("input[type=\"submit\"]"));
+        element.click();
+        driver.get(ofbizBaseUrl +  "partymgr/control/findparty");
+        // You are now in the partymgr Module, logged in as admin, in English with the TOMAHAWK theme
+        // Put some nice Selenium Code here
+    }
+
+    public static boolean isAlertPresent(FirefoxDriver driver) {
+        try {
+            driver.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }
+    }
+}
+

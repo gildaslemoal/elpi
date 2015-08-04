@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <WorkEffort workEffortId="DEFAULT_ROUTING" workEffortTypeId="ROUTING" currentStatusId="ROU_ACTIVE" workEffortName="Default Routing" description="Default Routing" quantityToProduce="0.000000" revisionNumber="1" lastUpdatedStamp="2015-06-18 14:49:56.001" lastUpdatedTxStamp="2015-06-18 14:49:55.982" createdStamp="2015-06-18 14:49:56.001" createdTxStamp="2015-06-18 14:49:55.982"/>
+    <WorkEffort workEffortId="DEFAULT_TASK" workEffortTypeId="ROU_TASK" currentStatusId="ROU_ACTIVE" workEffortPurposeTypeId="ROU_ASSEMBLING" workEffortName="Default Routing Task" description="Default Routing Task" estimatedMilliSeconds="0.0" estimatedSetupMillis="0.0" revisionNumber="1" lastUpdatedStamp="2015-06-18 14:49:56.402" lastUpdatedTxStamp="2015-06-18 14:49:55.982" createdStamp="2015-06-18 14:49:56.402" createdTxStamp="2015-06-18 14:49:55.982"/>
+    <WorkEffort workEffortId="_NA_" lastUpdatedStamp="2015-06-18 14:49:57.493" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.493" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

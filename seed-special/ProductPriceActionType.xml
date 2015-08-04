@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProductPriceActionType productPriceActionTypeId="PRICE_FLAT" description="Flat Amount Override" lastUpdatedStamp="2015-06-18 14:49:55.831" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.831" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceActionType productPriceActionTypeId="PRICE_FOL" description="Flat Amount Modify" lastUpdatedStamp="2015-06-18 14:49:55.83" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.83" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceActionType productPriceActionTypeId="PRICE_PFLAT" description="Promo Amount Override" lastUpdatedStamp="2015-06-18 14:49:55.832" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.832" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceActionType productPriceActionTypeId="PRICE_POAC" description="Percent Of Average Cost" lastUpdatedStamp="2015-06-18 14:49:55.827" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.827" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceActionType productPriceActionTypeId="PRICE_POD" description="Percent Of Default Price" lastUpdatedStamp="2015-06-18 14:49:55.826" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.826" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceActionType productPriceActionTypeId="PRICE_POL" description="Percent Of List Price" lastUpdatedStamp="2015-06-18 14:49:55.825" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.825" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceActionType productPriceActionTypeId="PRICE_POM" description="Percent Of Margin" lastUpdatedStamp="2015-06-18 14:49:55.828" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.828" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceActionType productPriceActionTypeId="PRICE_POWHS" description="Percent Of Wholesale" lastUpdatedStamp="2015-06-18 14:49:55.829" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.829" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceActionType productPriceActionTypeId="PRICE_WFLAT" description="Wholesale Amount Override" lastUpdatedStamp="2015-06-18 14:49:55.833" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.833" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

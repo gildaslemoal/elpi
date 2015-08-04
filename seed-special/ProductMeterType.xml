@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProductMeterType productMeterTypeId="COPY_COUNT" description="Copy Count Meter" lastUpdatedStamp="2015-06-18 14:49:55.742" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.742" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="DISTANCE" description="Distance Meter" lastUpdatedStamp="2015-06-18 14:49:55.739" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.739" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="EVENT_DATA_RECORDER" description="Event Data Recorder" lastUpdatedStamp="2015-06-18 14:49:55.746" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.746" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="MOTOR_TIME" description="Motor Time Meter" lastUpdatedStamp="2015-06-18 14:49:55.74" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.74" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="ODOMETER" description="Odometer" lastUpdatedStamp="2015-06-18 14:49:55.748" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.748" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="PEDOMETER" description="Pedometer" lastUpdatedStamp="2015-06-18 14:49:55.747" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.747" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="SPEEDOMETER" description="Speedometer" lastUpdatedStamp="2015-06-18 14:49:55.737" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.737" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="TACHOGRAPH" description="Tachograph" lastUpdatedStamp="2015-06-18 14:49:55.744" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.744" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="TACHOMETER" description="Tachometer" lastUpdatedStamp="2015-06-18 14:49:55.738" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.738" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="TAXIMETER" description="Taximeter" lastUpdatedStamp="2015-06-18 14:49:55.745" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.745" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="TRIP_METER" description="Trip meter" lastUpdatedStamp="2015-06-18 14:49:55.743" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.743" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductMeterType productMeterTypeId="USE_COUNT" description="Use Count Meter" lastUpdatedStamp="2015-06-18 14:49:55.741" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.741" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

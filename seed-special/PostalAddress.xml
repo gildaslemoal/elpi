@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PostalAddress contactMechId="10000" address1="4 rue Cherubini" city="Paris" postalCode="75002" countryGeoId="FRA" stateProvinceGeoId="_NA_" lastUpdatedStamp="2015-06-18 14:55:55.934" lastUpdatedTxStamp="2015-06-18 14:55:55.867" createdStamp="2015-06-18 14:55:55.934" createdTxStamp="2015-06-18 14:55:55.867"/>
+    <PostalAddress contactMechId="10010" address1="4 rue Cherubini" city="Paris" postalCode="75002" countryGeoId="FRA" stateProvinceGeoId="_NA_" lastUpdatedStamp="2015-06-18 14:59:54.532" lastUpdatedTxStamp="2015-06-18 14:59:54.472" createdStamp="2015-06-18 14:59:54.532" createdTxStamp="2015-06-18 14:59:54.472"/>
+</entity-engine-xml>

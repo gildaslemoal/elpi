@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <TechDataCalendar calendarId="DEFAULT" description="Default calendar used when no specific calendar is defined" calendarWeekId="DEFAULT" lastUpdatedStamp="2015-06-18 14:49:56.0" lastUpdatedTxStamp="2015-06-18 14:49:55.982" createdStamp="2015-06-18 14:49:56.0" createdTxStamp="2015-06-18 14:49:55.982"/>
+    <TechDataCalendar calendarId="SUPPLIER" description="Calendar used for Re-Order date calculation for bought product" calendarWeekId="SUPPLIER" lastUpdatedStamp="2015-06-18 14:49:55.998" lastUpdatedTxStamp="2015-06-18 14:49:55.982" createdStamp="2015-06-18 14:49:55.998" createdTxStamp="2015-06-18 14:49:55.982"/>
+</entity-engine-xml>

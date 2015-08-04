@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>Interface-Front Services</description>
+    <vendor></vendor>
+    <version>1.0</version>
+    <!-- party export services -->
+    <service name="exportPartyToBack" engine="soap-enhanced"
+        location="interface-back" invoke="importPartyFromFront">
+        <implements service="createPerson" optional="true"/>
+        <implements service="createPartyGroup" optional="true"/>
+        <attribute name="roleTypeId" mode="IN" type="String"/>
+        <override name="partyTypeId" optional="false"/>
+    </service>
+    <!-- customer login export service -->
+    <service name="exportUserLoginToBack" engine="soap-enhanced"
+        location="interface-back" invoke="importUserLoginFromFront">
+        <attribute name="partyId" mode="IN" type="String"/>
+        <attribute name="userLoginId" mode="IN" type="String"/>
+    </service>
+
+    <!-- customer order export service -->
+    <service name="exportConsumerOrderToBack" engine="soap-enhanced"
+        location="interface-back" invoke="importConsumerOrderFromFront">
+        <attribute name="partyId" mode="IN" type="String" optional="true"/>
+        <attribute name="orderHeader" mode="IN" type="Map"/>
+        <attribute name="orderItems" mode="IN" type="List"/>
+        <attribute name="orderAdjustments" mode="IN" type="List"/>
+        <attribute name="paymentInfos" mode="IN" type="List"/>
+        <attribute name="orderRoles" mode="IN" type="List" optional="true"/>
+        <attribute name="orderContactMechs" mode="IN" type="List" optional="true"/>
+<!--         <attribute name="ids" mode="OUT" type="Map"/> -->
+    </service>
+
+    <!-- postal address export services-->
+    <service name="exportPartyPostalAddressToBack" engine="soap-enhanced"
+        location="interface-back" invoke="importPartyPostalAddressFromFront">
+        <implements service="createPartyPostalAddress"/>
+        <override name="partyId" optional="false"/>
+    </service>
+
+    <!-- email address export services -->
+    <service name="exportPartyEmailAddressToBack" engine="soap-enhanced"
+        location="interface-back" invoke="importPartyEmailAddressFromFront">
+        <implements service="createPartyEmailAddress"/>
+        <override name="partyId" optional="false"/>
+    </service>
+
+    <!-- TelecomNumber export services   -->
+    <service name="exportPartyTelecomNumberToBack" engine="soap-enhanced"
+        location="interface-back" invoke="importPartyTelecomNumberFromFront">
+        <implements service="createPartyTelecomNumber"/>
+        <override name="partyId" optional="false"/>
+    </service>
+
+    <!-- party contactMech Association export service -->
+    <service name="exportPartyContactMechPurposeToBack" engine="soap-enhanced"
+        location="interface-back" invoke="importPartyContactMechPurposeFromFront">
+        <implements service="createPartyContactMechPurpose"/>
+        <attribute name="contactMechId" mode="INOUT" type="String"/>
+        <attribute name="partyId" mode="INOUT" type="String"/>
+        <attribute name="contactMechPurposeTypeId" mode="INOUT" type="String"/>
+        <attribute name="fromDate" mode="INOUT" type="Timestamp" optional="true"/>
+    </service>
+
+    <!-- party contactMech purpose export service 
+    <service name="updatePartyContactMechPurposeFromFront" engine="soap-enhanced"
+        location="interface-back" invoke="updatePartyContactMechPurposeFromFront">
+        <implements service="updatePartyContactMechPurpose"/>
+        <override name="partyId" optional="false"/>
+    </service>
+    -->
+
+    <!-- update shipping planning timer for offer
+    <service name="offerShippingAndCheckOutPlanning" engine="soap-enhanced"
+        location="interface-back" invoke="offerShippingAndCheckOutPlanning">
+        <attribute name="productOfferIds" mode="IN" type="String"/>
+        <attribute name="fromTime" mode="IN" type="String" optional="true"/>
+        <attribute name="facilityId" mode="IN" type="String" optional="true"/>
+        <attribute name="offerPlanning" mode="OUT" type="Map"/>
+    </service>
+     -->
+</services>

@@ -1,0 +1,63 @@
+package org.ofbiz.testtools.webdriverTests;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.*;
+import org.ofbiz.testtools.webdriverTests.utils.WebdriverTestCase;
+import org.ofbiz.testtools.webdriverTests.utils.Utils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class TestJavaScriptFunctions extends WebdriverTestCase{
+    /**
+     * <ul>
+     *   <li>log as admin and put language and theme correctly (TOMAHAWK and en).</li>
+     *   <li>Connect to partymgr application.</li>
+     *   <li>go to findparty page</li>
+     * </ul>
+     * 
+     * @throws Exception
+     */
+    @Test
+    public  void functionnalTest()  throws Exception {
+        driverWait = new WebDriverWait(driver, 30);
+        Utils.testChangeLanguage(ofbizBaseUrl, null, null, "TOMAHAWK", driver);
+        driver.get(ofbizBaseUrl + "partymgr/control/logout");
+        WebElement waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.name("USERNAME")));
+        waitFor.clear();
+        waitFor.sendKeys("admin");
+        WebElement element = driver.findElement(By.name("PASSWORD"));
+        element.clear();
+        element.sendKeys("ofbiz");
+        element = driver.findElement(By.cssSelector("input[type=\"submit\"]"));
+        element.click();
+        driver.get(ofbizBaseUrl +  "partymgr/control/findparty");
+        waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@value='Find']")));
+        assertEquals("OFBiz: Party Manager: Find Party(s)", driver.getTitle());
+        showInfoPanel("Now we are testing java script function execution using webdriver javaScriptExecuter"
+                     +"<br/> we will zoom in the field before we start typing and them zoom it out when it looses focus");
+        element = driver.findElement(By.name("lastName"));
+        zoomAndSendKeys((!"".equals(element.getAttribute("id")))? element.getAttribute("id"): "lastName", "My Last Name");
+        element = driver.findElement(By.name("firstName"));
+        zoomAndSendKeys((!"".equals(element.getAttribute("id")))? element.getAttribute("id"): "firstName", "My First Name");
+        showInfoPanel("We are foing to zoom the area we are going to use"
+                + "<br/> then we sleep for 10 seconds and terminate the test");
+        zoomAndSendKeys("findPartyParameters", "My First Name");
+        
+        Thread.sleep(5000);
+
+    }
+
+    public static boolean isAlertPresent(FirefoxDriver driver) {
+        try {
+            driver.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }
+    }
+}
+

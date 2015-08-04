@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <TerminationType terminationTypeId="FIRE" hasTable="N" description="Fired" lastUpdatedStamp="2015-06-18 14:49:58.199" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.199" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <TerminationType terminationTypeId="RESIGN" hasTable="N" description="Resignation" lastUpdatedStamp="2015-06-18 14:49:58.198" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.198" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <TerminationType terminationTypeId="RETIRE" hasTable="N" description="Retirement" lastUpdatedStamp="2015-06-18 14:49:58.2" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.2" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

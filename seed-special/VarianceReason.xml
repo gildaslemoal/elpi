@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <VarianceReason varianceReasonId="VAR_DAMAGED" description="Damaged" lastUpdatedStamp="2015-06-18 14:49:55.927" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.927" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <VarianceReason varianceReasonId="VAR_FOUND" description="Found" lastUpdatedStamp="2015-06-18 14:49:55.926" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.926" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <VarianceReason varianceReasonId="VAR_INTEGR" description="Integration" lastUpdatedStamp="2015-06-18 14:49:55.928" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.928" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <VarianceReason varianceReasonId="VAR_LOST" description="Lost" lastUpdatedStamp="2015-06-18 14:49:55.924" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.924" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <VarianceReason varianceReasonId="VAR_MISSHIP_ORDERED" description="Mis-shipped Item Ordered (+)" lastUpdatedStamp="2015-06-18 14:49:55.93" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.93" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <VarianceReason varianceReasonId="VAR_MISSHIP_SHIPPED" description="Mis-shipped Item Shipped (-)" lastUpdatedStamp="2015-06-18 14:49:55.931" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.931" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <VarianceReason varianceReasonId="VAR_SAMPLE" description="Sample (Giveaway)" lastUpdatedStamp="2015-06-18 14:49:55.929" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.929" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <VarianceReason varianceReasonId="VAR_STOLEN" description="Stolen" lastUpdatedStamp="2015-06-18 14:49:55.925" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.925" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

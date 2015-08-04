@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProductStoreRole partyId="10000" roleTypeId="AGENT" productStoreId="10000" fromDate="2015-06-18 15:02:06.739" lastUpdatedStamp="2015-06-18 15:02:06.74" lastUpdatedTxStamp="2015-06-18 15:02:06.718" createdStamp="2015-06-18 15:02:06.74" createdTxStamp="2015-06-18 15:02:06.718"/>
+</entity-engine-xml>

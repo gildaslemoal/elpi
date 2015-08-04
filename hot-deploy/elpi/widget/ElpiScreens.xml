@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+
+    <screen name="main">
+        <section>
+            <actions>
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+                </actions>
+            <widgets>
+                <decorator-screen name="ElpiCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+
+                            
+                        <screenlet title="New ticket">
+                            <include-form name="AddElpiTicket" location="component://elpi/widget/ElpiForms.xml"/>
+                            </screenlet> 
+
+                        <screenlet title="New event">
+                            <include-form name="AddElpiEvent" location="component://elpi/widget/ElpiForms.xml"/>
+                            </screenlet> 
+
+                        <screenlet title="ListUserElpiForm">
+                            <include-form name="ListElpiUser" location="component://elpi/widget/ElpiForms.xml"/>
+                            </screenlet> 
+
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <!-- note Glm 16072015 : Création d'un nouveau screen pour la webapp "activity"-->
+
+    <screen name="activity">
+        <section>
+            <actions>
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+                </actions>
+            <widgets>
+                <decorator-screen name="ElpiCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                            <label text="test activity OK"/>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <!-- note Glm 16072015 : Création d'un nouveau screen pour la webapp "library"-->
+
+    <screen name="library">
+        <section>
+            <actions>
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+                </actions>
+            <widgets>
+                <decorator-screen name="ElpiCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                            <label text="test library OK"/>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+
+    <!-- note Glm 16072015 : Création d'un nouveau screen pour la webapp "database"-->
+
+    <screen name="database">
+        <section>
+            <actions>
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+                </actions>
+            <widgets>
+                <decorator-screen name="ElpiCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                            <label text="test database OK"/>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+
+    <!-- note Glm 16072015 : Création d'un nouveau screen pour la webapp "settings"-->
+
+    <screen name="settings">
+        <section>
+            <actions>
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+                </actions>
+            <widgets>
+                <decorator-screen name="ElpiCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                             <screenlet title="Add new job for Elpi">
+                            <include-form name="AddElpiJob" location="component://elpi/widget/ElpiForms.xml"/>
+                            </screenlet>  
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+
+</screens>

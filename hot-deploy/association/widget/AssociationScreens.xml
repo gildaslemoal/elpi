@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+
+    <screen name="main">
+        <section>
+            <actions>
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+                <set field="layoutSettings.styleSheets[+0]" value="/easyofbiztheme/association/memberlist.css" global="true"/>
+                <set field="showByPartyType" value="Y" global="true"/>
+                <set field="showCustomer" value="Y" global="true"/>
+
+                <service service-name="findParty" auto-field-map="parameters"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="AssociationCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html>
+                                <html-template location="component://association/webapp/association/members/memberList.ftl"/>
+                            </html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="memberList">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleNewCustomer"/>
+
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+                <set field="layoutSettings.styleSheets[+0]" value="/easyofbiztheme/association/memberlist.css" global="true"/>
+                <set field="showByPartyType" value="Y" global="true"/>
+                <set field="showCustomer" value="Y" global="true"/>
+
+                <service service-name="findParty" auto-field-map="parameters"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="AssociationCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html>
+                                <html-template location="component://association/webapp/association/members/memberList.ftl"/>
+                            </html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="selectMailing">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleSelectMailing"/>
+
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+                <set field="layoutSettings.styleSheets[+0]" value="/easyofbiztheme/association/memberlist.css" global="true"/>
+                <set field="showByPartyType" value="Y" global="true"/>
+                <set field="showCustomer" value="Y" global="true"/>
+
+                <service service-name="findParty" auto-field-map="parameters"/>
+                <script location="component://association/webapp/association/WEB-INF/actions/GetPartyList.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="AssociationCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html>
+                                <html-template location="component://association/webapp/association/members/sendMailing.ftl"/>
+                            </html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="profileMember">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleNewCustomer"/>
+
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+                <set field="layoutSettings.styleSheets[+0]" value="/easyofbiztheme/association/memberlist.css" global="true"/>
+                <set field="showByPartyType" value="Y" global="true"/>
+                <set field="showCustomer" value="Y" global="true"/>
+                <script location="component://association/webapp/association/WEB-INF/actions/getProfileMember.groovy"/>
+                <service service-name="findParty" auto-field-map="parameters"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="AssociationCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html>
+                                <html-template location="component://association/webapp/association/members/profileMember.ftl"/>
+                            </html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+
+    <screen name="EMAIL_GENERIQUE">
+        <section>
+            <widgets>
+                <content content-id="EMAIL_GENERIQUE"/>
+            </widgets>
+        </section>
+    </screen>
+
+
+</screens>

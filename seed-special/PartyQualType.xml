@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PartyQualType partyQualTypeId="BSC" parentTypeId="DEGREE" description="Bachelor of Science" lastUpdatedStamp="2015-06-18 14:49:58.184" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.184" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PartyQualType partyQualTypeId="B.Tech" parentTypeId="DEGREE" description="Bachelor of Technology" lastUpdatedStamp="2015-06-18 14:49:58.181" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.181" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PartyQualType partyQualTypeId="CERTIFICATION" hasTable="N" description="Certification" lastUpdatedStamp="2015-06-18 14:49:54.425" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.425" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyQualType partyQualTypeId="DEGREE" hasTable="N" description="Degree" lastUpdatedStamp="2015-06-18 14:49:54.426" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.426" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyQualType partyQualTypeId="EXPERIENCE" hasTable="N" description="Work experience" lastUpdatedStamp="2015-06-18 14:49:54.424" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.424" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyQualType partyQualTypeId="MBA" parentTypeId="DEGREE" description="Masters of business administration" lastUpdatedStamp="2015-06-18 14:49:58.182" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.182" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <PartyQualType partyQualTypeId="MSC" parentTypeId="DEGREE" description="Masters of Science" lastUpdatedStamp="2015-06-18 14:49:58.183" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.183" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

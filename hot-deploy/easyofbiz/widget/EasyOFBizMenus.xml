@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-menu.xsd">
+    <menu name="MainAppBar" title="${uiLabelMap.EasyOFBizApplication}" extends="CommonAppBarMenu" extends-resource="component://common/widget/CommonMenus.xml">
+        <menu-item name="main" title="${uiLabelMap.CommonMain}"><link target="main"/></menu-item>
+        <!--<menu-item name="dashboard" title="${uiLabelMap.EasyOFBizOrderStat}"><link target="dashboard"/></menu-item>-->
+        <menu-item name="dashboardDons" title="${uiLabelMap.EasyOFBizDonationStat}"><link target="dashboardDons"/></menu-item>
+        <menu-item name="dashboardMembres" title="${uiLabelMap.EasyOFBizMembersStat}"><link target="dashboardMembres"/></menu-item>
+    </menu>
+</menus>

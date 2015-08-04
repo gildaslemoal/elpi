@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <UserLoginSecurityGroup userLoginId="admin" groupId="SUPER" fromDate="2001-01-01 12:00:00.0" lastUpdatedStamp="2015-06-18 14:52:40.439" lastUpdatedTxStamp="2015-06-18 14:52:40.428" createdStamp="2015-06-18 14:52:40.439" createdTxStamp="2015-06-18 14:52:40.428"/>
+    <UserLoginSecurityGroup userLoginId="system" groupId="SUPER" fromDate="2001-01-01 12:00:00.0" lastUpdatedStamp="2015-06-18 14:49:49.813" lastUpdatedTxStamp="2015-06-18 14:49:49.793" createdStamp="2015-06-18 14:49:49.813" createdTxStamp="2015-06-18 14:49:49.793"/>
+</entity-engine-xml>

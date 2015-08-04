@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ReturnHeaderType returnHeaderTypeId="CUSTOMER_RETURN" description="Return from Customer" lastUpdatedStamp="2015-06-18 14:49:58.521" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.521" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnHeaderType returnHeaderTypeId="VENDOR_RETURN" description="Return to Vendor" lastUpdatedStamp="2015-06-18 14:49:58.522" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.522" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

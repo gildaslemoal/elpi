@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <UserPreference userLoginId="_NA_" userPrefTypeId="ORGANIZATION_PARTY" userPrefGroupTypeId="GLOBAL_PREFERENCES" userPrefValue="DEFAULT" lastUpdatedStamp="2015-06-18 14:49:54.558" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.558" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <UserPreference userLoginId="_NA_" userPrefTypeId="VISUAL_THEME" userPrefGroupTypeId="GLOBAL_PREFERENCES" userPrefValue="DEFAULT" lastUpdatedStamp="2015-06-18 14:49:49.969" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.969" createdTxStamp="2015-06-18 14:49:49.866"/>
+</entity-engine-xml>

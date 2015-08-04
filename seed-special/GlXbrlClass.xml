@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <GlXbrlClass glXbrlClassId="IAS" description="IAS" lastUpdatedStamp="2015-06-18 14:49:56.981" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.981" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <GlXbrlClass glXbrlClassId="US_GAAP" description="US GAAP" lastUpdatedStamp="2015-06-18 14:49:56.98" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.98" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ShipmentGatewayConfigType shipmentGatewayConfTypeId="DHL" hasTable="N" description="DHL Shipment Gateway" lastUpdatedStamp="2015-06-18 14:49:55.891" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.891" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <ShipmentGatewayConfigType shipmentGatewayConfTypeId="FEDEX" hasTable="N" description="Fedex Shipment Gateway" lastUpdatedStamp="2015-06-18 14:49:55.921" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.921" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <ShipmentGatewayConfigType shipmentGatewayConfTypeId="UPS" hasTable="N" description="UPS Shipment Gateway" lastUpdatedStamp="2015-06-18 14:49:55.924" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.924" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <ShipmentGatewayConfigType shipmentGatewayConfTypeId="USPS" hasTable="N" description="USPS Shipment Gateway" lastUpdatedStamp="2015-06-18 14:49:55.932" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.932" createdTxStamp="2015-06-18 14:49:55.809"/>
+</entity-engine-xml>

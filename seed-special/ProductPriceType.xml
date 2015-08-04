@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProductPriceType productPriceTypeId="AVERAGE_COST" description="Average Cost" lastUpdatedStamp="2015-06-18 14:49:55.812" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.812" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceType productPriceTypeId="BOX_PRICE" description="Box Price" lastUpdatedStamp="2015-06-18 14:49:55.819" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.819" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceType productPriceTypeId="COMPETITIVE_PRICE" description="Competitive Price" lastUpdatedStamp="2015-06-18 14:49:55.816" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.816" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceType productPriceTypeId="DEFAULT_PRICE" description="Default Price" lastUpdatedStamp="2015-06-18 14:49:55.811" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.811" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceType productPriceTypeId="LIST_PRICE" description="List Price" lastUpdatedStamp="2015-06-18 14:49:55.81" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.81" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceType productPriceTypeId="MAXIMUM_PRICE" description="Maximum Price" lastUpdatedStamp="2015-06-18 14:49:55.814" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.814" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceType productPriceTypeId="MINIMUM_ORDER_PRICE" description="Minimum Order Price" lastUpdatedStamp="2015-06-18 14:49:55.82" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.82" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceType productPriceTypeId="MINIMUM_PRICE" description="Minimum Price" lastUpdatedStamp="2015-06-18 14:49:55.813" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.813" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceType productPriceTypeId="PROMO_PRICE" description="Promotional Price" lastUpdatedStamp="2015-06-18 14:49:55.815" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.815" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceType productPriceTypeId="SPECIAL_PROMO_PRICE" description="Special Promo Price" lastUpdatedStamp="2015-06-18 14:49:55.818" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.818" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPriceType productPriceTypeId="WHOLESALE_PRICE" description="Wholesale Price" lastUpdatedStamp="2015-06-18 14:49:55.817" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.817" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

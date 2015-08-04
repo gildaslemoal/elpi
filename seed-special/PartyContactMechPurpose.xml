@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PartyContactMechPurpose partyId="10000" contactMechId="10000" contactMechPurposeTypeId="BILLING_LOCATION" fromDate="2015-06-18 14:56:15.435" lastUpdatedStamp="2015-06-18 14:56:15.435" lastUpdatedTxStamp="2015-06-18 14:56:15.43" createdStamp="2015-06-18 14:56:15.435" createdTxStamp="2015-06-18 14:56:15.43"/>
+    <PartyContactMechPurpose partyId="10000" contactMechId="10000" contactMechPurposeTypeId="GENERAL_LOCATION" fromDate="2015-06-18 14:56:19.923" lastUpdatedStamp="2015-06-18 14:56:19.923" lastUpdatedTxStamp="2015-06-18 14:56:19.921" createdStamp="2015-06-18 14:56:19.923" createdTxStamp="2015-06-18 14:56:19.921"/>
+    <PartyContactMechPurpose partyId="10000" contactMechId="10000" contactMechPurposeTypeId="PAYMENT_LOCATION" fromDate="2015-06-18 14:56:26.708" lastUpdatedStamp="2015-06-18 14:56:26.708" lastUpdatedTxStamp="2015-06-18 14:56:26.706" createdStamp="2015-06-18 14:56:26.708" createdTxStamp="2015-06-18 14:56:26.706"/>
+</entity-engine-xml>

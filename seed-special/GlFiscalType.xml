@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <GlFiscalType glFiscalTypeId="ACTUAL" description="Actual" lastUpdatedStamp="2015-06-18 14:49:56.982" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.982" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <GlFiscalType glFiscalTypeId="BUDGET" description="Budget" lastUpdatedStamp="2015-06-18 14:49:56.983" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.983" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <GlFiscalType glFiscalTypeId="FORECAST" description="Forecast" lastUpdatedStamp="2015-06-18 14:49:56.984" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.984" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <GlFiscalType glFiscalTypeId="PLAN" description="Plan" lastUpdatedStamp="2015-06-18 14:49:56.985" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.985" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <GlFiscalType glFiscalTypeId="SCENARIO" description="Scenario" lastUpdatedStamp="2015-06-18 14:49:56.986" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.986" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

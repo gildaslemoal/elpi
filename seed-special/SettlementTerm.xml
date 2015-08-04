@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SettlementTerm settlementTermId="COD" termName="Cash Due on Delivery" termValue="0" uomId="TF_day" lastUpdatedStamp="2015-06-18 14:49:57.437" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.437" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <SettlementTerm settlementTermId="NET_15" termName="Net Due in 15 Days" termValue="15" uomId="TF_day" lastUpdatedStamp="2015-06-18 14:49:57.438" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.438" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <SettlementTerm settlementTermId="NET_30" termName="Net Due in 30 Days" termValue="30" uomId="TF_day" lastUpdatedStamp="2015-06-18 14:49:57.439" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.439" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <SettlementTerm settlementTermId="NET_60" termName="Net Due in 60 Days" termValue="60" uomId="TF_day" lastUpdatedStamp="2015-06-18 14:49:57.44" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.44" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <SettlementTerm settlementTermId="NET_90" termName="Net Due in 90 Days" termValue="90" uomId="TF_day" lastUpdatedStamp="2015-06-18 14:49:57.441" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.441" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

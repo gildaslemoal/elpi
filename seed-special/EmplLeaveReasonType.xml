@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <EmplLeaveReasonType emplLeaveReasonTypeId="CASUAL" hasTable="N" description="Casual" lastUpdatedStamp="2015-06-18 14:49:58.221" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.221" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <EmplLeaveReasonType emplLeaveReasonTypeId="MEDICAL" hasTable="N" description="Medical" lastUpdatedStamp="2015-06-18 14:49:58.219" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.219" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

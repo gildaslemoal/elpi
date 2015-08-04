@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SequenceValueItem seqName="ContactMech" seqId="10020"/>
+    <SequenceValueItem seqName="Facility" seqId="10010"/>
+    <SequenceValueItem seqName="Party" seqId="10010"/>
+    <SequenceValueItem seqName="ProductDimension" seqId="10010"/>
+    <SequenceValueItem seqName="ProductPriceChange" seqId="10010"/>
+    <SequenceValueItem seqName="ProductStore" seqId="10010"/>
+    <SequenceValueItem seqName="ServerHitBin" seqId="10010"/>
+    <SequenceValueItem seqName="Visit" seqId="10100"/>
+    <SequenceValueItem seqName="Visitor" seqId="10100"/>
+</entity-engine-xml>

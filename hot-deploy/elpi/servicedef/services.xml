@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>Elpi Services</description>
+    <vendor></vendor>
+    <version>1.0</version>
+
+    <!-- Note Glm 16/07/2015 : creation of forms according to http://ofbiz.us/developing-enterprise-application-with-apache-ofbiz-platform#ApacheOFBizFrameworkTutorial-AddCreateForm-->
+
+
+    <!-- Note Glm 16/07/2015 : services for backlog's screens-->
+
+    <service name="createElpiTicket" default-entity-name="TicketElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new Ticket for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="true"/>
+        <auto-attributes include="nonpk" mode="IN" optional="true"/>
+    </service>
+
+    <service name="createElpiEvent" default-entity-name="EventElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new Event for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="true"/>
+        <auto-attributes include="nonpk" mode="IN" optional="true"/>
+    </service>
+
+
+
+    <!-- Note Glm 16/07/2015 : services for activity's screens-->
+
+
+
+    <!-- Note Glm 16/07/2015 : services for library's screens-->
+
+    <service name="createElpiKnowledge" default-entity-name="KnowledgeElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new Knowledge for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="true"/>
+        <auto-attributes include="nonpk" mode="IN" optional="true"/>
+    </service>
+
+    <service name="createElpiKnowledgeUrl" default-entity-name="KnowledgeElpiUrl" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new KnowledgeUrl for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="false"/>
+    </service>
+
+    <service name="createElpiKeyword" default-entity-name="KeywordElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new Keyword for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="false"/>
+    </service>
+
+    <service name="createElpiAttachement" default-entity-name="AttachementElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new Attachement for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="true"/>
+    </service>
+
+
+    <!-- Note Glm 16/07/2015 : service for Database's screens-->
+
+    <service name="createElpiUser" default-entity-name="UserElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new User for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="false"/>
+    </service>
+
+    <service name="createElpiCompany" default-entity-name="CompanyElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new Company for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="true"/>
+        <auto-attributes include="nonpk" mode="IN" optional="true"/>
+    </service>
+
+
+
+    <!-- Note Glm 16/07/2015 : service for Settings's screens-->
+
+     <service name="createElpiProduct" default-entity-name="ProductElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new Product for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="true"/>
+        <auto-attributes include="nonpk" mode="IN" optional="true"/>
+    </service>
+
+    <service name="createElpiModule" default-entity-name="ModuleElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new Module for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="true"/>
+        <auto-attributes include="nonpk" mode="IN" optional="true"/>
+    </service>
+
+    <service name="createElpiKnowledgeType" default-entity-name="KnowledgeElpiType" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new KnowledgeType for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="false"/>
+    </service>
+
+    <service name="createElpiTicketType" default-entity-name="TicketElpiType" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new TicketType for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="false"/>
+    </service>
+
+    <service name="createElpiEventType" default-entity-name="EventElpiType" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new EventType for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="false"/>
+    </service>
+
+    <service name="createElpiTicketStatus" default-entity-name="TicketElpiStatus" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new TicketStatus for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="false"/>
+    </service>
+
+    <service name="createElpiRole" default-entity-name="RoleElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new Role for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="false"/>
+    </service>
+
+    <service name="createElpiJob" default-entity-name="JobElpi" engine="entity-auto" invoke="create" auth="true">
+        <description>Create a new Job for Elpi</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="false"/>
+    </service>
+
+</services>

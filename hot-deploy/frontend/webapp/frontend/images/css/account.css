@@ -1,0 +1,109 @@
+.account-header {
+    height: 150px;
+    background-color: #006991;
+    margin-bottom: 80px;
+    border: solid 3px #006991;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.account-picture {
+    background-color: #fff;
+    color: #d03427;
+    position: relative;
+    float: left;
+    top: 40px;
+    left: 40px;
+    font-size: 150px;
+    padding: 5px 5px 35px 5px;
+    border-radius: 50% ;
+    height: 170px;
+    width: 170px;
+    border: solid 2px #006991;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.account-header h1 {
+    color: #eee;
+    position: relative;
+    top: 30px;
+    left: 60px;
+    font-size: 60px;
+}
+.account-header .actor {
+    color: #eee;
+    position: relative;
+    top: 10px;
+    right: 20px;
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 50px;
+}
+.account-header .actor-subtitle {
+    color: #eee;
+    position: relative;
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 20px;
+}
+.account-header img {
+    float: right;
+    color: #CCC;
+    position: relative;
+    top: 40px;
+    left: 50px;
+}
+.account-menu {
+    margin: 0;
+    padding: 0;
+}
+.account-menu li {
+    list-style-type: none;
+    height: 50px;
+/*    border: solid 2px #d03427;*/
+    border: solid 2px #006991;
+    margin-bottom: 15px;
+    transition: 0.5s;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.account-menu li.active,
+/*.account-menu li.active a,*/
+.account-menu li.active i{
+    color: #fff;
+    background-color: #d03427;
+    border: solid 2px #d03427;
+/*    background-color: #006991;*/
+}
+.account-menu li.active a{
+    color: #fff;
+}
+.account-menu li a {
+    position: relative;
+    left: 5px;
+    top: -7px;
+    color: #006991;
+/*    color: #d03427;*/
+    text-decoration: none ;
+}
+.account-menu li a h3{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+}
+.account-menu li i {
+    color: #006991;
+/*    color: #d03427;*/
+}
+.account-menu li:hover {
+    position: relative;
+    transform: translateX(-25px)
+}
+.account-menu li.active:hover i
+{
+    color: #fff;
+}
+.account-menu li.active a:focus{
+    outline:none !important;
+}
+
+.myInformation-readOnly {
+    border: solid 1px #006991;
+/*    border: solid 1px #006991;*/
+    padding: 5px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+

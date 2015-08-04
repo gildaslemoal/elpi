@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ServerHitType hitTypeId="ENTITY" description="Entity" lastUpdatedStamp="2015-06-18 14:49:50.002" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:50.002" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <ServerHitType hitTypeId="EVENT" description="Event" lastUpdatedStamp="2015-06-18 14:49:50.0" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:50.0" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <ServerHitType hitTypeId="REQUEST" description="Request" lastUpdatedStamp="2015-06-18 14:49:49.998" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.998" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <ServerHitType hitTypeId="SERVICE" description="Service" lastUpdatedStamp="2015-06-18 14:49:50.003" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:50.003" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <ServerHitType hitTypeId="VIEW" description="View" lastUpdatedStamp="2015-06-18 14:49:50.001" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:50.001" createdTxStamp="2015-06-18 14:49:49.866"/>
+</entity-engine-xml>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SecurityGroupPermission groupId="FULLADMIN" permissionId="ASSOCIATION_ADMIN"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ASSOCIATION_CREATE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ASSOCIATION_DELETE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ASSOCIATION_UPDATE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ASSOCIATION_VIEW"/>
+    <SecurityGroupPermission groupId="VIEWADMIN" permissionId="ASSOCIATION_VIEW"/>
+    <SecurityGroupPermission groupId="BIZADMIN" permissionId="ASSOCIATION_ADMIN"/>
+</entity-engine-xml>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ReturnReason returnReasonId="RTN_COD_REJECT" description="COD Payment Rejected" sequenceId="05" lastUpdatedStamp="2015-06-18 14:49:58.578" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.578" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnReason returnReasonId="RTN_DEFECTIVE_ITEM" description="Defective Item" sequenceId="02" lastUpdatedStamp="2015-06-18 14:49:58.575" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.575" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnReason returnReasonId="RTN_DIG_FILL_FAIL" description="Digital Fulfillment Failed" sequenceId="04" lastUpdatedStamp="2015-06-18 14:49:58.577" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.577" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnReason returnReasonId="RTN_MISSHIP_ITEM" description="Mis-Shipped Item" sequenceId="03" lastUpdatedStamp="2015-06-18 14:49:58.576" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.576" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnReason returnReasonId="RTN_NORMAL_RETURN" description="Normal Return" sequenceId="07" lastUpdatedStamp="2015-06-18 14:49:58.58" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.58" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnReason returnReasonId="RTN_NOT_WANT" description="Did Not Want Item" sequenceId="01" lastUpdatedStamp="2015-06-18 14:49:58.574" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.574" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <ReturnReason returnReasonId="RTN_SIZE_EXCHANGE" description="Size Exchange" sequenceId="06" lastUpdatedStamp="2015-06-18 14:49:58.579" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.579" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

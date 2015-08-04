@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SecurityGroupPermission groupId="FULLADMIN" permissionId="ELPI_ADMIN"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ELPI_CREATE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ELPI_DELETE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ELPI_UPDATE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ELPI_VIEW"/>
+    <SecurityGroupPermission groupId="VIEWADMIN" permissionId="ELPI_VIEW"/>
+    <SecurityGroupPermission groupId="BIZADMIN" permissionId="ELPI_ADMIN"/>
+</entity-engine-xml>

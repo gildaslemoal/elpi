@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <EmploymentAppSourceType employmentAppSourceTypeId="ADV" hasTable="N" description="Advertisement" lastUpdatedStamp="2015-06-18 14:49:58.193" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.193" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <EmploymentAppSourceType employmentAppSourceTypeId="INTERNET" hasTable="N" description="Internet" lastUpdatedStamp="2015-06-18 14:49:58.192" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.192" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <EmploymentAppSourceType employmentAppSourceTypeId="NEWS_PAPER" hasTable="N" description="NewsPaper" lastUpdatedStamp="2015-06-18 14:49:58.19" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.19" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <EmploymentAppSourceType employmentAppSourceTypeId="PER_REF" hasTable="N" description="PersonalReferal" lastUpdatedStamp="2015-06-18 14:49:58.191" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.191" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

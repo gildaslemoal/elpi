@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <InvoiceItemAssocType invoiceItemAssocTypeId="COMMISSION_INVOICE" hasTable="N" description="Commission" lastUpdatedStamp="2015-06-18 14:49:57.111" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.111" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <InvoiceItemAssocType invoiceItemAssocTypeId="WITHDRAW_INVOICE" hasTable="N" description="Withdraw" lastUpdatedStamp="2015-06-18 14:49:57.112" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.112" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ShipmentContactMechType shipmentContactMechTypeId="SHIP_FROM_ADDRESS" description="Ship-From Address" lastUpdatedStamp="2015-06-18 14:49:55.818" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.818" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <ShipmentContactMechType shipmentContactMechTypeId="SHIP_FROM_EMAIL" description="Ship-From E-Mail" lastUpdatedStamp="2015-06-18 14:49:55.822" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.822" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <ShipmentContactMechType shipmentContactMechTypeId="SHIP_FROM_TELECOM" description="Ship-From Telecom Number" lastUpdatedStamp="2015-06-18 14:49:55.82" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.82" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <ShipmentContactMechType shipmentContactMechTypeId="SHIP_TO_ADDRESS" description="Ship-To Address" lastUpdatedStamp="2015-06-18 14:49:55.817" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.817" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <ShipmentContactMechType shipmentContactMechTypeId="SHIP_TO_EMAIL" description="Ship-To E-Mail" lastUpdatedStamp="2015-06-18 14:49:55.821" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.821" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <ShipmentContactMechType shipmentContactMechTypeId="SHIP_TO_TELECOM" description="Ship-To Telecom Number" lastUpdatedStamp="2015-06-18 14:49:55.819" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.819" createdTxStamp="2015-06-18 14:49:55.809"/>
+</entity-engine-xml>

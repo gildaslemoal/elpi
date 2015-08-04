@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <FixedAssetIdentType fixedAssetIdentTypeId="GAS_CARD1" description="Gas Card Number 1" lastUpdatedStamp="2015-06-18 14:49:56.859" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.859" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetIdentType fixedAssetIdentTypeId="GAS_CARD2" description="Gas Card Number 2" lastUpdatedStamp="2015-06-18 14:49:56.86" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.86" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetIdentType fixedAssetIdentTypeId="GAS_CARD3" description="Gas Card Number 3" lastUpdatedStamp="2015-06-18 14:49:56.861" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.861" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetIdentType fixedAssetIdentTypeId="MFG_SERIAL" description="Mfg Serial Number" lastUpdatedStamp="2015-06-18 14:49:56.855" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.855" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetIdentType fixedAssetIdentTypeId="TRACKING_LABEL" description="Internal Tracking Label Number" lastUpdatedStamp="2015-06-18 14:49:56.857" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.857" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetIdentType fixedAssetIdentTypeId="TRACKING_VENDOR" description="Vendor Tracking/Inventory Number" lastUpdatedStamp="2015-06-18 14:49:56.856" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.856" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetIdentType fixedAssetIdentTypeId="VIN" description="Vehicle Identification Number (VIN)" lastUpdatedStamp="2015-06-18 14:49:56.858" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.858" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

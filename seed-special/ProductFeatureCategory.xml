@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProductFeatureCategory productFeatureCategoryId="IMAGE" description="Image" lastUpdatedStamp="2015-06-18 14:49:55.944" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.944" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductFeatureCategory productFeatureCategoryId="TEXT" description="Text" lastUpdatedStamp="2015-06-18 14:49:55.945" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.945" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

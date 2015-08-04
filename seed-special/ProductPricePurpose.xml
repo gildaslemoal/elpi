@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProductPricePurpose productPricePurposeId="COMPONENT_PRICE" description="Component Price" lastUpdatedStamp="2015-06-18 14:49:55.824" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.824" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPricePurpose productPricePurposeId="PURCHASE" description="Purchase/Initial" lastUpdatedStamp="2015-06-18 14:49:55.821" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.821" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPricePurpose productPricePurposeId="RECURRING_CHARGE" description="Recurring Charge" lastUpdatedStamp="2015-06-18 14:49:55.822" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.822" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <ProductPricePurpose productPricePurposeId="USAGE_CHARGE" description="Usage Charge" lastUpdatedStamp="2015-06-18 14:49:55.823" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.823" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

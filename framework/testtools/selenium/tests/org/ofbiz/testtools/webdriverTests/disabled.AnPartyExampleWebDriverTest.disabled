@@ -1,0 +1,123 @@
+package org.ofbiz.testtools.webdriverTests;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+import org.ofbiz.testtools.webdriverTests.utils.Utils;
+import org.ofbiz.testtools.webdriverTests.utils.WebdriverTestCase;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class AnPartyExampleWebDriverTest extends WebdriverTestCase{
+    /**
+     * <ul>
+     *   <li>log as admin and put language and theme correctly (TOMAHAWK and en).</li>
+     *   <li>Connect to partymgr application.</li>
+     *   <li>click on CREATE NEW</li>
+     *   <li>click on Create New Person<ul>
+     *     <li>field firstName with Selenium</li>
+     *     <li>field lastName</li>
+     *     <li>field nickName</li>
+     *     <li>field comments</li>
+     *     <li>click date picker</li>
+     *     <li>field birthDate</li>
+     *     <li>save</li>
+     *     </ul>
+     *   </li>
+     *   <li>store partyId in profile view page</li>
+     *   <li>go to findparty page</li>
+     *   <li>search for "Sele"</li>
+     *   <li>click on link with partyId created on previous step</li>
+     *   <li>click update</li>
+     *   <li>update comments</li>
+     *   <li>save</li>
+     *   <li>check if message is Person successfully updated.</li>
+     *   <li>And remove all modifications<ul>
+     *     <li>person</li>
+     *     <li>PartyRole</li>
+     *     <li>PartyStatus</li>
+     *     <li>Party</li>
+     *     <li>SequenceValueItem</li>
+     *     </ul></li>
+     * </ul>
+     * 
+     * @throws Exception
+     */
+    @Test
+    public  void functionnalTest()  throws Exception {
+        testName = AnPartyExampleWebDriverTest.class.getSimpleName();
+        driverWait = new WebDriverWait(driver, 30);
+        Utils.testChangeLanguage(ofbizBaseUrl, "partymgr", "English    -    [en]", "TOMAHAWK", driver);
+        createPersonne(driverWait, driver, ofbizBaseUrl);
+    }
+    static protected void createPersonne(WebDriverWait driverWait, WebDriver driver, String ofbizBaseUrl)  throws Exception {
+        WebElement waitFor = driverWait.until(ExpectedConditions.elementToBeClickable(By.linkText("CREATE NEW")));
+        assertEquals("OFBiz: Party Manager: Find Party(s)", driver.getTitle());
+        waitFor.click();
+        waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Create New Person")));
+        assertEquals("OFBiz: Party Manager: Create New Party Detail", driver.getTitle());
+        waitFor.click();
+        waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.id("EditPerson_firstName")));
+        assertEquals("OFBiz: Party Manager: Edit Personal Information", driver.getTitle());
+
+        waitFor.sendKeys("Selenium");
+        waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.id("EditPerson_lastName")));
+        waitFor.clear();
+        waitFor.sendKeys("First_test");
+        // more simple if you are sur field is without javascript
+        WebElement e = driver.findElement(By.id("EditPerson_nickname"));
+        e.sendKeys("and a long nickname");
+        e = driver.findElement(By.id("EditPerson_comments"));
+        e.sendKeys("This comnt need some correcions");
+        waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("button.ui-datepicker-trigger")));
+        waitFor.click();
+        e = driver.findElement(By.id("EditPerson_birthDate_i18n"));
+        e.click();
+        e.clear();
+        e.sendKeys("2001-10-01");
+        e = driver.findElement(By.name("submitButton"));
+        e.click();
+        driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ViewPartyPerson_partyId_title")));
+        assertEquals("OFBiz: Party Manager: View Party Profile", driver.getTitle());
+        assertTrue(driver.findElements(By.xpath("//div[@class='content-messages errorMessage']")).size()==0);
+        String partyId = driver.findElement(By.xpath("//form[@id='ViewPartyPerson']/table/tbody/tr/td[2]")).getText();
+
+        driver.get(ofbizBaseUrl + "partymgr/control/findparty");
+        waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@value='Find']")));
+        assertEquals("OFBiz: Party Manager: Find Party(s)", driver.getTitle());
+        e = driver.findElement(By.name("firstName"));
+        e.sendKeys("Selen");
+        waitFor.click();
+        waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(partyId)));
+        assertEquals("OFBiz: Party Manager: Find Party(s)", driver.getTitle());
+        waitFor.click();
+
+        waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Update")));
+        assertEquals("OFBiz: Party Manager: View Party Profile", driver.getTitle());
+        waitFor.click();
+        waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.id("EditPerson_comments")));
+        assertEquals("OFBiz: Party Manager: Edit Personal Information", driver.getTitle());
+        waitFor.click();
+        e=driver.findElement(By.id("EditPerson_comments"));
+        e.clear();
+        e.sendKeys("The Comment is now corrected");
+
+        waitFor = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.name("submitButton")));
+        waitFor.click();
+        assertEquals("OFBiz: Party Manager: View Party Profile", driver.getTitle());
+        assertEquals("Person successfully updated.",driver.findElement(By.xpath("//div[@id='content-messages']/p[2]")).getText());
+
+        //clean data
+        Utils.connexionToWebtools(ofbizBaseUrl,driverWait, driver);
+        Utils.removeOneWithWebtools(ofbizBaseUrl, driverWait, driver, "Person", "partyId", partyId);
+        Utils.removeOneWithWebtools(ofbizBaseUrl, driverWait, driver, "PartyRole", "partyId", partyId);
+        Utils.removeOneWithWebtools(ofbizBaseUrl, driverWait, driver, "PartyStatus", "partyId", partyId);
+        Utils.removeOneWithWebtools(ofbizBaseUrl, driverWait, driver, "Party", "partyId", partyId);
+        // to play a second time the test, it's not necessary to clear SequenceValue, and if we clear, the second run (after a success) failed
+        //Utils.removeOneWithWebtools(ofbizBaseUrl, driverWait, driver, "SequenceValueItem", "seqName", "Party");
+    }
+
+}

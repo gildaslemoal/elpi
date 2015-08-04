@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <TrackingCodeType trackingCodeTypeId="ACCESS" description="Access Code" lastUpdatedStamp="2015-06-18 14:49:58.639" lastUpdatedTxStamp="2015-06-18 14:49:58.598" createdStamp="2015-06-18 14:49:58.639" createdTxStamp="2015-06-18 14:49:58.598"/>
+    <TrackingCodeType trackingCodeTypeId="EXTERNAL" description="External" lastUpdatedStamp="2015-06-18 14:49:58.641" lastUpdatedTxStamp="2015-06-18 14:49:58.598" createdStamp="2015-06-18 14:49:58.641" createdTxStamp="2015-06-18 14:49:58.598"/>
+    <TrackingCodeType trackingCodeTypeId="INTERNAL" description="Internal" lastUpdatedStamp="2015-06-18 14:49:58.64" lastUpdatedTxStamp="2015-06-18 14:49:58.598" createdStamp="2015-06-18 14:49:58.64" createdTxStamp="2015-06-18 14:49:58.598"/>
+    <TrackingCodeType trackingCodeTypeId="PARTNER_MGD" description="Partner Managed" lastUpdatedStamp="2015-06-18 14:49:58.642" lastUpdatedTxStamp="2015-06-18 14:49:58.598" createdStamp="2015-06-18 14:49:58.642" createdTxStamp="2015-06-18 14:49:58.598"/>
+</entity-engine-xml>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PortalPageColumn portalPageId="ApPortalPage" columnSeqId="00001" lastUpdatedStamp="2015-06-18 14:49:58.119" lastUpdatedTxStamp="2015-06-18 14:49:58.096" createdStamp="2015-06-18 14:49:58.119" createdTxStamp="2015-06-18 14:49:58.096"/>
+    <PortalPageColumn portalPageId="ArPortalPage" columnSeqId="00001" lastUpdatedStamp="2015-06-18 14:49:58.111" lastUpdatedTxStamp="2015-06-18 14:49:58.096" createdStamp="2015-06-18 14:49:58.111" createdTxStamp="2015-06-18 14:49:58.096"/>
+    <PortalPageColumn portalPageId="FinAccountPortalPage" columnSeqId="00001" lastUpdatedStamp="2015-06-18 14:49:58.103" lastUpdatedTxStamp="2015-06-18 14:49:58.096" createdStamp="2015-06-18 14:49:58.103" createdTxStamp="2015-06-18 14:49:58.096"/>
+    <PortalPageColumn portalPageId="OrderPortalPage" columnSeqId="00001" lastUpdatedStamp="2015-06-18 14:49:58.534" lastUpdatedTxStamp="2015-06-18 14:49:58.516" createdStamp="2015-06-18 14:49:58.534" createdTxStamp="2015-06-18 14:49:58.516"/>
+    <PortalPageColumn portalPageId="OrderPortalPage" columnSeqId="00002" lastUpdatedStamp="2015-06-18 14:49:58.535" lastUpdatedTxStamp="2015-06-18 14:49:58.516" createdStamp="2015-06-18 14:49:58.535" createdTxStamp="2015-06-18 14:49:58.516"/>
+    <PortalPageColumn portalPageId="OrderReportPage" columnSeqId="00001" columnWidthPercentage="50" lastUpdatedStamp="2015-06-18 14:49:58.539" lastUpdatedTxStamp="2015-06-18 14:49:58.516" createdStamp="2015-06-18 14:49:58.539" createdTxStamp="2015-06-18 14:49:58.516"/>
+    <PortalPageColumn portalPageId="OrderReportPage" columnSeqId="00002" lastUpdatedStamp="2015-06-18 14:49:58.54" lastUpdatedTxStamp="2015-06-18 14:49:58.516" createdStamp="2015-06-18 14:49:58.54" createdTxStamp="2015-06-18 14:49:58.516"/>
+    <PortalPageColumn portalPageId="PartyProfile" columnSeqId="00001" columnWidthPercentage="50" lastUpdatedStamp="2015-06-18 14:49:54.555" lastUpdatedTxStamp="2015-06-18 14:49:54.513" createdStamp="2015-06-18 14:49:54.555" createdTxStamp="2015-06-18 14:49:54.513"/>
+    <PortalPageColumn portalPageId="PartyProfile" columnSeqId="00002" lastUpdatedStamp="2015-06-18 14:49:54.556" lastUpdatedTxStamp="2015-06-18 14:49:54.513" createdStamp="2015-06-18 14:49:54.556" createdTxStamp="2015-06-18 14:49:54.513"/>
+    <PortalPageColumn portalPageId="ProductStoreFacility" columnSeqId="00001" lastUpdatedStamp="2015-06-18 14:49:55.98" lastUpdatedTxStamp="2015-06-18 14:49:55.972" createdStamp="2015-06-18 14:49:55.98" createdTxStamp="2015-06-18 14:49:55.972"/>
+    <PortalPageColumn portalPageId="SFA_MAIN" columnSeqId="00001" lastUpdatedStamp="2015-06-18 14:49:58.722" lastUpdatedTxStamp="2015-06-18 14:49:58.72" createdStamp="2015-06-18 14:49:58.722" createdTxStamp="2015-06-18 14:49:58.72"/>
+</entity-engine-xml>

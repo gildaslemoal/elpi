@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <QuoteType quoteTypeId="OTHER_QUOTE" hasTable="N" description="Other" lastUpdatedStamp="2015-06-18 14:49:58.348" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.348" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <QuoteType quoteTypeId="PRODUCT_QUOTE" hasTable="N" description="Product" lastUpdatedStamp="2015-06-18 14:49:58.349" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.349" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <QuoteType quoteTypeId="PROPOSAL" hasTable="N" description="Proposal" lastUpdatedStamp="2015-06-18 14:49:58.35" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.35" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <QuoteType quoteTypeId="PURCHASE_QUOTE" hasTable="N" description="Product Purchase" lastUpdatedStamp="2015-06-18 14:49:58.351" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.351" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

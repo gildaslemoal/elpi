@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <InventoryItemType inventoryItemTypeId="NON_SERIAL_INV_ITEM" hasTable="N" description="Non-Serialized" lastUpdatedStamp="2015-06-18 14:49:55.573" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.573" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <InventoryItemType inventoryItemTypeId="SERIALIZED_INV_ITEM" hasTable="N" description="Serialized" lastUpdatedStamp="2015-06-18 14:49:55.572" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.572" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

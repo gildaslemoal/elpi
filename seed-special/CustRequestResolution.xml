@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <CustRequestResolution custRequestResolutionId="DUPLICATE" custRequestTypeId="RF_FEATURE" description="Duplicate" lastUpdatedStamp="2015-06-18 14:49:58.295" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.295" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestResolution custRequestResolutionId="FIXED" custRequestTypeId="RF_BUGFIX" description="Fixed" lastUpdatedStamp="2015-06-18 14:49:58.292" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.292" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestResolution custRequestResolutionId="IMPLEMENTED" custRequestTypeId="RF_FEATURE" description="Implemented" lastUpdatedStamp="2015-06-18 14:49:58.297" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.297" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestResolution custRequestResolutionId="REJECTED" custRequestTypeId="RF_FEATURE" description="Rejected" lastUpdatedStamp="2015-06-18 14:49:58.296" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.296" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestResolution custRequestResolutionId="WONTFIX" custRequestTypeId="RF_BUGFIX" description="Won&apos;t Fix" lastUpdatedStamp="2015-06-18 14:49:58.294" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.294" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <CustRequestResolution custRequestResolutionId="WORKS" custRequestTypeId="RF_BUGFIX" description="Works For Me" lastUpdatedStamp="2015-06-18 14:49:58.293" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.293" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

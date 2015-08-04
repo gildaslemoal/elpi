@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <RejectionReason rejectionId="SRJ_DAMAGED" description="Damaged" lastUpdatedStamp="2015-06-18 14:49:55.867" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.867" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <RejectionReason rejectionId="SRJ_NOT_ORDERED" description="Not Ordered" lastUpdatedStamp="2015-06-18 14:49:55.868" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.868" createdTxStamp="2015-06-18 14:49:55.809"/>
+    <RejectionReason rejectionId="SRJ_OVER_SHIPPED" description="Over Shipped" lastUpdatedStamp="2015-06-18 14:49:55.869" lastUpdatedTxStamp="2015-06-18 14:49:55.809" createdStamp="2015-06-18 14:49:55.869" createdTxStamp="2015-06-18 14:49:55.809"/>
+</entity-engine-xml>

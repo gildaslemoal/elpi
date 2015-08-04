@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+
+    <EmailTemplateSetting bodyScreenLocation="component://association/widget/AssociationScreens.xml#EMAIL_GENERIQUE" contentType="text/html"  description="Send generic email to members" emailTemplateSettingId="EMAIL_GENERIQUE" subject="Nous Citoyens : Newsletter"/>
+    <DataResource characterSetId="UTF-8" createdByUserLogin="admin" createdDate="2014-05-15 10:14:12.48" dataResourceId="EMAIL_GENERIQUE" dataResourceTypeId="ELECTRONIC_TEXT" dataTemplateTypeId="FTL" isPublic="Y" lastModifiedByUserLogin="admin" lastModifiedDate="2014-05-15 13:05:00.85"  statusId="CTNT_IN_PROGRESS"/>
+    <Content contentId="EMAIL_GENERIQUE" contentName="EMAIL_GENERIQUE" contentTypeId="DOCUMENT" createdByUserLogin="admin" createdDate="2014-05-15 10:06:44.597" dataResourceId="EMAIL_GENERIQUE" description="EMAIL_GENERIQUE" lastModifiedByUserLogin="admin" lastModifiedDate="2014-05-15 13:04:49.878" mimeTypeId="text/html" statusId="CTNT_AVAILABLE"/>
+
+    <!--
+        Synchronisation of account creation
+    -->
+    <ElectronicText dataResourceId="EMAIL_GENERIQUE" >
+        <textData><![CDATA[<html style="margin:0; padding:0;">
+    <body style="margin:0; padding:0; font-family:Arial, sans-serif; font-size:16px; font-weight:normal; color:#424242; background:#FFFFFF;">
+<div style="margin:0px auto;text-align:center;font-size:12px;color:#A2A2A2;padding-bottom:6px">
+</div>
+<b>Bonjour ${firstName} ${lastName}</b>
+
+<p>${emailContent}</p>
+<br/>
+<br/>
+<p>L'équipe de Nous Citoyens</p>
+
+    </body>
+</html>]]></textData>
+    </ElectronicText>
+
+</entity-engine-xml>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProductAverageCostType productAverageCostTypeId="MOVING_AVG_COST" hasTable="N" description="Moving Average Cost" lastUpdatedStamp="2015-06-18 14:49:57.515" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.515" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <ProductAverageCostType productAverageCostTypeId="SIMPLE_AVG_COST" hasTable="N" description="Simple Average Cost" lastUpdatedStamp="2015-06-18 14:49:57.513" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.513" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <ProductAverageCostType productAverageCostTypeId="WEIGHTED_AVG_COST" hasTable="N" description="Weighted Average Cost" lastUpdatedStamp="2015-06-18 14:49:57.514" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.514" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

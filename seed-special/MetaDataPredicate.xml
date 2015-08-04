@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <MetaDataPredicate metaDataPredicateId="author-email" description="eMail address of the author or creator of the subject." lastUpdatedStamp="2015-06-18 14:49:54.635" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.635" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <MetaDataPredicate metaDataPredicateId="author-name" description="Name of the author or creator of the subject." lastUpdatedStamp="2015-06-18 14:49:54.634" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.634" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <MetaDataPredicate metaDataPredicateId="event-date" description="The date and time of the event in format [yyyy-MM-dd hh:mm:ss]." lastUpdatedStamp="2015-06-18 14:49:54.636" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.636" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <MetaDataPredicate metaDataPredicateId="event-location" description="The location where subject event took place." lastUpdatedStamp="2015-06-18 14:49:54.637" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.637" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <MetaDataPredicate metaDataPredicateId="event-person-name" description="The name of a person involved in the subject event." lastUpdatedStamp="2015-06-18 14:49:54.638" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.638" createdTxStamp="2015-06-18 14:49:54.587"/>
+</entity-engine-xml>

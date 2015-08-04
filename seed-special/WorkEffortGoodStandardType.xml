@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <WorkEffortGoodStandardType workEffortGoodStdTypeId="GENERAL_SALES" hasTable="N" description="Product to Represent General Sales of the WorkEffort" lastUpdatedStamp="2015-06-18 14:49:55.485" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.485" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortGoodStandardType workEffortGoodStdTypeId="PRUN_PROD_DELIV" hasTable="N" description="Production Run and Product to Deliver Association" lastUpdatedStamp="2015-06-18 14:49:55.482" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.482" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortGoodStandardType workEffortGoodStdTypeId="PRUNT_PROD_DELIV" hasTable="N" description="Production Run Task and Deliverable Product Association" lastUpdatedStamp="2015-06-18 14:49:55.484" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.484" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortGoodStandardType workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" hasTable="N" description="Production Run Task and Needed Product Association" lastUpdatedStamp="2015-06-18 14:49:55.483" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.483" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortGoodStandardType workEffortGoodStdTypeId="ROU_PROD_TEMPLATE" hasTable="N" description="Product and Routing Association" lastUpdatedStamp="2015-06-18 14:49:55.481" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.481" createdTxStamp="2015-06-18 14:49:55.323"/>
+</entity-engine-xml>

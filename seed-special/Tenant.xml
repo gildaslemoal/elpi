@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <Tenant tenantId="DEMO1" tenantName="Demo Tenant One" lastUpdatedStamp="2015-01-20 16:23:10.036" lastUpdatedTxStamp="2015-01-20 16:23:10.035" createdStamp="2015-01-20 16:23:10.036" createdTxStamp="2015-01-20 16:23:10.035"/>
+    <Tenant tenantId="DEMO2" tenantName="Demo Tenant Two" lastUpdatedStamp="2015-01-20 16:23:10.04" lastUpdatedTxStamp="2015-01-20 16:23:10.035" createdStamp="2015-01-20 16:23:10.04" createdTxStamp="2015-01-20 16:23:10.035"/>
+</entity-engine-xml>

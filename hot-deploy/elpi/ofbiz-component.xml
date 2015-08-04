@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ofbiz-component name="elpi"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-component.xsd">
+    <!-- define resource loaders; most common is to use the component resource loader -->
+    <resource-loader name="main" type="component"/>
+
+    <!-- place the config directory on the classpath to access configuration files -->
+    <classpath type="dir" location="config"/>
+    <classpath type="dir" location="dtd"/>
+
+    <!-- load single or multiple external libraries -->
+    <classpath type="jar" location="build/lib/*"/>
+    <classpath type="jar" location="lib/*"/>
+
+    <!-- entity resources: model(s), eca(s), group, and data definitions -->
+    <entity-resource type="model" reader-name="main" loader="main" location="entitydef/entitymodel.xml"/>
+    <!-- <entity-resource type="eca" reader-name="main" loader="main" location="entitydef/eecas.xml"/> -->
+    <entity-resource type="data" reader-name="seed" loader="main" location="data/ElpiTypeData.xml"/>
+    <entity-resource type="data" reader-name="seed" loader="main" location="data/ElpiSecurityPermissionSeedData.xml"/>
+    <entity-resource type="data" reader-name="demo" loader="main" location="data/ElpiSecurityGroupDemoData.xml"/>
+    <entity-resource type="data" reader-name="demo" loader="main" location="data/ElpiDemoData.xml"/>
+
+    <!-- service resources: model(s), eca(s) and group definitions -->
+    <service-resource type="model" loader="main" location="servicedef/services.xml"/>
+    <!--
+    <service-resource type="eca" loader="main" location="servicedef/secas.xml"/>
+    <service-resource type="group" loader="main" location="servicedef/groups.xml"/>
+    -->
+
+    <test-suite loader="main" location="testdef/ElpiTests.xml"/>
+
+    <!-- web applications; will be mounted when using the embedded container -->
+
+    <!-- ANciens commentaires :
+
+    Note 1 (GLM - 25062015) : empty webapp declaration in ofbiz-component : 
+
+     <webapp name="x"
+        title="x"
+        server="default-server"
+        location="webapp/Elpi"
+        base-permission="OFBTOOLS,Elpi"
+        mount-point="/Elpi/x"
+        position="0"
+        menu-style=""
+        app-bar-display="true"/>
+
+    Note 2 (GLM - 25062015) Explanations about each fo those tags : 
+
+    (required ones)
+
+    - name: the name of our web application
+    - title: the title of the application which will be shown in the top navigation
+    - server: the server to use
+    - location: the permissions required to use this component. This example requires that the user should have the OFBTOOLS permission Since the 'admin' user has this permission we do not have to create any new users in order to test this component
+    - base-permission: the default base directory for the server
+    - mount-point: the URL used to access this resource. In this case it would be localhost:8080/practice.
+    - app-bar-display: "true" if the component should show up in the main application tabs that are part of the common OFBiz decorator and "false" (According to my own research on the web, it's the only simple way to take out components or webapps access in the main menu items)(not sure this one is really required)   (non required ones)
+    - description: 
+    - position: rank of the webapp in the main menu (by default, webapp's list in the User's Interface is based on alphabetical ranking)
+    - menu-style: Defines the style of menu item (In this particular theme, which is based on bootstrap CSS Framework, you can use glyphicon icons (see this glyphicon's list on W3SCHOOLS website : http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp) or font awesome icons (see: http://fortawesome.github.io/Font-Awesome/icons/)
+    Note 3 (GLM - 25062015) : Sioux's Theme is based on  the bootstrap's menu styles "Metis" and "sb-admin-2". Those themes have to be in the Databse. All CSS's Themes are placed in themes/easyofbiztheme/EasyOFBizThemeData.xml
+    Modification of code (GLM - 25062015) Test : creation of a web app (source : https://cwiki.apache.org/confluence/display/OFBIZ/OFBiz+Tutorial+-+A+Beginners+Development+Guide#OFBizTutorial-ABeginnersDevelopmentGuide-CreateaComponentDefinitionFile).
+    I try to create new webapps inside hot-deploy/Elpi-->
+
+    <!-- Note 1 (GLM - 15072015) : j'ajoute les lignes suivantes pour créer le menu que je souhaite-->
+
+<webapp name="elpi"
+        title="Backlog"
+        server="default-server"
+        location="webapp/elpi"
+        base-permission="OFBTOOLS,ELPI"
+        menu-style="glyphicon glyphicon-th-list"
+        position="10"
+        mount-point="/elpi"
+        app-bar-display="true"/>
+
+<webapp name="activity"
+        title="Activity"
+        server="default-server"
+        location="webapp/activity"
+        base-permission="OFBTOOLS,ELPI"
+        menu-style="fa fa-tachometer"
+        position="20"
+        mount-point="/activity"   
+        app-bar-display="true"/>
+ 
+ <webapp name="library"
+        title="Library"
+        server="default-server"
+        location="webapp/library"
+        base-permission="OFBTOOLS,ELPI"
+        menu-style="glyphicon glyphicon-book"
+        position="30"
+        mount-point="/library"
+        app-bar-display="true"/>
+
+<webapp name="database"
+        title="Database"
+        server="default-server"
+        location="webapp/database"
+        base-permission="OFBTOOLS,ELPI"
+        menu-style="fa fa-database"
+        position="40"
+        mount-point="/database"
+        app-bar-display="true"/>
+
+<webapp name="settings"
+        title="Settings"
+        server="default-server"
+        location="webapp/settings"
+        base-permission="OFBTOOLS,ELPI"
+        menu-style="glyphicon glyphicon-cog"
+        position="50"
+        mount-point="/settings"
+        app-bar-display="true"/>
+
+</ofbiz-component>

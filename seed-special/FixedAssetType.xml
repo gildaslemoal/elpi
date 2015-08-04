@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <FixedAssetType fixedAssetTypeId="COMPUTER_HARDWARE" hasTable="N" description="Computer Hardware" lastUpdatedStamp="2015-06-18 14:49:56.831" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.831" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetType fixedAssetTypeId="COMPUTER_SOFTWARE" hasTable="N" description="Computer Software" lastUpdatedStamp="2015-06-18 14:49:56.83" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.83" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetType fixedAssetTypeId="EQUIPMENT" hasTable="N" description="Equipment" lastUpdatedStamp="2015-06-18 14:49:56.823" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.823" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetType fixedAssetTypeId="GROUP_EQUIPMENT" hasTable="N" description="Group of machines, used for task and routing definition" lastUpdatedStamp="2015-06-18 14:49:56.825" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.825" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetType fixedAssetTypeId="OTHER_FIXED_ASSET" hasTable="N" description="Other Fixed Asset" lastUpdatedStamp="2015-06-18 14:49:56.826" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.826" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetType fixedAssetTypeId="PRODUCTION_EQUIPMENT" hasTable="N" description="The fixed asset used in the operation-routing definition" lastUpdatedStamp="2015-06-18 14:49:56.824" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.824" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetType fixedAssetTypeId="PROPERTY" hasTable="N" description="Property" lastUpdatedStamp="2015-06-18 14:49:56.827" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.827" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetType fixedAssetTypeId="REAL_ESTATE" hasTable="N" description="Real Estate" lastUpdatedStamp="2015-06-18 14:49:56.829" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.829" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetType fixedAssetTypeId="VEHICLE" hasTable="N" description="Vehicle" lastUpdatedStamp="2015-06-18 14:49:56.828" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.828" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

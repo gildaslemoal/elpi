@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>Association Services</description>
+    <vendor></vendor>
+    <version>1.0</version>
+
+    <service name="noSyntaxError" engine="interface">
+        <description>
+            Dummy service to prevent empty files and syntax error - Remove when the 1st real service will be added here 
+        </description>
+    </service>
+
+    <service name="sendEmail" engine="java"
+             location="org.ofbiz.association.AssociationServices" invoke="sendEmail">
+        <attribute name="partyList" type="List" mode="IN" optional="true"/>
+        <attribute name="emailContent" type="String" mode="IN" optional="true" allow-html="safe"/>
+    </service>
+
+</services>

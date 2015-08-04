@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <FixedAssetStdCostType fixedAssetStdCostTypeId="SETUP_COST" hasTable="N" description="Standard Setup Cost" lastUpdatedStamp="2015-06-18 14:49:57.473" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.473" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <FixedAssetStdCostType fixedAssetStdCostTypeId="USAGE_COST" hasTable="N" description="Standard Usage Cost" lastUpdatedStamp="2015-06-18 14:49:57.474" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.474" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

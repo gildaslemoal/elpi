@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <VisualThemeSet visualThemeSetId="BACKOFFICE" description="Themes to be used for backoffice applications" lastUpdatedStamp="2015-06-18 14:49:49.992" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.992" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <VisualThemeSet visualThemeSetId="ECOMMERCE" description="Themes to be used for ECommerce applications" lastUpdatedStamp="2015-06-18 14:49:49.993" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.993" createdTxStamp="2015-06-18 14:49:49.866"/>
+</entity-engine-xml>

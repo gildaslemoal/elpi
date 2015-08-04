@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <AgreementType agreementTypeId="COMMISSION_AGREEMENT" hasTable="N" description="Commission" lastUpdatedStamp="2015-06-18 14:49:54.195" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.195" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <AgreementType agreementTypeId="EMPLOYMENT_AGREEMENT" hasTable="N" description="Employment" lastUpdatedStamp="2015-06-18 14:49:54.193" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.193" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <AgreementType agreementTypeId="EULA" hasTable="N" description="End User License Agreement" lastUpdatedStamp="2015-06-18 14:49:54.196" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.196" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <AgreementType agreementTypeId="OTHER_AGREEMENT" hasTable="N" description="Other" lastUpdatedStamp="2015-06-18 14:49:54.194" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.194" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <AgreementType agreementTypeId="PRODUCT_AGREEMENT" hasTable="N" description="Product" lastUpdatedStamp="2015-06-18 14:49:54.19" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.19" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <AgreementType agreementTypeId="PURCHASE_AGREEMENT" parentTypeId="PRODUCT_AGREEMENT" hasTable="N" description="Purchase" lastUpdatedStamp="2015-06-18 14:49:54.191" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.191" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <AgreementType agreementTypeId="SALES_AGREEMENT" parentTypeId="PRODUCT_AGREEMENT" hasTable="N" description="Sales" lastUpdatedStamp="2015-06-18 14:49:54.192" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.192" createdTxStamp="2015-06-18 14:49:54.183"/>
+</entity-engine-xml>

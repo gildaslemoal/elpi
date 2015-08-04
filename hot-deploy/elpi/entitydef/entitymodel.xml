@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<entitymodel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/entitymodel.xsd">
+  <!-- ========================================================= -->
+  <!-- ======================== Defaults ======================= -->
+  <!-- ========================================================= -->
+  <title>Entity of elpi Component</title>
+  <description>Lists of entities for the Elpi's components</description>
+  <version>1.0.1</version>
+
+  <!-- Description : entitymodel.xml of "Elpi" Component 
+path : elpi-ofbiz/hot-deploy/elpi/entitydef/entitymodel.xml -->
+
+<!-- 
+Note 1 : List of ofbiz's Entities Type with the corresponding postgreql one
+
+General Types
+    
+    <field-type-def type="blob" sql-type="BYTEA" java-type="java.sql.Blob"/>
+    <field-type-def type="byte-array" sql-type="BYTEA" java-type="byte[]"/>
+    <field-type-def type="object" sql-type="BYTEA" java-type="Object"/>
+
+    <field-type-def type="date-time" sql-type="TIMESTAMPTZ" java-type="java.sql.Timestamp"/>
+    <field-type-def type="date" sql-type="DATE" java-type="java.sql.Date"/>
+    <field-type-def type="time" sql-type="TIME" java-type="java.sql.Time"/>
+
+    <field-type-def type="currency-amount" sql-type="NUMERIC(18,2)" java-type="java.math.BigDecimal"/>
+    <field-type-def type="currency-precise" sql-type="NUMERIC(18,3)" java-type="java.math.BigDecimal"/>
+    <field-type-def type="fixed-point" sql-type="NUMERIC(18,6)" java-type="java.math.BigDecimal"/>
+    <field-type-def type="floating-point" sql-type="FLOAT8" java-type="Double"/>
+    <field-type-def type="numeric" sql-type="NUMERIC(20,0)" java-type="Long"/>
+
+    <field-type-def type="id" sql-type="VARCHAR(20)" java-type="String"/>
+    <field-type-def type="id-long" sql-type="VARCHAR(60)" java-type="String"/>
+    <field-type-def type="id-vlong" sql-type="VARCHAR(255)" java-type="String"/>
+
+    <field-type-def type="indicator" sql-type="CHAR(1)" sql-type-alias="BPCHAR" java-type="String"/>
+    <field-type-def type="very-short" sql-type="VARCHAR(10)" java-type="String"/>
+    <field-type-def type="short-varchar" sql-type="VARCHAR(60)" java-type="String"/>
+    <field-type-def type="long-varchar" sql-type="VARCHAR(255)" java-type="String"/>
+    <field-type-def type="very-long" sql-type="TEXT" java-type="String"/>
+
+    <field-type-def type="comment" sql-type="VARCHAR(255)" java-type="String"/>
+    <field-type-def type="description" sql-type="VARCHAR(255)" java-type="String"/>
+    <field-type-def type="name" sql-type="VARCHAR(100)" java-type="String"/>
+    <field-type-def type="value" sql-type="VARCHAR(255)" java-type="String"/>
+
+    Specialized Types
+    
+    <field-type-def type="credit-card-number" sql-type="VARCHAR(255)" java-type="String"/>
+    <field-type-def type="credit-card-date" sql-type="VARCHAR(20)" java-type="String"/>
+    <field-type-def type="email" sql-type="VARCHAR(255)" java-type="String"/>
+    <field-type-def type="url" sql-type="VARCHAR(255)" java-type="String"/>
+
+    Note : "id-ne" = "id not empty"
+
+    <field-type-def type="id-ne" sql-type="VARCHAR(20)" java-type="String"/>
+    <field-type-def type="id-long-ne" sql-type="VARCHAR(60)" java-type="String"/>
+    <field-type-def type="id-vlong-ne" sql-type="VARCHAR(255)" java-type="String"/>
+    <field-type-def type="tel-number" sql-type="VARCHAR(60)" java-type="String"/>
+</fieldtypemodel>
+
+-->
+
+<!-- 
+
+Note 2 : See the Entity Engine Guide on Apache-OFBiz Website for more Explanations -
+https://cwiki.apache.org/confluence/display/OFBIZ/Entity+Engine+Guide#EntityEngineGuide-EntityModeling
+For explanations about foreign keys, see also http://neogia.org/wiki/index.php/UML_modelization_rules
+types of relation : 
+"one" for 1..1 association
+"one-nofk" for 0..1 association
+"many" for 1..n association
+-->
+
+<!-- 
+
+Note 3 : Model of Empty entity : 
+
+<entity entity-name=""
+            package-name="org.ofbiz.elpi"
+            title="">
+            
+      <field name="" type=""></field>
+      <field name="comments" type="comment"></field>
+      <prim-key field=""/>
+      <relation type="one" fk-name="" rel-entity-name="">
+        <key-map field-name=""/>
+      </relation>
+      
+    </entity>
+
+-->
+
+<!-- 
+
+Note 4 : Questions to answer : What is the most appropriate type for boolean values? 
+ALso : What's the right choice for a binary field?
+-->
+
+
+<entity entity-name="UserElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="userElpiId" type="id"></field>
+      <field name="lastElpiName" type="name"></field>
+      <field name="firstElpiName" type="name"></field>
+      <field name="phoneElpiNumber" type="tel-number"></field>
+      <field name="emailElpi" type="email"></field>
+      <field name="availableElpi" type="indicator"></field>
+      <field name="roleElpiId" type="id"></field>
+      <field name="jobElpiId" type="id"></field>
+      <field name="companyElpiId" type="id"></field>
+      <prim-key field="userElpiId"/>
+      <relation type="one" fk-name="userElpiCompanyFk" rel-entity-name="CompanyElpi">
+        <key-map field-name="companyElpiId"/>
+      </relation>
+      <relation type="one" fk-name="userElpiRoleFk" rel-entity-name="RoleElpi">
+        <key-map field-name="roleElpiId"/>
+      </relation>
+      <relation type="one" fk-name="userElpiJobFk" rel-entity-name="JobElpi">
+        <key-map field-name="jobElpiId"/>
+      </relation>
+      
+    </entity>
+    
+<entity entity-name="TicketElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="ticketElpiId" type="id"></field>
+      <field name="creationElpiDateTime" type="date-time"></field>
+      <field name="endElpiDateTime" type="date-time"></field>
+      <field name="titleElpi" type="short-varchar"></field>
+      <field name="publicElpi" type="indicator"></field>
+      <field name="userElpiInChargeId" type="id"></field>
+      <field name="moduleElpiId" type="id"></field>
+      <field name="ticketElpiTypeId" type="id"></field>
+      <field name="ticketElpiStatusId" type="id"></field>
+      <prim-key field="ticketElpiId"/>
+      <!-- note Glm 14/07/2015 : "ticketUser" relation here deals with the user IN CHARGE OF the ticket, meaning the one who is responsible for finding a solution -->
+      <relation type="one" fk-name="ticketElpiUserInChargeFk" rel-entity-name="UserElpi">
+         <key-map field-name="userElpiInChargeId" rel-field-name="userElpiId"/>
+      </relation>
+      <relation type="one" fk-name="ticketElpiModuleFk" rel-entity-name="ModuleElpi">
+         <key-map field-name="moduleElpiId"/>
+      </relation>
+      <relation type="one" fk-name="ticketElpiTicketTypeFk" rel-entity-name="TicketElpiType">
+         <key-map field-name="ticketElpiTypeId"/>
+      </relation>
+      <relation type="one" fk-name="ticketElpiTicketStatusFk" rel-entity-name="TicketElpiStatus">
+         <key-map field-name="ticketElpiStatusId"/>
+      </relation>
+      
+    </entity>
+    
+<entity entity-name="CompanyElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="companyElpiId" type="id"></field>
+      <field name="companyElpiName" type="name"></field>
+      <prim-key field="companyElpiId"/>
+      
+    </entity>
+    
+<entity entity-name="EventElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="eventElpiId" type="id"></field>
+      <field name="eventElpiContent" type="very-long"></field>
+      <field name="ticketElpiId" type="id"></field>
+      <field name="userElpiCreatorId" type="id"></field>
+      <field name="userElpiAssociatedId" type="id"></field>
+      <field name="eventElpiTypeId" type="id"></field>
+      <prim-key field="eventElpiId"/>
+      <relation type="one" fk-name="eventElpiTicketFk" rel-entity-name="TicketElpi">
+        <key-map field-name="ticketElpiId"/>
+      </relation>
+      <relation type="one" fk-name="eventElpiUserCreatorFk" rel-entity-name="UserElpi">
+        <key-map field-name="userElpiCreatorId" rel-field-name="userElpiId"/>
+      </relation>
+      <relation type="many" fk-name="eventElpiUserAssociatedFk" rel-entity-name="UserElpi">
+        <key-map field-name="userElpiAssociatedId" rel-field-name="userElpiId"/>
+      </relation>
+      <relation type="one" fk-name="eventElpiTypeFk" rel-entity-name="EventElpiType">
+        <key-map field-name="eventElpiTypeId"/>
+      </relation>
+                
+    </entity>
+    
+<entity entity-name="ProductElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="productElpiId" type="id"></field>
+      <field name="productElpiName" type="name"></field>
+      <field name="productElpiTypeId" type="id"></field>
+      <field name="moduleElpiId" type="id"></field>
+      <prim-key field="productElpiId"/>
+       <relation type="one" fk-name="productElpiProductTypeFk" rel-entity-name="ProductElpiType">
+        <key-map field-name="productElpiTypeId"/>
+      </relation>
+       <relation type="one" fk-name="productElpiModuleDefaultFk" rel-entity-name="ModuleElpi">
+        <key-map field-name="moduleElpiId"/>
+      </relation>
+      
+    </entity>
+    
+<entity entity-name="KnowledgeElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="knowledgeElpiId" type="id"></field>
+      <field name="knowledgeElpiContent" type="very-long"></field>
+      <field name="knowledgeElpiTypeId" type="id"></field>
+      <field name="keywordElpiId" type="id"></field>
+      <prim-key field="knowledgeElpiId"/>
+      <relation type="one" fk-name="knowledgeElpiKnowledgeTypeFk" rel-entity-name="KnowledgeElpiType">
+        <key-map field-name="knowledgeElpiTypeId"/>
+      </relation>
+      <relation type="one" fk-name="knowledgeElpiKeywordFk" rel-entity-name="KnowledgeElpiType">
+        <key-map field-name="keywordElpiId"/>
+      </relation>
+      
+    </entity>
+    
+<entity entity-name="KeywordElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="keywordElpiId" type="id"></field>
+      <field name="keywordElpiName" type="name"></field>
+      <prim-key field="keywordElpiId"/>
+            
+    </entity>
+    
+<entity entity-name="KnowledgeElpiType"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="knowledgeElpiTypeId" type="id"></field>
+      <field name="knowledgeElpiTypeName" type="name"></field>
+      <prim-key field="knowledgeElpiTypeId"/>
+           
+    </entity>
+    
+<entity entity-name="ModuleElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="moduleElpiId" type="id"></field>
+      <field name="moduleElpiName" type="name"></field>
+      <field name="productElpiId" type="id"></field>
+      <prim-key field="moduleElpiId"/>
+      <relation type="one" fk-name="moduleElpiProductFk" rel-entity-name="ProductElpi">
+        <key-map field-name="productElpiId"/>
+      </relation>
+            
+    </entity>
+    
+<entity entity-name="ProductElpiType"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="productElpiTypeId" type="id"></field>
+      <field name="productElpiTypeName" type="name"></field>
+      <prim-key field="productElpiTypeId"/>
+            
+    </entity>
+    
+<entity entity-name="TicketElpiType"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="ticketElpiTypeId" type="id"></field>
+      <field name="ticketElpiTypeName" type="name"></field>
+      <prim-key field="ticketElpiTypeId"/>
+            
+    </entity>
+
+<entity entity-name="EventElpiType"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="eventElpiTypeId" type="id"></field>
+      <field name="eventElpiTypeName" type="name"></field>
+      <prim-key field="eventElpiTypeId"/>
+            
+    </entity>
+
+<!-- Note : is the type "blob" the right choice here? -->
+
+<entity entity-name="AttachementElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="attachementElpiId" type="id"></field>
+      <field name="attachementElpiTitle" type="short-varchar"></field>
+      <field name="attachementElpiFile" type="blob"></field>
+      <prim-key field="attachementElpiId"/>
+      
+    </entity>
+    
+<entity entity-name="TicketElpiStatus"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="ticketElpiStatusId" type="id"></field>
+      <field name="ticketElpiStatusName" type="name"></field>
+      <prim-key field="ticketElpiStatusId"/>
+      
+    </entity>
+
+<entity entity-name="RoleElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="roleElpiId" type="id"></field>
+      <field name="roleElpiName" type="name"></field>
+      <prim-key field="roleElpiId"/>
+      
+    </entity>
+    
+<entity entity-name="JobElpi"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="jobElpiId" type="id"></field>
+      <field name="jobElpiName" type="name"></field>
+      <prim-key field="jobElpiId"/>
+      
+    </entity>
+    
+<entity entity-name="KnowledgeElpiUrl"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="knowledgeElpiUrlId" type="id"></field>
+      <field name="knowledgeElpiUrl" type="url"></field>
+      <field name="knowledgeElpiId" type="id"></field>
+      <prim-key field="knowledgeElpiUrlId"/>
+      <relation type="one" fk-name="knowledgeElpiUrlKnowledgeFk" rel-entity-name="KnowledgeElpi">
+        <key-map field-name="knowledgeElpiId"/>
+      </relation>
+      
+    </entity>
+
+<!-- Note : Relation's Tables -->
+<!-- Question : In the "<keymap>" lines, are the attributes "rel-field-name" needed?-->
+<!-- Note Glm 15/07/15 ! Answer : NOOOOOOOO!! -->
+    
+<entity entity-name="RelElpiKnowledgeProduct"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="relElpiKnowledgeProductId" type="id"></field>
+      <field name="knowledgeElpiId" type="id"></field>
+      <field name="productElpiId" type="id"></field>
+      <prim-key field="relElpiKnowledgeProductId"/>
+      <relation type="one" fk-name="productElpiRelKnowledgeFk" rel-entity-name="KnowledgeElpi">
+        <key-map field-name="knowledgeElpiId"/>
+      </relation>
+      <relation type="one" fk-name="knowledgeElpiRelProductFk" rel-entity-name="ProductElpi">
+        <key-map field-name="productElpiId"/>
+      </relation>
+      
+    </entity>
+    
+<entity entity-name="RelElpiTicketKeyword"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="relElpiTicketKeywordId" type="id"></field>
+      <field name="ticketElpiId" type="id"></field>
+      <field name="keywordElpiId" type="id"></field>
+      <prim-key field="relElpiTicketKeywordId"/>
+      <relation type="one" fk-name="ticketElpiKeywordRelFk" rel-entity-name="TicketElpi">
+        <key-map field-name="ticketElpiId"/>
+      </relation>
+      <relation type="one" fk-name="keywordElpiTicketRelFk" rel-entity-name="KeywordElpi">
+        <key-map field-name="keywordElpiId"/>
+      </relation>
+      
+    </entity>
+    
+<entity entity-name="RelElpiEventAttachement"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="RelElpiEventAttachementId" type="id"></field>
+      <field name="eventElpiId" type="id"></field>
+      <field name="attachementElpiId" type="id"></field>
+      <prim-key field="RelElpiEventAttachementId"/>
+      <relation type="one" fk-name="eventElpiAttachementRel" rel-entity-name="EventElpi">
+        <key-map field-name="eventElpiId"/>
+      </relation>
+      <relation type="one" fk-name="attachementElpiEventRel" rel-entity-name="AttachementElpi">
+        <key-map field-name="attachementElpiId" />
+      </relation>
+      
+    </entity>
+    
+<entity entity-name="RelElpiKnowledgeAttachement"
+            package-name="org.ofbiz.elpi">
+            
+      <field name="RelElpiKnowledgeAttachementId" type="id"></field>
+      <field name="knowledgeElpiId" type="id"></field>
+      <field name="attachementElpiId" type="id"></field>
+      <prim-key field="RelElpiKnowledgeAttachementId"/>
+      <relation type="one" fk-name="knowledgeElpiAttachementRelFk" rel-entity-name="KnowledgeElpi">
+        <key-map field-name="knowledgeElpiId"/>
+      </relation>
+      <relation type="one" fk-name="attachementElpiKnowledgeRelFkFk" rel-entity-name="AttachementElpi">
+        <key-map field-name="attachementElpiId"/>
+      </relation>
+      
+    </entity>
+
+</entitymodel>

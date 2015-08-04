@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+
+    <screen name="newcustomer">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleNewCustomer"/>
+                <!--<script location="component://frontend/webapp/frontend/WEB-INF/actions/RoofList.groovy"/>-->
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/customer/NewCustomer.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="application-bar-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific>
+                                <html>
+                                    <html-template location="component://frontend/webapp/frontend/customer/newcustomer.ftl"/>
+                                </html>
+                            </platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="CreatePartyNotification">
+        <section>
+            <actions>
+                <property-map resource="PartyUiLabels" map-name="uiLabelMap" global="true"/>
+                <set field="title" value="${uiLabelMap.PartyNotificationMailCreate}"/>
+            </actions>
+            <widgets>
+                <platform-specific><html><html-template location="component://frontend/templates/CreatePartyNotification.ftl"/></html></platform-specific>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="forgotpassword">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleForgotPassword"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="application-bar-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific>
+                                <html>
+                                    <html-template location="component://frontend/webapp/frontend/customer/forgot-password.ftl"/>
+                                </html>
+                            </platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="SendPwdResetLink">
+        <section>
+            <actions>
+                <property-map resource="FrontEndUiLabels" map-name="uiLabelMap" global="true"/>
+            </actions>
+            <widgets>
+                <platform-specific><html><html-template location="component://frontend/templates/SendPwdResetLink.ftl"/></html></platform-specific>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="ChangePassword">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleChangePassword"/>
+                <set field="emailAddress" from-field="parameters.emailAddress" />
+            </actions>
+            <widgets>
+                <decorator-screen name="application-bar-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific>
+                                <html>
+                                    <html-template location="component://frontend/webapp/frontend/customer/change-password.ftl"/>
+                                </html>
+                            </platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="account">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleAccount"/>
+                <set field="layoutSettings.styleSheets[+0]" value="/frontend/images/css/account.css" global="true"/>
+                <set field="layoutSettings.javaScripts[+0]" value="/frontend/images/js/account.js" global="true"/>
+                <script location="component://frontend/webapp/frontend/WEB-INF/actions/RoofList.groovy"/>
+                <script location="component://frontend/webapp/frontend/WEB-INF/actions/customer/account.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="application-bar-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific>
+                                <html>
+                                    <html-template location="component://frontend/webapp/frontend/customer/account-header.ftl"/>
+                                    <html-template location="component://frontend/webapp/frontend/customer/account.ftl"/>
+                                </html>
+                            </platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="accountOrder">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleAccount"/>
+                <set field="layoutSettings.styleSheets[+0]" value="/frontend/images/css/account.css" global="true"/>
+                <script location="component://frontend/webapp/frontend/WEB-INF/actions/customer/accountOrder.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="application-bar-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific>
+                                <html>
+                                    <html-template location="component://frontend/webapp/frontend/customer/account-header.ftl"/>
+                                    <html-template location="component://frontend/webapp/frontend/customer/account-order.ftl"/>
+                                </html>
+                            </platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+</screens>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>Interface-Front Services</description>
+    <vendor></vendor>
+    <version>1.0</version>
+    <!-- export party and his userLogin (used upon customer account creation) -->
+    <service name="exportCustomer" engine="java" auth="true"
+        location="org.ofbiz.backend.BackendExportService" invoke="exportCustomer">
+        <attribute name="partyId" mode="IN" type="String"/>
+        <attribute name="userLoginId" mode="IN" type="String"/>
+    </service>
+    <service name="exportPartyAndLogin" engine="java" auth="true"
+        location="org.ofbiz.backend.BackendExportService" invoke="exportPartyAndLogin">
+        <attribute name="partyId" mode="IN" type="String"/>
+        <attribute name="userLoginId" mode="IN" type="String"/>
+    </service>
+
+    <!-- party export services -->
+    <service name="exportParty" engine="java" auth="true"
+        location="org.ofbiz.backend.BackendExportService" invoke="exportParty">
+        <attribute name="partyId" mode="IN" type="String"/>
+    </service>
+
+    <!-- customer login export service -->
+    <service name="exportUserLogin" engine="java" auth="true"
+        location="org.ofbiz.backend.BackendExportService" invoke="exportUserLogin">
+        <attribute name="partyId" mode="IN" type="String"/>
+        <attribute name="userLoginId" mode="IN" type="String" optional="true"/>
+    </service>
+
+    <!-- customer order export service -->
+    <service name="exportConsumerOrder" engine="java" auth="true"
+        location="org.ofbiz.backend.BackendExportService" invoke="exportConsumerOrder">
+        <attribute name="orderId" mode="IN" type="String"/>
+    </service>
+    <!-- postal address export services-->
+    <service name="exportPartyPostalAddress" engine="java" auth="true"
+        location="org.ofbiz.backend.BackendExportService" invoke="exportPartyPostalAddress">
+        <attribute name="partyId" mode="IN" type="String"/>
+        <attribute name="contactMechId" mode="IN" type="String"/>
+        <attribute name="fromDate" mode="IN" type="Timestamp"/>
+    </service>
+
+    <!-- TelecomNumber export services -->
+    <service name="exportPartyTelecomNumber" engine="java" auth="true"
+        location="org.ofbiz.backend.BackendExportService" invoke="exportPartyTelecomNumber">
+        <attribute name="partyId" mode="IN" type="String" optional="true"/>
+        <attribute name="contactMechId" mode="IN" type="String" optional="true"/>
+        <attribute name="fromDate" mode="IN" type="Timestamp" optional="true"/>
+    </service>
+
+    <!-- email address export services -->
+    <service name="exportPartyEmailAddress" engine="soap-enhanced" auth="true"
+        location="org.ofbiz.backend.BackendExportService" invoke="exportPartyEmailAddress">
+        <implements service="createPartyEmailAddress"/>
+        <override name="partyId" optional="false"/>
+    </service>
+
+    <!-- party contactMech Association export service -->
+    <service name="exportPartyContactMechPurpose" engine="soap-enhanced" auth="true"
+        location="interface-back" invoke="exportPartyContactMechPurpose">
+        <implements service="createPartyContactMechPurpose"/>
+        <attribute name="contactMechId" mode="INOUT" type="String"/>
+        <attribute name="partyId" mode="INOUT" type="String"/>
+        <attribute name="contactMechPurposeTypeId" mode="INOUT" type="String"/>
+        <attribute name="fromDate" mode="INOUT" type="Timestamp" optional="true"/>
+    </service>
+
+    <!-- party contactMech purpose export service 
+    <service name="updatePartyContactMechPurposeFromFront" engine="soap-enhanced" auth="true"
+        location="interface-back" invoke="updatePartyContactMechPurposeFromFront">
+        <implements service="updatePartyContactMechPurpose"/>
+        <override name="partyId" optional="false"/>
+    </service>
+    -->
+
+    <!-- update shipping planning timer for offer
+    <service name="offerShippingAndCheckOutPlanning" engine="soap-enhanced" auth="true"
+        location="interface-back" invoke="offerShippingAndCheckOutPlanning">
+        <attribute name="productOfferIds" mode="IN" type="String"/>
+        <attribute name="fromTime" mode="IN" type="String" optional="true"/>
+        <attribute name="facilityId" mode="IN" type="String" optional="true"/>
+        <attribute name="offerPlanning" mode="OUT" type="Map"/>
+    </service>
+     -->
+</services>

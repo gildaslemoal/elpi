@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <DeductionType deductionTypeId="CAFE_PLAN" description="Cafeteria Plan" lastUpdatedStamp="2015-06-18 14:49:58.197" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.197" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <DeductionType deductionTypeId="FED_TAX" description="Federal Tax" lastUpdatedStamp="2015-06-18 14:49:58.194" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.194" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <DeductionType deductionTypeId="INSURANCE" description="Insurance" lastUpdatedStamp="2015-06-18 14:49:58.196" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.196" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <DeductionType deductionTypeId="STATE_TAX" description="State Tax" lastUpdatedStamp="2015-06-18 14:49:58.195" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.195" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

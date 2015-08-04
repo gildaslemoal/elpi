@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+
+<PartyIdentificationType partyIdentificationTypeId="SIRET" description="Numéro d'identification des sociétés françaises (SIRET)"/>
+
+</entity-engine-xml>

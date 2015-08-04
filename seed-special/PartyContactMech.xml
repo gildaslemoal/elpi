@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PartyContactMech partyId="10000" contactMechId="10000" fromDate="2015-06-18 14:55:55.95" lastUpdatedStamp="2015-06-18 14:55:55.95" lastUpdatedTxStamp="2015-06-18 14:55:55.867" createdStamp="2015-06-18 14:55:55.95" createdTxStamp="2015-06-18 14:55:55.867"/>
+</entity-engine-xml>

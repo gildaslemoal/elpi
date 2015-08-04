@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+    <screen name="viewmycompany">
+        <section>
+            <actions>
+                <property-to-field field="mycompany" resource="easyofbiz" property="mycompany-partyId"/>
+                <set field="parameters.partyId" from-field="mycompany"/>
+            </actions>
+            <widgets>
+                <include-screen name="viewprofile"/>
+<!--                 <include-screen name="viewprofile" location="component://party/widget/partymgr/PartyScreens.xml"/> -->
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="newemployee">
+        <section>
+            <actions>
+                <set field="parameters.easyOfbizUser" value="Y"/>
+            </actions>
+            <widgets>
+                <include-screen name="NewEmployee" location="component://party/widget/partymgr/PartyScreens.xml"/>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="listemployees">
+        <section>
+            <actions>
+                <property-to-field field="mycompany" resource="easyofbiz" property="mycompany-partyId"/>
+                <set field="parameters.partyId" from-field="mycompany"/>
+            </actions>
+            <widgets>
+                <include-screen name="EditPartyRelationships" location="component://party/widget/partymgr/PartyScreens.xml"/>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="ViewProfile">
+        <section>
+            <actions>
+                <property-to-field field="mycompany" resource="easyofbiz" property="mycompany-partyId"/>
+                <set field="parameters.partyId" from-field="mycompany"/>
+                <set field="titleProperty" value="PageTitleViewPartyProfile"/>
+                <set field="tabButtonItem" value="viewprofile"/>
+                <set field="labelTitleProperty" value="PartyTaxAuthInfos"/>
+                <set field="partyId" from-field="parameters.partyId"/>
+                <set field="layoutSettings.javaScripts[]" value="/partymgr/js/PartyProfileContent.js" global="true"/>
+                <script location="component://party/webapp/partymgr/WEB-INF/actions/party/ViewProfile.groovy"/>
+                <entity-one value-field="partyGroupe" entity-name="PartyGroup">
+                    <field-map field-name="partyId" from-field="partyId"/>
+                </entity-one>
+                <set field="partyName" from-field="partyGroupe.partyName"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="CommonPartyDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <section>
+                            <condition>
+                                <not><if-empty field="party"/></not>
+                            </condition>
+                            <widgets>
+                                <container style="col-lg-6">
+                                <section>
+                                    <condition>
+                                        <if-has-permission permission="PARTYMGR" action="_CREATE"/>
+                                    </condition>
+                                    <widgets>
+                                        <section>
+                                            <actions>
+                                                <script location="component://party/webapp/partymgr/WEB-INF/actions/party/GetContactMechs.groovy"/>
+                                                <script location="component://party/webapp/partymgr/WEB-INF/actions/party/GetUserLoginPrimaryEmail.groovy"/>
+                                                <script location="component://party/webapp/mycompany/WEB-INF/actions/GetBusinessCardInfo.groovy"/>
+                                            </actions>
+                                            <widgets>
+                                                <screenlet id="MyCompanyBusinessCardPanel" title="${partyName}">
+                                                    <container id="mycompanybusinesscard">
+                                                        <platform-specific>
+                                                            <html>
+                                                                <html-template location="component://party/webapp/mycompany/MyCompanyBusinessCard.ftl"/>
+                                                            </html>
+                                                        </platform-specific>
+                                                    </container>
+                                                </screenlet>
+                                            </widgets>
+                                        </section>
+                                    </widgets>
+                                </section>
+                                </container>
+                                <container style="col-lg-6">
+                                <screenlet title="${uiLabelMap.CommonNotes}">
+                                    <include-form name="ListPartyNotes" location="component://party/widget/partymgr/EasyOfbizForms.xml"/>
+                                </screenlet>
+                                <screenlet title="${uiLabelMap.ContentContents}">
+                                    <include-form name="ListPartyContents" location="component://party/widget/partymgr/EasyOfbizForms.xml"/>
+                                </screenlet>
+                                </container>
+                                <container style="clear"/>
+                            </widgets>
+                            <fail-widgets>
+                                <container>
+                                    <label style="h3">${uiLabelMap.PartyNoPartyFoundWithPartyId}: ${parameters.partyId}</label>
+                                </container>
+                            </fail-widgets>
+                        </section>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    
+    <screen name="ViewEmployees">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PartyListEmployees"/>
+                <set field="tabButtonItem" value="viewprofile"/>
+                <set field="labelTitleProperty" value="PartyTaxAuthInfos"/>
+                <set field="partyId" from-field="parameters.partyId"/>
+                <set field="layoutSettings.javaScripts[]" value="/partymgr/js/PartyProfileContent.js" global="true"/>
+                <script location="component://party/webapp/partymgr/WEB-INF/actions/party/ViewProfile.groovy"/>
+                <entity-one value-field="partyGroupe" entity-name="PartyGroup">
+                    <field-map field-name="partyId" from-field="partyId"/>
+                </entity-one>
+                <set field="partyName" from-field="partyGroupe.partyName"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="CommonPartyDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <section>
+                            <condition>
+                                <not><if-empty field="party"/></not>
+                            </condition>
+                            <widgets>
+                                <container style="col-lg-6">
+                                <section>
+                                    <condition>
+                                        <if-has-permission permission="PARTYMGR" action="_CREATE"/>
+                                    </condition>
+                                    <widgets>
+                                        <section>
+                                            <actions>
+                                                <script location="component://party/webapp/partymgr/WEB-INF/actions/party/GetContactMechs.groovy"/>
+                                                <script location="component://party/webapp/partymgr/WEB-INF/actions/party/GetUserLoginPrimaryEmail.groovy"/>
+                                                <script location="component://party/webapp/mycompany/WEB-INF/actions/GetBusinessCardInfo.groovy"/>
+                                            </actions>
+                                            <widgets>
+                                                <screenlet id="MyCompanyBusinessCardPanel" title="${partyName}">
+                                                    <container id="mycompanybusinesscard">
+                                                        <platform-specific>
+                                                            <html>
+                                                                <html-template location="component://party/webapp/mycompany/MyCompanyBusinessCard.ftl"/>
+                                                            </html>
+                                                        </platform-specific>
+                                                    </container>
+                                                </screenlet>
+                                            </widgets>
+                                        </section>
+                                    </widgets>
+                                </section>
+                                </container>
+                                <container style="col-lg-6">
+                                <screenlet title="${uiLabelMap.CommonNotes}">
+                                    <include-form name="ListPartyNotes" location="component://party/widget/partymgr/EasyOfbizForms.xml"/>
+                                </screenlet>
+                                <screenlet title="${uiLabelMap.ContentContents}">
+                                    <include-form name="ListPartyContents" location="component://party/widget/partymgr/EasyOfbizForms.xml"/>
+                                </screenlet>
+                                </container>
+                                <container style="clear"/>
+                            </widgets>
+                            <fail-widgets>
+                                <container>
+                                    <label style="h3">${uiLabelMap.PartyNoPartyFoundWithPartyId}: ${parameters.partyId}</label>
+                                </container>
+                            </fail-widgets>
+                        </section>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    
+    
+    
+</screens>

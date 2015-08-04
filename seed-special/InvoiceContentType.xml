@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <InvoiceContentType invoiceContentTypeId="COMMENTS" hasTable="N" description="comments" lastUpdatedStamp="2015-06-18 14:49:56.988" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:56.988" createdTxStamp="2015-06-18 14:49:56.73"/>
+</entity-engine-xml>

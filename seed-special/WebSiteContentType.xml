@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <WebSiteContentType webSiteContentTypeId="BLOG_ROOT" description="Blog Root" hasTable="N" lastUpdatedStamp="2015-06-18 14:49:54.736" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.736" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <WebSiteContentType webSiteContentTypeId="DEFAULT_PAGE" description="Default Page" hasTable="N" lastUpdatedStamp="2015-06-18 14:49:54.737" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.737" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <WebSiteContentType webSiteContentTypeId="ERROR_ROOT" description="Error Page Containers" hasTable="N" lastUpdatedStamp="2015-06-18 14:49:54.74" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.74" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <WebSiteContentType webSiteContentTypeId="FORUM_ROOT" description="Forum Root" hasTable="N" lastUpdatedStamp="2015-06-18 14:49:54.738" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.738" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <WebSiteContentType webSiteContentTypeId="MENU_ROOT" description="Menu Containers" hasTable="N" lastUpdatedStamp="2015-06-18 14:49:54.739" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.739" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <WebSiteContentType webSiteContentTypeId="PUBLISH_POINT" description="Publish Point" hasTable="N" lastUpdatedStamp="2015-06-18 14:49:54.741" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.741" createdTxStamp="2015-06-18 14:49:54.587"/>
+</entity-engine-xml>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+
+    <screen name="main">
+        <section>
+            <actions>
+                <!--                <set field="leftbarScreenName" value="leftbar"/> -->
+                <!--                <set field="rightbarScreenName" value="rightbar"/> -->
+                <set field="MainColumnStyle" value="center"/>
+
+                <set field="titleProperty" value="PageTitleMain"/>
+                <set field="headerItem" value="main"/>
+                <set field="randomSurveyGroup" value="testSurveyGroup"/>
+
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/Main.groovy"/>
+                <!--<script location="component://order/webapp/ordermgr/WEB-INF/actions/entry/catalog/Category.groovy"/>-->
+                <!--<script location="component://frontend/webapp/frontend/WEB-INF/actions/GetProductOffersData.groovy"/>-->
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/cart/ShowCart.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="application-bar-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/includes/otoit-head-logo.ftl"/></html></platform-specific>
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/accueil.ftl"/></html></platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="application-window">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleApplicationWindow"/>
+                <set field="layoutSettings.styleSheets[+0]" value="/frontend/images/css/appwindow.css" global="true"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="application-bar-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container-full">
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/applicationsWindow.ftl"/></html></platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="adhesion">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleAdhesion"/>
+                <set field="headerItem" value="Adhesion"/>
+                <script location="component://frontend/webapp/frontend/WEB-INF/actions/SetMembershipUnpaid.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/adhesion.ftl"/></html></platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="payment">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitlePayment"/>
+                <set field="headerItem" value="Payment"/>
+                <script location="component://order/webapp/ordermgr/WEB-INF/actions/entry/CheckoutPayment.groovy"/>
+                <script location="component://order/webapp/ordermgr/WEB-INF/actions/entry/StorePaymentOptions.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/payment.ftl"/></html></platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="showcart">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleShoppingCart"/>
+                <set field="headerItem" value="Shopping Cart"/>
+                <property-to-field resource="order" property="orderPreference.giftEnable" field="giftEnable" default="Y"/>
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/cart/ShowCart.groovy"/>
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/cart/ShowPromoText.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/includes/otoit-head-logo.ftl"/></html></platform-specific>
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/showcart.ftl"/></html></platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="selectroof">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleCheckoutOptions"/>
+                <script location="component://order/webapp/ordermgr/WEB-INF/actions/entry/CheckoutShippingAddress.groovy"/>
+                <script location="component://frontend/webapp/frontend/WEB-INF/actions/GetSelectRoofData.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/includes/otoit-head-logo.ftl"/></html></platform-specific>
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/selectroof.ftl"/></html></platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="checkoutpayment">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleCheckoutOptions"/>
+                <script location="component://order/webapp/ordermgr/WEB-INF/actions/entry/CheckoutPayment.groovy"/>
+                <script location="component://order/webapp/ordermgr/WEB-INF/actions/entry/StorePaymentOptions.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/includes/otoit-head-logo.ftl"/></html></platform-specific>
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/checkoutpayment.ftl"/></html></platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="checkoutreview">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleCheckoutReview"/>
+                <set field="parameters.formNameValue" value="orderreview" global="true"/>
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/order/CheckoutReview.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://frontend/webapp/frontend/checkoutreview.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="ordercomplete">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleOrderSummary"/>
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/order/OrderStatus.groovy"/>
+                <script location="component://frontend/webapp/frontend/WEB-INF/actions/SetMembershipToPayed.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/includes/otoit-head-logo.ftl"/></html></platform-specific>
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/ordercomplete.ftl"/></html></platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="orderincomplete">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleOrderSummary"/>
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/order/OrderStatus.groovy"/>
+                <!--<script location="component://frontend/webapp/frontend/WEB-INF/actions/GetOrderData.groovy"/>-->
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <container style="container">
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/includes/otoit-head-logo.ftl"/></html></platform-specific>
+                            <platform-specific><html><html-template location="component://frontend/webapp/frontend/orderincomplete.ftl"/></html></platform-specific>
+                        </container>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+</screens>

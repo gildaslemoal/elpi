@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<site-conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/site-conf.xsd">
+    <include location="component://common/webcommon/WEB-INF/common-controller.xml"/>
+    <include location="component://party/webapp/partymgr/WEB-INF/controller.xml"/>
+    <description>My Company Module Site Configuration File</description>
+    
+    <!-- Request Mappings -->
+    <request-map uri="main">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="main"/>
+    </request-map>
+    <request-map uri="mycompany">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="main"/>
+    </request-map>
+    <request-map uri="NewEmployee">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="NewEmployee"/>
+    </request-map>
+    <request-map uri="listemployees">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="listemployees"/>
+    </request-map>
+    <request-map uri="viewProfile">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="ViewProfile"/>
+    </request-map>
+    <request-map uri="ViewEmployees">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="ViewEmployees"/>
+    </request-map>
+    <request-map uri="ViewCoordinates">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="ViewCoordinates"/>
+    </request-map>
+    <request-map uri="ViewContents">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="ViewContents"/>
+    </request-map>
+    <request-map uri="ViewNotes">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="ViewNotes"/>
+    </request-map>
+    <request-map uri="ViewProductStore">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="ViewProductStore"/>
+    </request-map>
+    <!-- end of request mappings -->
+
+    <!-- View Mappings -->
+    <view-map name="main" type="screen" page="component://party/widget/mycompany/MyCompanyScreens.xml#ViewProfile"/>
+    <view-map name="NewEmployee" type="screen" page="component://party/widget/mycompany/MyCompanyScreens.xml#newemployee"/>
+    <view-map name="listemployees" type="screen" page="component://party/widget/mycompany/MyCompanyScreens.xml#listemployees"/>
+    <view-map name="ViewProfile" type="screen" page="component://party/widget/mycompany/MyCompanyScreens.xml#ViewProfile"/>
+    <view-map name="ViewEmployees" type="screen" page="component://party/widget/mycompany/MyCompanyScreens.xml#ViewEmployees"/>
+    <view-map name="ViewCoordinates" type="screen" page="component://party/widget/mycompany/MyCompanyScreens.xml#ViewCoordinates"/>
+    <view-map name="ViewContents" type="screen" page="component://party/widget/mycompany/MyCompanyScreens.xml#ViewContents"/>
+    <view-map name="ViewNotes" type="screen" page="component://party/widget/mycompany/MyCompanyScreens.xml#ViewNotes"/>
+    <view-map name="ViewProductStore" type="screen" page="component://party/widget/mycompany/MyCompanyScreens.xml#ViewProductStore"/>
+
+    <!-- end of view mappings -->
+</site-conf>

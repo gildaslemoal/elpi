@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <GeoType geoTypeId="CITY" hasTable="N" description="City" lastUpdatedStamp="2015-06-18 14:49:49.921" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.921" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="COUNTRY" hasTable="N" description="Country" lastUpdatedStamp="2015-06-18 14:49:49.928" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.928" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="COUNTY" hasTable="N" description="County" lastUpdatedStamp="2015-06-18 14:49:49.931" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.931" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="COUNTY_CITY" hasTable="N" description="County-City" lastUpdatedStamp="2015-06-18 14:49:49.933" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.933" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="GROUP" hasTable="N" description="Group" lastUpdatedStamp="2015-06-18 14:49:49.923" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.923" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="MUNICIPALITY" hasTable="N" description="Municipality" lastUpdatedStamp="2015-06-18 14:49:49.934" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.934" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="POSTAL_CODE" hasTable="N" description="Postal Code" lastUpdatedStamp="2015-06-18 14:49:49.926" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.926" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="PROVINCE" hasTable="N" description="Province" lastUpdatedStamp="2015-06-18 14:49:49.935" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.935" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="REGION" hasTable="N" description="Region" lastUpdatedStamp="2015-06-18 14:49:49.936" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.936" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="SALES_TERRITORY" parentTypeId="TERRITORY" hasTable="N" description="Sales Territory" lastUpdatedStamp="2015-06-18 14:49:49.938" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.938" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="SERVICE_TERRITORY" parentTypeId="TERRITORY" hasTable="N" description="Service Territory" lastUpdatedStamp="2015-06-18 14:49:49.939" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.939" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="STATE" hasTable="N" description="State" lastUpdatedStamp="2015-06-18 14:49:49.924" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.924" createdTxStamp="2015-06-18 14:49:49.866"/>
+    <GeoType geoTypeId="TERRITORY" hasTable="N" description="Territory" lastUpdatedStamp="2015-06-18 14:49:49.937" lastUpdatedTxStamp="2015-06-18 14:49:49.866" createdStamp="2015-06-18 14:49:49.937" createdTxStamp="2015-06-18 14:49:49.866"/>
+</entity-engine-xml>

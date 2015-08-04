@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ResponsibilityType responsibilityTypeId="FIN_MGMT" hasTable="N" description="Finance Management" lastUpdatedStamp="2015-06-18 14:49:58.168" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.168" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <ResponsibilityType responsibilityTypeId="INV_MGMT" hasTable="N" description="Inventory Management" lastUpdatedStamp="2015-06-18 14:49:58.169" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.169" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <ResponsibilityType responsibilityTypeId="PROD_MGMT" hasTable="N" description="Production Management" lastUpdatedStamp="2015-06-18 14:49:58.172" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.172" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <ResponsibilityType responsibilityTypeId="PUR_MGMT" hasTable="N" description="Purchase Management" lastUpdatedStamp="2015-06-18 14:49:58.17" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.17" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <ResponsibilityType responsibilityTypeId="RES_MGMT" hasTable="N" description="Resource Management" lastUpdatedStamp="2015-06-18 14:49:58.171" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.171" createdTxStamp="2015-06-18 14:49:58.129"/>
+    <ResponsibilityType responsibilityTypeId="SALES_MGMT" hasTable="N" description="Sales Management" lastUpdatedStamp="2015-06-18 14:49:58.173" lastUpdatedTxStamp="2015-06-18 14:49:58.129" createdStamp="2015-06-18 14:49:58.173" createdTxStamp="2015-06-18 14:49:58.129"/>
+</entity-engine-xml>

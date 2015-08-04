@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <WorkEffortContentType workEffortContentTypeId="CREATED_MEDIA" description="Created Media" lastUpdatedStamp="2015-06-18 14:49:55.427" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.427" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortContentType workEffortContentTypeId="PROJECT_DISCUSSION" description="Project Discussion" lastUpdatedStamp="2015-06-18 14:49:55.422" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.422" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortContentType workEffortContentTypeId="PROJECT_SPEC" description="Project Specification" lastUpdatedStamp="2015-06-18 14:49:55.424" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.424" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortContentType workEffortContentTypeId="PROJECT_UPDATE" description="Project Update" lastUpdatedStamp="2015-06-18 14:49:55.423" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.423" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortContentType workEffortContentTypeId="PROPOSAL_MEDIA" description="Proposal Media" lastUpdatedStamp="2015-06-18 14:49:55.425" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.425" createdTxStamp="2015-06-18 14:49:55.323"/>
+    <WorkEffortContentType workEffortContentTypeId="SUPPORTING_MEDIA" description="Supporting Media" lastUpdatedStamp="2015-06-18 14:49:55.426" lastUpdatedTxStamp="2015-06-18 14:49:55.323" createdStamp="2015-06-18 14:49:55.426" createdTxStamp="2015-06-18 14:49:55.323"/>
+</entity-engine-xml>

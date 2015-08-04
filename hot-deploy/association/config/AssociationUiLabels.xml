@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <property key="AssociationApplication">
+        <value xml:lang="fr">Application d'association</value>
+        <value xml:lang="en">Foundation Application</value>
+    </property>
+    <property key="AssociationCompanyName">
+        <value xml:lang="en">OFBiz: Association</value>
+        <value xml:lang="fr">OFBiz: Association</value>
+    </property>
+    <property key="AssociationCompanySubtitle">
+        <value xml:lang="fr">Gérez votre association avec OFBiz</value>
+        <value xml:lang="en">Manage foundation with OFBiz</value>
+    </property>
+    <property key="AssociationMailing">
+        <value xml:lang="en">Mailing</value>
+        <value xml:lang="fr">Mailing</value>
+    </property>
+    <property key="AssociationMembersList">
+        <value xml:lang="en">Members list</value>
+        <value xml:lang="fr">Liste des membres</value>
+    </property>
+    <property key="AssociationViewPermissionError">
+        <value xml:lang="fr">Vous n'avez pas le droit d'accès à cette page</value>
+        <value xml:lang="en">You are not allowed to view this page.</value>
+        <value xml:lang="zh">不允许你浏览这个页面。</value>
+    </property>
+    <property key="PageTitleFindMember">
+        <value xml:lang="fr">Recherche de membre</value>
+        <value xml:lang="en">Find member</value>
+    </property>
+    <property key="PageTitleMembersList">
+        <value xml:lang="fr">Liste des membres</value>
+        <value xml:lang="en">Members list</value>
+    </property>
+    <property key="PageTitleSelectMailing">
+        <value xml:lang="fr">Envoi de mailing</value>
+        <value xml:lang="en">Mailing sending</value>
+    </property>
+</resource>

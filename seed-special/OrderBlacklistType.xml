@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <OrderBlacklistType orderBlacklistTypeId="BLACKLIST_ADDRESS" description="Addresss" lastUpdatedStamp="2015-06-18 14:49:58.312" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.312" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderBlacklistType orderBlacklistTypeId="BLACKLIST_CREDITCARD" description="Credit Card" lastUpdatedStamp="2015-06-18 14:49:58.313" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.313" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderBlacklistType orderBlacklistTypeId="BLACKLIST_EMAIL" description="E-Mail" lastUpdatedStamp="2015-06-18 14:49:58.314" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.314" createdTxStamp="2015-06-18 14:49:58.279"/>
+    <OrderBlacklistType orderBlacklistTypeId="BLACKLIST_PHONE" description="Phone Number" lastUpdatedStamp="2015-06-18 14:49:58.315" lastUpdatedTxStamp="2015-06-18 14:49:58.279" createdStamp="2015-06-18 14:49:58.315" createdTxStamp="2015-06-18 14:49:58.279"/>
+</entity-engine-xml>

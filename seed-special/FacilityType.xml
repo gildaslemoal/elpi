@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <FacilityType facilityTypeId="BUILDING" hasTable="N" description="Building" lastUpdatedStamp="2015-06-18 14:49:55.551" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.551" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <FacilityType facilityTypeId="CALL_CENTER" hasTable="N" description="Call Center" lastUpdatedStamp="2015-06-18 14:49:55.554" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.554" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <FacilityType facilityTypeId="FLOOR" hasTable="N" description="Floor" lastUpdatedStamp="2015-06-18 14:49:55.552" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.552" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <FacilityType facilityTypeId="OFFICE" hasTable="N" description="Office" lastUpdatedStamp="2015-06-18 14:49:55.553" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.553" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <FacilityType facilityTypeId="PLANT" hasTable="N" description="Plant" lastUpdatedStamp="2015-06-18 14:49:55.555" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.555" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <FacilityType facilityTypeId="RETAIL_STORE" hasTable="N" description="Retail Store" lastUpdatedStamp="2015-06-18 14:49:55.557" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.557" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <FacilityType facilityTypeId="ROOM" hasTable="N" description="Room" lastUpdatedStamp="2015-06-18 14:49:55.556" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.556" createdTxStamp="2015-06-18 14:49:55.451"/>
+    <FacilityType facilityTypeId="WAREHOUSE" hasTable="N" description="Warehouse" lastUpdatedStamp="2015-06-18 14:49:55.558" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.558" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

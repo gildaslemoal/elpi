@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SubscriptionType subscriptionTypeId="NEWSGROUP_SUBSCR" hasTable="N" description="Newsgroup" lastUpdatedStamp="2015-06-18 14:49:54.733" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.733" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <SubscriptionType subscriptionTypeId="OTHER_SUBSCR" hasTable="N" description="Other" lastUpdatedStamp="2015-06-18 14:49:54.734" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.734" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <SubscriptionType subscriptionTypeId="PRODUCT_INFO_SUBSCR" hasTable="N" description="Product Info" lastUpdatedStamp="2015-06-18 14:49:54.735" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.735" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <SubscriptionType subscriptionTypeId="PRODUCT_SUBSCR" hasTable="N" description="Product" lastUpdatedStamp="2015-06-18 14:49:55.934" lastUpdatedTxStamp="2015-06-18 14:49:55.451" createdStamp="2015-06-18 14:49:55.934" createdTxStamp="2015-06-18 14:49:55.451"/>
+</entity-engine-xml>

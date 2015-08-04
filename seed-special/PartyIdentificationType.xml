@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <PartyIdentificationType partyIdentificationTypeId="INVOICE_EXPORT" description="replacement value for partyId in the invoice export function in accounting" lastUpdatedStamp="2015-06-18 14:49:57.527" lastUpdatedTxStamp="2015-06-18 14:49:56.73" createdStamp="2015-06-18 14:49:57.527" createdTxStamp="2015-06-18 14:49:56.73"/>
+    <PartyIdentificationType partyIdentificationTypeId="RCS" description=" 	Num&#233;ro de registre du commerce" lastUpdatedStamp="2015-06-18 14:49:54.564" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.564" createdTxStamp="2015-06-18 14:49:54.183"/>
+    <PartyIdentificationType partyIdentificationTypeId="SIRET" description="Num&#233;ro d&apos;identification des soci&#233;t&#233;s fran&#231;aises (SIRET)" lastUpdatedStamp="2015-06-18 14:49:58.911" lastUpdatedTxStamp="2015-06-18 14:49:58.911" createdStamp="2015-06-18 14:49:58.911" createdTxStamp="2015-06-18 14:49:58.911"/>
+    <PartyIdentificationType partyIdentificationTypeId="TVA" description="Num&#233;ro de TVA" lastUpdatedStamp="2015-06-18 14:49:54.563" lastUpdatedTxStamp="2015-06-18 14:49:54.183" createdStamp="2015-06-18 14:49:54.563" createdTxStamp="2015-06-18 14:49:54.183"/>
+</entity-engine-xml>

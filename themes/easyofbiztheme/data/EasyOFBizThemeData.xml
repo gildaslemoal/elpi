@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+    <VisualTheme visualThemeId="EASYOFBIZ" visualThemeSetId="BACKOFFICE" description="Easy OFBiz - Floating Layout, Sight-Impaired Accessible, Bidirectional"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_NAME" resourceValue="EASYOFBIZ" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/easyofbiztheme/maincss.css" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/easyofbiztheme/javascript.css" sequenceId="02"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/images/bootstrap/css/bootstrap.min.css" sequenceId="03"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/easyofbiztheme/css/plugins/metisMenu/metisMenu.min.css" sequenceId="04"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/easyofbiztheme/css/sb-admin-2.css" sequenceId="05"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/easyofbiztheme/font-awesome/css/font-awesome.min.css" sequenceId="06"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/easyofbiztheme/silviomoreto-bootstrap-select/css/bootstrap-select.min.css" sequenceId="07"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_STYLESHEET" resourceValue="/easyofbiztheme/loginstyle.min.css" sequenceId="08"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_HELPSTYLESHEET" resourceValue="/easyofbiztheme/help.css" sequenceId="01"/>    
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_DOCBOOKSTYLESHEET" resourceValue="/easyofbiztheme/webapp/easyofbiz/docbook.css" sequenceId="01"/>    
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_RTL_STYLESHEET" resourceValue="/easyofbiztheme/mainrtl.css" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_HDR_JAVASCRIPT" resourceValue="component://easyofbiztheme/js/application.js" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_FTR_JAVASCRIPT" resourceValue="/images/bootstrap/js/bootstrap.min.js" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_FTR_JAVASCRIPT" resourceValue="/easyofbiztheme/js/plugins/metisMenu/metisMenu.min.js" sequenceId="02"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_FTR_JAVASCRIPT" resourceValue="/easyofbiztheme/js/sb-admin-2.js" sequenceId="03"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_FTR_JAVASCRIPT" resourceValue="/easyofbiztheme/silviomoreto-bootstrap-select/js/bootstrap-select.min.js" sequenceId="04"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_SHORTCUT_ICON" resourceValue="/images/ofbiz.ico" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_HDR_IMAGE_URL" resourceValue="/easyofbiztheme/images/ofbiz_logo.gif" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_HDR_TMPLT_LOC" resourceValue="component://easyofbiztheme/includes/header.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_MSG_TMPLT_LOC" resourceValue="component://common/webcommon/includes/messages.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_FTR_TMPLT_LOC" resourceValue="component://easyofbiztheme/includes/footer.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_NAV_OPEN_TMPLT" resourceValue="component://easyofbiztheme/includes/appbarOpen.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_NAV_CLOSE_TMPLT" resourceValue="component://easyofbiztheme/includes/appbarClose.ftl" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="EASYOFBIZ" resourceTypeEnumId="VT_SCREENSHOT" resourceValue="/easyofbiz/screenshot.jpg" sequenceId="01"/>
+</entity-engine-xml>

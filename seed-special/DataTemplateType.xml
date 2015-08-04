@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <DataTemplateType dataTemplateTypeId="FTL" description="FreeMarker" extension="ftl" lastUpdatedStamp="2015-06-18 14:49:54.699" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.699" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <DataTemplateType dataTemplateTypeId="NONE" description="No Template" lastUpdatedStamp="2015-06-18 14:49:54.698" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.698" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <DataTemplateType dataTemplateTypeId="SCREEN_COMBINED" description="Screen widget" extension="xml" lastUpdatedStamp="2015-06-18 14:49:54.703" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.703" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <DataTemplateType dataTemplateTypeId="VTL" description="Velocity" extension="vtl" lastUpdatedStamp="2015-06-18 14:49:54.7" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.7" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <DataTemplateType dataTemplateTypeId="WM" description="WebMacro" extension="wm" lastUpdatedStamp="2015-06-18 14:49:54.701" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.701" createdTxStamp="2015-06-18 14:49:54.587"/>
+    <DataTemplateType dataTemplateTypeId="XSLT" description="XSLT" extension="xsl" lastUpdatedStamp="2015-06-18 14:49:54.702" lastUpdatedTxStamp="2015-06-18 14:49:54.587" createdStamp="2015-06-18 14:49:54.702" createdTxStamp="2015-06-18 14:49:54.587"/>
+</entity-engine-xml>
